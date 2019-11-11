@@ -66,12 +66,39 @@
         </ul>
       </section>
       <article class="product-promotion">
-
+        <h2 class="product-promotion__header">Живой пример</h2>
+        <p class="product-promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <!-- <dl class="product-promotion__progress-list">
+          <dt class="product-promotion__progress-item-name">снижение веса</dt>
+            <dd class="product-promotion__progress-item-value">5 кг</dd>
+        </dl> -->
+        <table class="product-promotion__progress">
+          <tr class="product-promotion__progress-header">
+            <th>снижение веса</th>
+            <th>затрачено времени</th>
+          </tr>
+          <tr class="product-promotion__progress-value">
+            <td>5 кг</td>
+            <td>60 дней</td>
+          </tr>
+        </table>
+        <p class="product-promotion__expense">затраты на питание: 15 000 руб.</p>
+        <label class="product-promotion_img-toggle-label">Было
+          <input type="radio" name="img-toggle" value="0" class="product-promotion_img-toggle">
+        </label>
+        <label class="product-promotion_img-toggle-label">
+          <input type="radio" name="img-toggle" value="1" class="product-promotion_img-toggle">Стало
+        </label>
+        <img class="product-promotion_img-before" src="https://via.placeholder.com/150x150" width="311" height="232" alt="Толстый кот">
+        <img class="product-promotion_img-after" src="https://via.placeholder.com/150x150" width="311" height="232" alt="Худой кот">
       </article>
     </main>
     <footer class="page-footer">
-      <section class="for-partners">
-
+      <section class="page-footer__for-partners contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <img class="contacts__map" src="https://via.placeholder.com/150x150" width="320" height="400" alt="Карта">
       </section>
       <a class="page-footer__logo logo">
         <img class="logo__image" src="https://via.placeholder.com/150x150" width="128" height="24" alt="Логотип Cat Energy">

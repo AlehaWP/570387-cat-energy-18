@@ -21,9 +21,47 @@
       </nav>
     </header>
     <section class="page-main">
+      <h1 class="page-main__header">подбор программы</h1>
+      <form class="find-program" action="https://echo.htmlacademy.ru" method="post">
+        <p class="find-program__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <fieldset class="find-program__cat form-sender">
+          <legend class="visually-hidden">Данные кота</legend>
+          <label class="fs-sender__label" for="input-name" >имя:*</label>
+          <input class="fs-sender__input" type="text" name="cat-name" value="" id="input-name"  required>
+          <label class="fs-sender__label" for="input-weight" >вес(кг):*</label>
+          <input class="fs-sender__input" type="text" name="cat-weight" value="" id="input-weight"  required>
+          <label class="fs-sender__label" for="input-age" >возраст(лет):</label>
+          <input class="fs-sender__input" type="text" name="cat-age" value="" id="input-age">
+        </fieldset>
+        <fieldset class="find-program__select-target fs-radio">
+          <legend class="visually-hidden">Выбор программы</legend>
+          <input class="fs-radio__input" type="radio" name="program" value="1" id="radio-1">
+          <label class="fs-radio__label" for="radio-1">похудение</label>
+          <input class="fs-radio__input" type="radio" name="program" value="2" id="radio-2">
+          <label class="fs-radio__label" for="radio-2">набо массы</label>
+          <input class="fs-radio__input" type="radio" name="program" value="0" id="radio-0">
+          <label class="fs-radio__label" for="radio-0">не знаю (нужен ваш совет)</label>
+        </fieldset>
+        <fieldset class="find-program__contacts fs-sender">
+          <legend class="find-program__legend fs-sender__legend">контактные данные (владельца кота)</legend>
+          <label class="fs-sender__label" for="input-email" >имя:*</label>
+          <input class="fs-sender__input input-email" type="email" name="sender-email" value="" id="input-email"  required>
+          <label class="fs-sender__label" for="input-tel" >вес(кг):*</label>
+          <input class="fs-sender__input input-tel" type="tel" name="sender-tel" value="" id="input-tel"  required>
+        </fieldset>
+        <fieldset class="find-program__comments fs-comments">
+          <legend class="find-program__legend fs-comments__legend">комментарий</legend>
 
+        </fieldset>
+      </form>
     </section>
     <footer class="page-footer">
+      <section class="page-footer__for-partners contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <img class="contacts__map" src="https://via.placeholder.com/150x150" width="320" height="400" alt="Карта">
+      </section>
       <a class="page-footer__logo logo" href="index.html">
         <img class="logo__image" src="https://via.placeholder.com/150x150" width="128" height="24" alt="Логотип Cat Energy">
       </a>

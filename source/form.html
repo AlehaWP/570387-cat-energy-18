@@ -22,37 +22,50 @@
     </header>
     <section class="page-main">
       <h1 class="page-main__header">подбор программы</h1>
-      <form class="find-program" action="https://echo.htmlacademy.ru" method="post">
-        <p class="find-program__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <fieldset class="find-program__cat form-sender">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <fieldset class="form__fieldset form__fieldset--border-bottom">
           <legend class="visually-hidden">Данные кота</legend>
-          <label class="fs-sender__label" for="input-name" >имя:*</label>
-          <input class="fs-sender__input" type="text" name="cat-name" value="" id="input-name"  required>
-          <label class="fs-sender__label" for="input-weight" >вес(кг):*</label>
-          <input class="fs-sender__input" type="text" name="cat-weight" value="" id="input-weight"  required>
-          <label class="fs-sender__label" for="input-age" >возраст(лет):</label>
-          <input class="fs-sender__input" type="text" name="cat-age" value="" id="input-age">
+          <label class="form__lb-text" for="cat-name" >имя:*</label>
+          <input class="form__text" type="text" name="cat-name" value="" id="cat-name" placeholder="барсик" required>
+          <label class="form__lb-text" for="input-weight" >вес(кг):*</label>
+          <input class="form__text" type="text" pattern="^[0-9]+$" name="cat-weight" value="" id="cat-weight" placeholder="7" required>
+          <label class="form__lb-text" for="cat-age" >возраст(лет):</label>
+          <input class="form__text" type="text" pattern="^[0-9]+$" name="cat-age" value="" id="cat-age" placeholder="7">
         </fieldset>
-        <fieldset class="find-program__select-target fs-radio">
+        <fieldset class="form__fieldset form__fieldset--border-bottom">
           <legend class="visually-hidden">Выбор программы</legend>
-          <input class="fs-radio__input" type="radio" name="program" value="1" id="radio-1">
-          <label class="fs-radio__label" for="radio-1">похудение</label>
-          <input class="fs-radio__input" type="radio" name="program" value="2" id="radio-2">
-          <label class="fs-radio__label" for="radio-2">набо массы</label>
-          <input class="fs-radio__input" type="radio" name="program" value="0" id="radio-0">
-          <label class="fs-radio__label" for="radio-0">не знаю (нужен ваш совет)</label>
+          <input class="form__check--radio" type="radio" name="program" value="1" id="pr-loss-weight" checked>
+          <label class="form__lb-check" for="pr-loss-weight">похудение</label>
+          <input class="form__check--radio" type="radio" name="program" value="2" id="pr-up-weight">
+          <label class="form__lb-check" for="pr-up-weight">набо массы</label>
+          <input class="form__check--radio" type="radio" name="program" value="0" id="pr-no-idea">
+          <label class="form__lb-check" for="pr-no-idea">не знаю (нужен ваш совет)</label>
         </fieldset>
-        <fieldset class="find-program__contacts fs-sender">
-          <legend class="find-program__legend fs-sender__legend">контактные данные (владельца кота)</legend>
-          <label class="fs-sender__label" for="input-email" >имя:*</label>
-          <input class="fs-sender__input input-email" type="email" name="sender-email" value="" id="input-email"  required>
-          <label class="fs-sender__label" for="input-tel" >вес(кг):*</label>
-          <input class="fs-sender__input input-tel" type="tel" name="sender-tel" value="" id="input-tel"  required>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">контактные данные (владельца кота)</legend>
+          <label class="form__lb-text" for="input-email" lang="en">e-mail:*</label>
+          <input class="form__text input-email" type="email" name="sender-email" value="" id="input-email" placeholder="kuklachev@gmail.com" required>
+          <label class="form__lb-text" for="input-tel" >телефон:*</label>
+          <input class="form__text input-tel" type="tel" name="sender-tel" value="" id="input-tel" placeholder="8 (960) 900-60-90" required>
         </fieldset>
-        <fieldset class="find-program__comments fs-comments">
-          <legend class="find-program__legend fs-comments__legend">комментарий</legend>
-
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">комментарий</legend>
+          <textarea class="form__textarea" name="name" rows="8" cols="80" placeholder="расскажите обо всех повадках кота"></textarea>
         </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Дополнительно</legend>
+          <input class="form__check" type="checkbox" name="no-shugar" id="chk-no-shugar" checked>
+          <label class="form__lb-check" for="chk-no-shugar">сахарозаменитель</label>
+          <input class="form__check" type="checkbox" name="water" id="chk-water">
+          <label class="form__lb-check" for="chk-water">питьевая вода</label>
+          <input class="form__check" type="checkbox" name="milk" id="сhk-milk">
+          <label class="form__lb-check" for="сhk-milk">молоко</label>
+          <input class="form__check" type="checkbox" name="vitamins" id="сhk-vitamins">
+          <label class="form__lb-check" for="сhk-vitamins">витамины</label>
+        </fieldset>
+        <button class="form__submit button button--green" type="submit" name="send-form">отправить заявку</button>
+        <p class="form__dictionary">* — Обязательные поля</p>
       </form>
     </section>
     <footer class="page-footer">

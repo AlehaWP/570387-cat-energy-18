@@ -1,0 +1,18 @@
+@import "logo.scss";
+
+.page-header{
+  @include center-container();
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  @include font-oswald-normal(20px, 22px);
+  color: $txt-header-color;
+  background-color: $main-bg-color;
+}
+
+.page-header__logo{
+  width: 191px;
+  flex-grow: 0;
+  text-decoration: none;
+}

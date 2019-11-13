@@ -1,0 +1,44 @@
+@font-face{
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Oswald";
+  src: url("../fonts/oswaldmedium.woff2");
+  font-weight: 500;
+}
+
+@mixin font-arial($p-width: 14px, $p-line-height: 18px){
+  font-family: Arial, sans-serif;
+  font-size: $p-width;
+  line-height: $p-line-height;
+}
+
+@mixin font-oswald-normal($p-width: 20px, $p-line-height: 20px){
+  font-family: "Oswald", sans-serif;
+  font-size: $p-width;
+  line-height: $p-line-height;
+  font-weight: 400;
+}
+
+@mixin font-oswald-regular($p-width: 36px, $p-line-height: 36px){
+  font-family: "Oswald", sans-serif;
+  font-size: $p-width;
+  line-height: $p-line-height;
+  font-weight: 500;
+}
+
+$main-bg-color: white;
+$blocks-bg-color: #f2f2f2;
+$banner-bg-color: #5eaa2f;
+$button-bg-color: $banner-bg-color;
+$txt-main-color: #444444;
+$txt-header-color: black;
+$txt-contr-color: white;
+
+@mixin center-container{
+  width: 280px;
+}

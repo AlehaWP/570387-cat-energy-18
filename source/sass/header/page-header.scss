@@ -24,6 +24,12 @@ $button-color: #222222;
   height: 39px;
   text-decoration: none;
   background-color: transparent;
+  &:hover,&:focus{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 
 .main-nav__bt-show-menu-toggle{

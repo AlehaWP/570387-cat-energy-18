@@ -13,8 +13,9 @@
 .page-list__item a{
   display: flex;
   justify-content: center;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  width: 100%;
+  margin: 0;
+  padding: 22px 0px;
   border-bottom: 1px solid $border-block-color;
   @include font-oswald-normal(20px, 20px);
   text-decoration: none;

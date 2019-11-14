@@ -1,8 +1,10 @@
 @import "page-list.scss";
 
+$button-color: #222222;
+
 .page-header{
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   @include center-container();
   @include font-oswald-normal(20px, 22px);
   color: $txt-header-color;
@@ -11,10 +13,10 @@
 
 .page-header__top{
   padding: 11px 23px 15px 20px;
+  flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
 }
 
 .page-header__logo{
@@ -31,8 +33,28 @@
   margin-top: 1px;
   margin-bottom: 3px;
   border: none;
-  border-top: 2px solid #222222;
-  border-bottom: 2px solid #222222;
+  border-top: 2px solid $button-color;
+  border-bottom: 2px solid $button-color;
   color: transparent;
   background-color: transparent;
+  &::after,
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-1px);
+    width: 100%;
+    height: 2px;
+    background-color: $button-color;
+  }
+  &--close{
+    border: none;
+  }
+  &--close::after{
+    transform: translateY(-1px) rotate(45deg);
+  }
+  &--close::before{
+    transform: translateY(-1px) rotate(-45deg);
+  }
 }

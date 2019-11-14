@@ -1,0 +1,44 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*сокрытие элементов которые должны быть видны для роботов и читалок*/
+.visually-hidden:not(:active){
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+//
+// body {
+//   margin: 0;
+//   min-width: 320px;
+//   font-family: Arial, sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-size: 15px;
+//   line-height: 2;
+//   color: black;
+// }
+
+body{
+  @include center-container();
+}

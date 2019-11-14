@@ -1,17 +1,38 @@
-@import "logo.scss";
+@import "page-list.scss";
 
 .page-header{
-  @include center-container();
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: center;
+  @include center-container();
   @include font-oswald-normal(20px, 22px);
   color: $txt-header-color;
   background-color: $main-bg-color;
 }
 
+.page-header__top{
+  padding: 11px 23px 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
 .page-header__logo{
   width: 191px;
-  flex-grow: 0;
+  height: 39px;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.main-nav__bt-show-menu-toggle{
+  position: relative;
+  width: 25px;
+  height: 19px;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  border: none;
+  border-top: 2px solid #222222;
+  border-bottom: 2px solid #222222;
+  color: transparent;
+  background-color: transparent;
 }

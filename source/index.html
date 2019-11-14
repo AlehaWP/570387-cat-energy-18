@@ -9,17 +9,19 @@
   <!-- https://echo.htmlacademy.ru -->
   <body>
     <header class="page-header">
-      <a class="page-header__logo logo">
-        <img class="logo__image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
-      </a>
-      <nav class="page-header__nav main-nav">
+      <div class="page-header__top">
+        <a class="page-header__logo logo">
+          <img class="logo__image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+        </a>
         <button type="button" class="main-nav__bt-show-menu-toggle">
           <span class="visually-hidden">Меню</span>
         </button>
-        <ul class="main-nav__list page-list">
-          <li class="page-list__list-item page-list__list-item--active"><a>главная</a></li>
-          <li class="page-list__list-item"><a href="catalog.html">каталог продукции</a></li>
-          <li class="page-list__list-item"><a href="form.html">подбор программы</a></li>
+      </div>
+      <nav class="page-header__nav">
+        <ul class="page-header__page-list page-list">
+          <li class="page-list__item page-list__item--active"><a>главная</a></li>
+          <li class="page-list__item"><a href="catalog.html">каталог продукции</a></li>
+          <li class="page-list__item"><a href="form.html">подбор программы</a></li>
         </ul>
       </nav>
     </header>

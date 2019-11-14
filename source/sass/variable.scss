@@ -38,7 +38,10 @@ $button-bg-color: $banner-bg-color;
 $txt-main-color: #444444;
 $txt-header-color: black;
 $txt-contr-color: white;
+$border-block-color: #ededed;
 
 @mixin center-container{
-  width: 280px;
+  width: 640px;
+  margin: 0 auto;
+  padding: 0 5px;
 }

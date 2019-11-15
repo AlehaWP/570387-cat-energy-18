@@ -1,0 +1,19 @@
+.developer{
+  padding: 31px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.developer__link{
+  text-decoration: none;
+  @include font-arial(16px, 16px);
+  color: $txt-main-color;
+  background-color: transparent;
+}
+
+.developer__logo{
+  width: 27px;
+  height: 34px;
+}

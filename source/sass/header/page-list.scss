@@ -23,18 +23,11 @@
   text-transform: uppercase;
   color: $txt-header-color;
   background-color: $main-bg-color;
-  &:hover,
-  &:focus{
+  &:not(&--active):hover,
+  &:not(&--active):focus{
     opacity: 0.6;
   }
-  &:active{
+  &:not(&--active):active{
     opacity: 0.3;
-  }
-  &--active,
-  &--active:hover,
-  &--active:focus,
-  &--active:active{
-    border-bottom-color: #68b738;
-    opacity: 1;
   }
 }

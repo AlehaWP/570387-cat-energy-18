@@ -1,0 +1,9 @@
+@import "contacts.scss";
+
+.page-footer{
+  display: flex;
+  flex-wrap: wrap;
+  @include font-arial(14px, 20px);
+  color: $txt-main-color;
+  background-color: $blocks-bg-color;
+}

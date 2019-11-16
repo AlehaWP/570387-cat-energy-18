@@ -2,4 +2,18 @@
 @import "variable.scss";
 @import "overall.scss";
 @import "header/page-header.scss";
+@import "main/page_main.scss";
 @import "footer/page-footer.scss";
+
+.button{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 12px 12px;
+  @include font-oswald-regular(14px, 18px);
+  color: $txt-contr-color;
+  background-color: $button-bg-color;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}

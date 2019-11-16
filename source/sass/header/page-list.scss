@@ -15,14 +15,17 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 0;
   padding: 22px 0px;
   border-bottom: 1px solid $border-block-color;
-  @include font-oswald-normal(20px, 20px);
   text-decoration: none;
   text-transform: uppercase;
+  @include font-oswald-medium(20px, 20px);
   color: $txt-header-color;
   background-color: $main-bg-color;
+  &--active{
+    border-bottom: 1px solid #68b738;
+    cursor: default;
+  }
   &:not(&--active):hover,
   &:not(&--active):focus{
     opacity: 0.6;

@@ -6,7 +6,7 @@ $button-color: #222222;
   display: flex;
   flex-wrap: wrap;
   @include center-container();
-  @include font-oswald-normal(20px, 22px);
+  @include font-oswald-medium(20px, 22px);
   color: $txt-header-color;
   background-color: $main-bg-color;
 }
@@ -32,7 +32,7 @@ $button-color: #222222;
   }
 }
 
-.main-nav__bt-show-menu-toggle{
+.page-header__bt-show-menu-toggle{
   position: relative;
   width: 25px;
   height: 19px;
@@ -43,6 +43,7 @@ $button-color: #222222;
   border-bottom: 2px solid $button-color;
   color: transparent;
   background-color: transparent;
+  cursor:pointer;
   &::after,
   &::before{
     content: "";

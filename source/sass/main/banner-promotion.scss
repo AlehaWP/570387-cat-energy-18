@@ -1,0 +1,31 @@
+.banner-promotion{
+  padding: 29px 19px 0 19px;
+  color: $txt-contr-color;
+  background-color: $main-bg-color;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.banner-promotion__header{
+  margin: 0;
+  padding: 0 16px;
+  margin-bottom: 19px;
+  @include font-oswald-regular(36px, 36px);
+}
+
+.banner-promotion__appeal{
+  margin: 0;
+  padding: 0 16px;
+  margin-bottom: 29px;
+
+  @include font-oswald-regular(14px, 14px);
+  text-transform: uppercase;
+
+}
+
+.banner-promotion__image{
+  width: 280;
+  height: 280;
+  background-color: transparent;
+}

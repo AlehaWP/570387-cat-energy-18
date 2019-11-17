@@ -20,6 +20,9 @@
     background-position: 0 0;
     background-repeat: no-repeat;
   }
+  &:active{
+    opacity: 0.3;
+  }
 }
 
 .social__list-vk{
@@ -27,6 +30,10 @@
   height: 12px;
   margin-right: 34px;
   background-image: url("../img/icon-vk.svg");
+  &:hover,
+  &:focus{
+    background-image: url("../img/icon-vk.svg");
+  }
 }
 
 .social__list-insta{
@@ -34,6 +41,10 @@
   height: 23px;
   margin-right: 34px;
   background-image: url("../img/icon-insta.svg");
+  &:hover,
+  &:focus{
+    background-image: url("../img/icon-insta.svg");
+  }
 }
 
 .social__list-fb{
@@ -41,4 +52,8 @@
   height: 19px;
   margin-right: 0px;
   background-image: url("../img/icon-fb.svg");
+  &:hover,
+  &:focus{
+    background-image: url("../img/icon-fb.svg");
+  }
 }

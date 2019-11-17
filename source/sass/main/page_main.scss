@@ -1,5 +1,7 @@
 @import "banner-promotion.scss";
 @import "our-programs.scss";
+@import "advantages.scss";
+@import "product-promotion.scss";
 
 .banner-promotion{
   margin-bottom: 20px;
@@ -7,4 +9,8 @@
 
 .our-programs{
   margin-bottom: 30px;
+}
+
+.advantages{
+  margin-bottom: 42px;
 }

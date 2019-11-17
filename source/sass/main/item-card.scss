@@ -40,15 +40,26 @@
   }
 }
 
+
+.item-card__header--pro{
+  &::after{
+    left: -83px;
+    top: 3px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
 .item-card__description{
   margin-bottom: 23px;
 }
 
 .item-card__more-details{
-  $item-color: opacify(gray, 0.1);
+  $item-color: rgba(gray, 0.5);
   display: flex;
+  align-items: flex-end;
   padding-top: 20px;
-  //position: relative;
   text-decoration: none;
   @include font-oswald-regular(16px, 16px);
   color: $txt-header-color;
@@ -56,13 +67,27 @@
   border-top: 2px solid $item-color;
   &::after{
     content: "";
-    position: relative;
-    margin-left: 12px;
-    //right: 120px;
-    //top: center;
-    transform: translateY(-1px);
+    transition: width 0.3s linear 0s;
+    margin: auto 0 auto 12px;
     width: 25px;
     height: 2px;
-    background-color: $item-color;
+    background-color: $txt-header-color;
+  };
+  &::before{
+    content: "";
+    order: 2;
+    margin: auto 0;
+    border: 5px solid transparent;
+    border-left-color: $txt-header-color;
+  };
+  &:hover::after{
+    width: 34px;
+  }
+  &:active{
+    color: rgba($txt-header-color, 0.3);
+  };
+  &:active::after,
+  &:active::before{
+    opacity: 0.3;
   }
 }

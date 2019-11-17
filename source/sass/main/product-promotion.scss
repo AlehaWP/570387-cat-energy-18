@@ -1,3 +1,125 @@
 .product-promotion{
+  padding: 15px 0;
+  @include font-arial(14px, 18px);
+  color: $txt-main-color;
   background-color: $blocks-bg-color;
+}
+
+.product-promotion__text-content{
+  padding: 0 19px;
+}
+
+.product-promotion__header{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  @include font-oswald-regular(36px, 60px);
+  color: $txt-header-color;
+  background-color: transparent;
+}
+
+.product-promotion__description{
+  margin: 0;
+  padding: 4px 1px 4px 0px;
+  margin-bottom: 22px;
+}
+
+.product-promotion__progress{
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 32px 0px;
+  margin: 0 0 20px -32px;
+  //border-collapse: collapse;
+}
+
+.product-promotion__progress-value td{
+  margin-right: 32px;
+  width: 124px;
+  padding: 17px 0;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+  @include font-oswald-regular(24px, 24px);
+  color: $txt-header-color;
+  background-color: inherit;
+}
+
+.product-promotion__progress-header{
+  display:flex;
+  width: 280px;
+  justify-content: space-between;
+  margin-top: -7px;
+}
+
+.product-promotion__progress-header th{
+  //display: inline-block;
+  padding: 0 16px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 89px;
+  @include font-arial(12px, 12px);
+  color: $txt-main-color;
+  background-color: $blocks-bg-color;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.product-promotion__expense{
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0 47px;
+  text-transform: uppercase;
+  @include font-oswald-regular(14px, 20px);
+  color: $txt-header-color;
+  background-color: inherit;
+}
+
+.product-promotion__img{
+  display: none;
+  background-color: inherit;
+  width: 311px;
+  height: 232px;
+}
+
+.product-promotion__img.active{
+  display: block;
+  margin-bottom: 30px;
+}
+
+.product-promotion__img-toggle-block{
+  margin: 0px 0px 23px 42px;
+}
+
+.product-promotion__img-toggle-caption{
+  padding: 0 15px;
+  @include font-oswald-regular(16px, 20px);
+  text-transform: uppercase;
+}
+
+.product-promotion__img-toggle{
+  display: inline-block;
+  position: relative;
+  width: 84px;
+  height: 14px;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  background-color: $main-bg-color;
+  cursor: pointer;
+  &:after{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    right: 4px;
+    top: 3px;
+    background-color: $banner-bg-color;
+    border-radius: 6px;
+  }
+}
+
+.product-promotion__img-toggle.before{
+  &:after{
+    left: 4px;
+  }
 }

@@ -75,31 +75,34 @@
         </ul>
       </section>
       <article class="product-promotion">
-        <h2 class="product-promotion__header">Живой пример</h2>
-        <p class="product-promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <!-- <dl class="product-promotion__progress-list">
-          <dt class="product-promotion__progress-item-name">снижение веса</dt>
-            <dd class="product-promotion__progress-item-value">5 кг</dd>
-        </dl> -->
-        <table class="product-promotion__progress">
-          <tr class="product-promotion__progress-header">
-            <th>снижение веса</th>
-            <th>затрачено времени</th>
-          </tr>
-          <tr class="product-promotion__progress-value">
-            <td>5 кг</td>
-            <td>60 дней</td>
-          </tr>
-        </table>
-        <p class="product-promotion__expense">затраты на питание: 15 000 руб.</p>
-        <label class="product-promotion_img-toggle-label">Было
-          <input type="radio" name="img-toggle" value="0" class="product-promotion_img-toggle">
-        </label>
-        <label class="product-promotion_img-toggle-label">
-          <input type="radio" name="img-toggle" value="1" class="product-promotion_img-toggle">Стало
-        </label>
-        <img class="product-promotion_img-before" src="https://via.placeholder.com/150x150" width="311" height="232" alt="Толстый кот">
-        <img class="product-promotion_img-after" src="https://via.placeholder.com/150x150" width="311" height="232" alt="Худой кот">
+        <div class="product-promotion__text-content">
+          <h2 class="product-promotion__header">Живой пример</h2>
+          <p class="product-promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <!-- <dl class="product-promotion__progress-list">
+            <dt class="product-promotion__progress-item-name">снижение веса</dt>
+              <dd class="product-promotion__progress-item-value">5 кг</dd>
+          </dl> -->
+          <table class="product-promotion__progress">
+            <tr class="product-promotion__progress-value">
+              <td>5 кг</td>
+              <td>60 дней</td>
+            </tr>
+            <tr class="product-promotion__progress-header">
+              <th>снижение веса</th>
+              <th>затрачено времени</th>
+            </tr>
+          </table>
+          <p class="product-promotion__expense">затраты на питание: 15 000 руб.</p>
+        </div>
+        <div class="product-promotion__example-images">
+          <img class="product-promotion__img product-promotion__img--before active" src="/img/before-mobile@1x.png" width="311" height="232" alt="Толстый кот">
+          <img class="product-promotion__img product-promotion__img--after" src="/img/after-mobile@1x.png" width="311" height="232" alt="Худой кот">
+          <div class="product-promotion__img-toggle-block">
+            <span class="product-promotion__img-toggle-caption">Было</span>
+            <span class="product-promotion__img-toggle before"></span>
+            <span class="product-promotion__img-toggle-caption">Стало</span>
+          </div>
+        </div>
       </article>
     </main>
     <footer class="page-footer">

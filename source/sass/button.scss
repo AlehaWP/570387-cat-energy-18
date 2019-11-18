@@ -1,0 +1,19 @@
+.button{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 12px 12px;
+  @include font-header(14px, 18px);
+  color: $txt-contr-color;
+  background-color: $button-bg-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover,
+  &:focus{
+    background-color: #5eaa2f;
+  }
+  &:active{
+    color: rgba($txt-contr-color, 0.3);
+    background-color: #5eaa2f;
+  }
+}

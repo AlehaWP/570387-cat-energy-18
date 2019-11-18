@@ -1,14 +1,15 @@
 $button-color: #222222;
 
-.page-header{
+.page-header {
   display: flex;
   flex-wrap: wrap;
+
   @include font-menu(20px, 22px);
   color: $txt-header-color;
   background-color: $main-bg-color;
 }
 
-.page-header__top{
+.page-header__top {
   padding: 11px 23px 15px 20px;
   flex-grow: 1;
   display: flex;
@@ -16,20 +17,23 @@ $button-color: #222222;
   align-items: center;
 }
 
-.page-header__logo{
+.page-header__logo {
   width: 191px;
   height: 39px;
   text-decoration: none;
   background-color: transparent;
-  &:hover,&:focus{
+
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }
 
-.page-header__menu-toggle{
+.page-header__menu-toggle {
   position: relative;
   width: 25px;
   height: 19px;
@@ -40,9 +44,10 @@ $button-color: #222222;
   border-bottom: 2px solid $button-color;
   color: transparent;
   background-color: transparent;
-  cursor:pointer;
+  cursor: pointer;
+
   &::after,
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -52,17 +57,20 @@ $button-color: #222222;
     height: 2px;
     background-color: $button-color;
   }
-  &--close{
+
+  &--close {
     border: none;
   }
-  &--close::after{
+
+  &--close::after {
     transform: translateY(-1px) rotate(45deg);
   }
-  &--close::before{
+
+  &--close::before {
     transform: translateY(-1px) rotate(-45deg);
   }
 }
 
-.page-header__menu-toggle.no-js{
+.page-header__menu-toggle.no-js {
   display: none;
 }

@@ -1,20 +1,21 @@
-.page-main__header{
+.page-main__header {
   margin: 0;
   padding: 12px 22px 25px 22px;
+
   @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: inherit;
   border-bottom: 1px solid #ededed;
 }
 
-.banner-promotion{
+.banner-promotion {
   margin-bottom: 20px;
 }
 
-.our-programs{
+.our-programs {
   margin-bottom: 30px;
 }
 
-.advantages{
+.advantages {
   margin-bottom: 42px;
 }

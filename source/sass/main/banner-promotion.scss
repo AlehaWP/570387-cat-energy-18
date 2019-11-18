@@ -1,4 +1,4 @@
-.banner-promotion{
+.banner-promotion {
   padding: 29px 19px 0 19px;
   color: $txt-contr-color;
   background-color: $main-bg-color;
@@ -7,14 +7,15 @@
   background-repeat: no-repeat;
 }
 
-.banner-promotion__header{
+.banner-promotion__header {
   margin: 0;
   padding: 0 16px;
   margin-bottom: 19px;
+
   @include font-header(36px, 36px);
 }
 
-.banner-promotion__appeal{
+.banner-promotion__appeal {
   margin: 0;
   padding: 0 16px;
   margin-bottom: 29px;
@@ -23,7 +24,7 @@
   text-transform: uppercase;
 }
 
-.banner-promotion__image{
+.banner-promotion__image {
   width: 280;
   height: 280;
   background-color: transparent;

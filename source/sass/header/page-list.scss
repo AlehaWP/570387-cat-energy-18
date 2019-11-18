@@ -1,4 +1,4 @@
-.page-list{
+.page-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -6,31 +6,34 @@
   list-style: none;
 }
 
-.page-list__item{
+.page-list__item {
   min-width: 320px;
-
 }
 
-.page-list__item-link{
+.page-list__item-link {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 22px 0px;
+  padding: 22px 0;
   border-bottom: 1px solid $border-block-color;
   text-decoration: none;
   text-transform: uppercase;
+
   @include font-menu(20px, 20px);
   color: $txt-header-color;
   background-color: $main-bg-color;
-  &--active{
+
+  &--active {
     border-bottom: 1px solid #68b738;
     cursor: default;
   }
+
   &:not(&--active):hover,
-  &:not(&--active):focus{
+  &:not(&--active):focus {
     opacity: 0.6;
   }
-  &:not(&--active):active{
+
+  &:not(&--active):active {
     opacity: 0.3;
   }
 }

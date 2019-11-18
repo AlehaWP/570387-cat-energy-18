@@ -1,4 +1,4 @@
-.developer{
+.developer {
   padding: 31px 0;
   display: flex;
   flex-wrap: wrap;
@@ -6,20 +6,23 @@
   align-items: center;
 }
 
-.developer__link{
+.developer__link {
   text-decoration: none;
+
   @include font-content(16px, 16px);
   color: $txt-main-color;
   background-color: transparent;
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }
 
-.developer__logo{
+.developer__logo {
   width: 27px;
   height: 34px;
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }

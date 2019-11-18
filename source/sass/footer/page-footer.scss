@@ -1,34 +1,37 @@
-.page-footer{
+.page-footer {
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
+
   @include font-content(14px, 20px);
   color: $txt-main-color;
   background-color: $blocks-bg-color;
 }
 
-.page-footer__contacts{
+.page-footer__contacts {
   margin-bottom: 8px;
 }
 
-.page-footer__logo{
+.page-footer__logo {
   margin: 31px 96px;
   padding: 0;
 }
 
-.page-footer__logo-image{
+.page-footer__logo-image {
   width: 128px;
   height: 24px;
+
   &:hover,
-  &:focus{
+  &:focus {
     opacity: 0.8;
   }
-  &:active{
+
+  &:active {
     opacity: 0.6;
   }
 }
 
 .page-footer__social,
-.page-footer__developer{
+.page-footer__developer {
   margin: 0 19px;
 }

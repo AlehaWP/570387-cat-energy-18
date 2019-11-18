@@ -3,19 +3,22 @@
   min-height: 266px;
   margin-bottom: 20px;
   padding: 20px;
+
   @include font-content(14px, 18px);
   color: $txt-main-color;
   background-color: $blocks-bg-color;
 }
 
-.item-card__header{
+.item-card__header {
   position: relative;
   margin: 18px 30px 15px 70px;
+
   @include font-header(24px, 37px);
   color: $txt-header-color;
   background-color: transparent;
   text-transform: uppercase;
-  &::before{
+
+  &::before {
     content: "";
     position: absolute;
     left: -70px;
@@ -25,9 +28,9 @@
     border: 4px solid transparent;
     border-radius: 50%;
     background-color: $button-bg-color;
-
   }
-  &::after{
+
+  &::after {
     content: "";
     position: absolute;
     left: -63px;
@@ -41,8 +44,8 @@
 }
 
 
-.item-card__header--pro{
-  &::after{
+.item-card__header--pro {
+  &::after {
     left: -83px;
     top: 3px;
     width: 67px;
@@ -51,21 +54,23 @@
   }
 }
 
-.item-card__description{
+.item-card__description {
   margin-bottom: 23px;
 }
 
-.item-card__more-details{
+.item-card__more-details {
   $item-color: rgba(gray, 0.5);
   display: flex;
   align-items: flex-end;
   padding-top: 20px;
   text-decoration: none;
+
   @include font-header(16px, 16px);
   color: $txt-header-color;
   text-transform: uppercase;
   border-top: 2px solid $item-color;
-  &::after{
+
+  &::after {
     content: "";
     transition: width 0.3s linear 0s;
     margin: auto 0 auto 12px;
@@ -73,21 +78,25 @@
     height: 2px;
     background-color: $txt-header-color;
   }
-  &::before{
+
+  &::before {
     content: "";
     order: 2;
     margin: auto 0;
     border: 5px solid transparent;
     border-left-color: $txt-header-color;
   }
-  &:hover::after{
+
+  &:hover::after {
     width: 34px;
   }
-  &:active{
+
+  &:active {
     color: rgba($txt-header-color, 0.3);
   }
+
   &:active::after,
-  &:active::before{
+  &:active::before {
     opacity: 0.3;
   }
 }

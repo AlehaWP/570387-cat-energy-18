@@ -1,28 +1,27 @@
-html{
+html {
   box-sizing: border-box;
 }
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
 
 /*сокрытие элементов которые должны быть видны для роботов и читалок*/
-.visually-hidden:not(:active){
+.visually-hidden:not(:active) {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -39,6 +38,6 @@ img{
 //   color: black;
 // }
 
-body{
+body {
   @include container-mobile();
 }

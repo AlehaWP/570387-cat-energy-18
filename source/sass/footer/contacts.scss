@@ -16,7 +16,7 @@
   width: 40%;
   margin: 0;
   padding: 0;
-  @include font-oswald-medium(16px, 20px);
+  @include font-header(16px, 20px);
   color: $txt-header-color;
   text-transform: uppercase;
   background-color: transparent;
@@ -27,7 +27,7 @@
   margin: 0;
   padding: 0;
   //padding: 27px 19px 27px 19px;
-  @include font-arial(14px, 20px);
+  @include font-content(14px, 20px);
   font-style: normal;
 }
 

@@ -15,14 +15,15 @@
 
 .social__list-item{
   background-color: transparent;
-  a{
-    display: block;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-  }
   &:active{
     opacity: 0.3;
   }
+}
+
+.social__list-item a{
+  display: block;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .social__list-vk{

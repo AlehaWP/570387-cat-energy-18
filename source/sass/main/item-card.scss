@@ -3,7 +3,7 @@
   min-height: 266px;
   margin-bottom: 20px;
   padding: 20px;
-  @include font-arial(14px, 18px);
+  @include font-content(14px, 18px);
   color: $txt-main-color;
   background-color: $blocks-bg-color;
 }
@@ -11,7 +11,7 @@
 .item-card__header{
   position: relative;
   margin: 18px 30px 15px 70px;
-  @include font-oswald-regular(24px, 37px);
+  @include font-header(24px, 37px);
   color: $txt-header-color;
   background-color: transparent;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
   align-items: flex-end;
   padding-top: 20px;
   text-decoration: none;
-  @include font-oswald-regular(16px, 16px);
+  @include font-header(16px, 16px);
   color: $txt-header-color;
   text-transform: uppercase;
   border-top: 2px solid $item-color;
@@ -72,20 +72,20 @@
     width: 25px;
     height: 2px;
     background-color: $txt-header-color;
-  };
+  }
   &::before{
     content: "";
     order: 2;
     margin: auto 0;
     border: 5px solid transparent;
     border-left-color: $txt-header-color;
-  };
+  }
   &:hover::after{
     width: 34px;
   }
   &:active{
     color: rgba($txt-header-color, 0.3);
-  };
+  }
   &:active::after,
   &:active::before{
     opacity: 0.3;

@@ -1,29 +1,33 @@
 @font-face{
   font-family: "Oswald";
-  src: url("../fonts/oswaldregular.woff2");
+  src: local("Oswald"),
+       url("../fonts/oswaldregular.woff2") format("woff2"),
+       url("../fonts/oswaldregular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face{
   font-family: "Oswald";
-  src: url("../fonts/oswaldmedium.woff2");
+  src: local("Oswald Medium"),
+       url("../fonts/oswaldmedium.woff2") format("woff2"),
+       url("../fonts/oswaldmedium.woff") format("woff");
   font-weight: 500;
 }
 
-@mixin font-arial($p-width: 14px, $p-line-height: 18px){
+@mixin font-content($p-width: 14px, $p-line-height: 18px){
   font-family: Arial, sans-serif;
   font-size: $p-width;
   line-height: $p-line-height;
 }
 
-@mixin font-oswald-medium($p-width: 20px, $p-line-height: 20px){
+@mixin font-menu($p-width: 20px, $p-line-height: 20px){
   font-family: "Oswald", sans-serif;
   font-size: $p-width;
   line-height: $p-line-height;
   font-weight: 500;
 }
 
-@mixin font-oswald-regular($p-width: 36px, $p-line-height: 36px){
+@mixin font-header($p-width: 36px, $p-line-height: 36px){
   font-family: "Oswald", sans-serif;
   font-size: $p-width;
   line-height: $p-line-height;
@@ -39,8 +43,7 @@ $txt-header-color: black;
 $txt-contr-color: white;
 $border-block-color: #ededed;
 
-@mixin center-container{
-  width: 330px;
+@mixin container-mobile{
+  width: 320px;
   margin: 0 auto;
-  padding: 0 5px;
 }

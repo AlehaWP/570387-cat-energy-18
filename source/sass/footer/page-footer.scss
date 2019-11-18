@@ -1,12 +1,8 @@
-@import "contacts.scss";
-@import "social.scss";
-@import "developer.scss";
-
 .page-footer{
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  @include font-arial(14px, 20px);
+  @include font-content(14px, 20px);
   color: $txt-main-color;
   background-color: $blocks-bg-color;
 }

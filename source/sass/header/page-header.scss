@@ -1,12 +1,9 @@
-@import "page-list.scss";
-
 $button-color: #222222;
 
 .page-header{
   display: flex;
   flex-wrap: wrap;
-  @include center-container();
-  @include font-oswald-medium(20px, 22px);
+  @include font-menu(20px, 22px);
   color: $txt-header-color;
   background-color: $main-bg-color;
 }
@@ -32,7 +29,7 @@ $button-color: #222222;
   }
 }
 
-.page-header__bt-show-menu-toggle{
+.page-header__menu-toggle{
   position: relative;
   width: 25px;
   height: 19px;
@@ -64,4 +61,8 @@ $button-color: #222222;
   &--close::before{
     transform: translateY(-1px) rotate(-45deg);
   }
+}
+
+.page-header__menu-toggle.no-js{
+  display: none;
 }

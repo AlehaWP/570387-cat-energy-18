@@ -1,13 +1,7 @@
-@import "banner-promotion.scss";
-@import "our-programs.scss";
-@import "advantages.scss";
-@import "product-promotion.scss";
-@import "catalog.scss";
-
 .page-main__header{
   margin: 0;
   padding: 12px 22px 25px 22px;
-  @include font-oswald-regular(36px, 60px);
+  @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: inherit;
   border-bottom: 1px solid #ededed;

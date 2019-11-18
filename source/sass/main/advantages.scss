@@ -1,6 +1,6 @@
 .advantages{
   padding: 0 19px;
-  @include font-arial(14px, 18px);
+  @include font-content(14px, 18px);
   color: $txt-main-color;
   background-color: transparent;
 }
@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 35px;
-  @include font-oswald-regular(36px, 60px);
+  @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: transparent;
 }

@@ -1,7 +1,7 @@
 .product-card{
   display: flex;
   flex-wrap: wrap;
-  @include font-arial(12px, 16px);
+  @include font-content(12px, 16px);
   color: $txt-main-color;
 }
 
@@ -25,7 +25,7 @@
   margin-bottom: 11px;
   padding: 0;
   width: 75px;
-  @include font-oswald-regular(16px, 20px);
+  @include font-header(16px, 20px);
   color: $txt-header-color;
   background-color: inherit;
   text-transform: uppercase;
@@ -35,6 +35,6 @@
   margin: 0 -65px;
   padding: 0;
   border-spacing: 62px 0px;
-  @include font-arial(12px, 16px);
+  @include font-content(12px, 16px);
   color: $txt-main-color;
 }

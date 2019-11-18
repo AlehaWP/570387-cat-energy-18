@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0 16px;
   margin-bottom: 19px;
-  @include font-oswald-regular(36px, 36px);
+  @include font-header(36px, 36px);
 }
 
 .banner-promotion__appeal{
@@ -19,9 +19,8 @@
   padding: 0 16px;
   margin-bottom: 29px;
 
-  @include font-oswald-regular(14px, 14px);
+  @include font-header(14px, 14px);
   text-transform: uppercase;
-
 }
 
 .banner-promotion__image{

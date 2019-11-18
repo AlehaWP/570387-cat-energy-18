@@ -40,5 +40,5 @@ img{
 // }
 
 body{
-  @include center-container();
+  @include container-mobile();
 }

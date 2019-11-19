@@ -19,4 +19,19 @@
     color: rgba($txt-contr-color, 0.3);
     background-color: #5eaa2f;
   }
+
+  &--gray {
+    color: #444444;
+    background-color: #f2f2f2;
+  }
+
+  &--gray:hover,
+  &--gray:focus {
+    background-color: #ebebeb;
+  }
+
+  &--gray:active {
+    color: rgba(#444444, 0.3);
+    background-color: #ebebeb;
+  }
 }

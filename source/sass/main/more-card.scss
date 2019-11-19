@@ -1,0 +1,35 @@
+.more-card {
+  @include font-content(12px, 16px);
+  color: $txt-main-color;
+  background-color: inherit;
+}
+
+.more-card__header {
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 83px 35px 0 37px;
+
+  @include font-header(16px, 20px);
+  text-transform: uppercase;
+  background-color: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    transform: translateX(-15px);
+    width: 31px;
+    height: 31px;
+    background-color: inherit;
+    background-image: url("../img/icon-plus.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.more-card__intrigue {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 25px;
+}

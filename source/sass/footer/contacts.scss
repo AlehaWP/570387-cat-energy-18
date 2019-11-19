@@ -1,0 +1,38 @@
+.contacts {
+  display: flex;
+  flex-flow: column;
+}
+
+.contacts__text-content {
+  padding: 27px 19px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: content-box;
+  background-color: $main-bg-color;
+}
+
+.contacts__description {
+  width: 40%;
+  margin: 0;
+  padding: 0;
+
+  @include font-header(16px, 20px);
+  color: $txt-header-color;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.contacts__address {
+  width: 53%;
+  margin: 0;
+  padding: 0;
+
+  @include font-content(14px, 20px);
+  font-style: normal;
+}
+
+.contacts__map {
+  width: 320px;
+  height: 363px;
+}

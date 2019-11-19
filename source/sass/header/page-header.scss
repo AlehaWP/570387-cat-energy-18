@@ -1,0 +1,76 @@
+$button-color: #222222;
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include font-menu(20px, 22px);
+  color: $txt-header-color;
+  background-color: $main-bg-color;
+}
+
+.page-header__top {
+  padding: 11px 23px 15px 20px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo {
+  width: 191px;
+  height: 39px;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__menu-toggle {
+  position: relative;
+  width: 25px;
+  height: 19px;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  border: none;
+  border-top: 2px solid $button-color;
+  border-bottom: 2px solid $button-color;
+  color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-1px);
+    width: 100%;
+    height: 2px;
+    background-color: $button-color;
+  }
+
+  &--close {
+    border: none;
+  }
+
+  &--close::after {
+    transform: translateY(-1px) rotate(45deg);
+  }
+
+  &--close::before {
+    transform: translateY(-1px) rotate(-45deg);
+  }
+}
+
+.page-header__menu-toggle.no-js {
+  display: none;
+}

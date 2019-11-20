@@ -1,3 +1,7 @@
+.catalog__header {
+  border-bottom: 1px solid #ededed;
+}
+
 .catalog__products-list,
 .catalog__extra-list {
   list-style: none;
@@ -16,21 +20,18 @@
   border-bottom: 1px solid #ededed;
 }
 
-.catalog__block-header {
-  margin: 0 20px;
-  padding: 0;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ededed;
-  @include font-header(24px, 24px);
-}
-
-.catalog__extra-item{
+.catalog__extra-item {
   margin: 0 20px;
   padding: 0;
   padding-bottom: 17px;
+  border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
 }
 
-.catalog__extra-item dl{
-  margin-bottom: 14px;
+.catalog__extra {
+  margin-bottom: 35px;
+}
+
+.catalog__banner {
+  margin: 0 20px 35px 20px;
 }

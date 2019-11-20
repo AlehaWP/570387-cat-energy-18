@@ -1,0 +1,134 @@
+.form {
+  @include font-header(16px, 18px);
+  color: $txt-form-color;
+  background-color: $main-bg-color;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+}
+
+.form__legend {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 31px;
+  text-transform: uppercase;
+}
+
+.form__description {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
+
+  @include font-header(14px, 18px);
+  text-transform: uppercase;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 10px;
+  width: 100%;
+  border: none;
+
+  text-transform: uppercase;
+
+  &--border {
+    padding-top: 34px;
+    //padding-bottom: 10px;
+    border-top: 1px solid $border-block-color;
+    border-bottom: 1px solid $border-block-color;
+    margin-bottom: 28px;
+  }
+
+  &--check {
+    padding-top: 15px;
+  }
+}
+
+.form__lb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  &--check{
+    margin-bottom: 34px;
+  }
+}
+
+.form__text {
+  flex-grow: 1;
+  padding: 12px 16px;
+  margin-left: 15px;
+  border: 1px solid $border-input-color;
+}
+
+.form__check {
+  width: 0;
+  height: 0;
+  margin-left: 15px;
+  margin-right: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: center;
+    height: center;
+    transform: translate(-15px, -15px);
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-input-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: center;
+    height: center;
+    transform: translate(-15px, -15px);
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-input-color;
+  }
+
+  &:checked::before {
+    content:"";
+    position: absolute;
+    top: center;
+    height: center;
+    width: 22px;
+    height: 17px;
+    transform: translate(-6px, -6px);
+    background-color: $button-bg-color;
+  }
+
+  &--radio::after {
+    border-radius: 50%;
+  }
+
+  &--radio:checked::before {
+    transform: translate(-6px, -6px);
+    width: 12px;
+    height: 12px;
+    background-color: $button-bg-color;
+    border-radius: 50%;
+  }
+}
+
+.form__textarea {
+  margin-bottom: 20px;
+}
+
+.form__submit {
+  margin-bottom: 23px;
+}
+
+.form__dictionary {
+  margin: 0;
+  text-align: center;
+  @include font-content(14px, 16px);
+  color: $txt-main-color;
+  background-color: transparent;
+}

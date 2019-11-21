@@ -45,21 +45,42 @@
 }
 
 .form__lb {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 14px;
   text-transform: uppercase;
+  cursor: pointer;
 
   &--check {
     margin-bottom: 27px;
   }
+
+  &--check:active {
+    opacity: 0.3;
+  }
 }
 
 .form__text {
+  position: absolute;
   flex-grow: 1;
   padding: 12px 16px;
   margin-left: 15px;
-  border: 1px solid $border-input-color;
+  border: 1px solid rgba($border-input-color, 0.5);
+
+  &:hover,
+  &:focus {
+    border-color: $border-input-color;
+  }
+
+  &:invalid {
+    border-color: $border-error-color;
+  }
+
+  &--email,
+  &--tel {
+    padding-right: 35px;
+  }
 }
 
 .form__check {
@@ -69,6 +90,7 @@
   height: 12px;
   margin-left: 10px;
   margin-right: 20px;
+  cursor: inherit;
 
   &::before {
     content: "";
@@ -81,6 +103,12 @@
     width: 30px;
     height: 30px;
     border: 1px solid $border-input-color;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before{
+    border-color: $border-hover-color;
   }
 
   &:checked::after {

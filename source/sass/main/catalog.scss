@@ -1,4 +1,9 @@
-.catalog__products-list {
+.catalog__header {
+  border-bottom: 1px solid #ededed;
+}
+
+.catalog__products-list,
+.catalog__extra-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -10,6 +15,23 @@
 }
 
 .catalog__products-more {
+  margin-bottom: 25px;
   padding: 0 20px 25px 20px;
   border-bottom: 1px solid #ededed;
+}
+
+.catalog__extra-item {
+  margin: 0 20px;
+  padding: 0;
+  padding-bottom: 17px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+.catalog__extra {
+  margin-bottom: 35px;
+}
+
+.catalog__banner {
+  margin: 0 20px 35px 20px;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -30,7 +30,7 @@
       </nav>
     </header>
     <section class="page-main catalog">
-      <h1 class="page-main__header">Каталог продукции</h1>
+      <h1 class="page-main__header catalog__header">Каталог продукции</h1>
       <section class="catalog__products">
         <h2 class="visually-hidden">Основная продукция</h2>
         <ul class="catalog__products-list">
@@ -39,158 +39,115 @@
               <a class="product-card__product-link" href="#"><img class="product-card__image" src="img/chicken-small-mobile@1x.jpg" alt="Банка 100% натурального корма со вкусом курицы весом 0.5 кг." width="140" height="144"></a>
               <div class="product-card__txt-content">
                 <h3 class="product-card__header">cat energy pro 500 г</h3>
-                <table class="product-card__characteristics">
-                  <tr class="product-card__characteristics-item">
-                    <td>Объем</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Вкус</td>
-                    <td>Курица</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Цена</td>
-                    <td>700 Р.</td>
-                  </tr>
-                </table>
+                <dl class="product-card__options-item">
+                  <dt class="product-card__option">Объем</dt>
+                  <dd class="product-card__value">500 г</dd>
+                  <dt class="product-card__option">Вкус</dt>
+                  <dd class="product-card__value">Курица</dd>
+                  <dt class="product-card__option">Цена</dt>
+                  <dd class="product-card__value">700 Р.</dd>
+                </dl>
               </div>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
           <li class="catalog__products-list-item">
             <div class="product-card">
-              <a class="product-card__product-link" href="#"><img class="product-card__image" src="https://via.placeholder.com/150x150" alt="Банка 100% натурального корма со вкусом курицы весом 1 кг." width="140" height="144"></a>
+              <a class="product-card__product-link" href="#"><img class="product-card__image" src="img/chicken-big-mobile@1x.jpg" alt="Банка 100% натурального корма со вкусом курицы весом 1 кг." width="140" height="144"></a>
               <div class="product-card__txt-content">
                 <h3 class="product-card__header">cat energy pro 1000 г</h3>
-                <table class="product-card__characteristics">
-                  <tr class="product-card__characteristics-item">
-                    <td>Объем</td>
-                    <td>1000 г</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Вкус</td>
-                    <td>Курица</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Цена</td>
-                    <td>1000 Р.</td>
-                  </tr>
-                </table>
+                <dl class="product-card__options-item">
+                  <dt class="product-card__option">Объем</dt>
+                  <dd class="product-card__value">1000 г</dd>
+                  <dt class="product-card__option">Вкус</dt>
+                  <dd class="product-card__value">Курица</dd>
+                  <dt class="product-card__option">Цена</dt>
+                  <dd class="product-card__value">1000 Р.</dd>
+                </dl>
               </div>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
           <li class="catalog__products-list-item">
             <div class="product-card">
-              <a class="product-card__product-link" href="#"><img class="product-card__image" src="https://via.placeholder.com/150x150" alt="Банка 100% натурального корма со вкусом рыбы весом 0.5кг." width="140" height="144"></a>
+              <a class="product-card__product-link" href="#"><img class="product-card__image" src="img/fish-small-mobile@1x.jpg" alt="Банка 100% натурального корма со вкусом рыбы весом 0.5кг." width="140" height="144"></a>
               <div class="product-card__txt-content">
                 <h3 class="product-card__header">cat energy pro 500 г</h3>
-                <table class="product-card__characteristics">
-                  <tr class="product-card__characteristics-item">
-                    <td>Объем</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Вкус</td>
-                    <td>Рыба</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Цена</td>
-                    <td>700 Р.</td>
-                  </tr>
-                </table>
+                <dl class="product-card__options-item">
+                  <dt class="product-card__option">Объем</dt>
+                  <dd class="product-card__value">500 г</dd>
+                  <dt class="product-card__option">Вкус</dt>
+                  <dd class="product-card__value">Рыба</dd>
+                  <dt class="product-card__option">Цена</dt>
+                  <dd class="product-card__value">700 Р.</dd>
               </div>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
           <li class="catalog__products-list-item">
             <div class="product-card">
-              <a class="product-card__product-link" href="#"><img class="product-card__image" src="https://via.placeholder.com/150x150" alt="Банка 100% натурального корма со вкусом рыбы весом 1кг." width="140" height="144"></a>
+              <a class="product-card__product-link" href="#"><img class="product-card__image" src="img/fish-big-mobile@1x.jpg" alt="Банка 100% натурального корма со вкусом рыбы весом 1кг." width="140" height="144"></a>
               <div class="product-card__txt-content">
                 <h3 class="product-card__header">cat energy pro 1000 г</h3>
-                <table class="product-card__characteristics">
-                  <tr class="product-card__characteristics-item">
-                    <td>Объем</td>
-                    <td>1000 г</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Вкус</td>
-                    <td>Рыба</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Цена</td>
-                    <td>1000 Р.</td>
-                  </tr>
-                </table>
+                <dl class="product-card__options-item">
+                  <dt class="product-card__option">Объем</dt>
+                  <dd class="product-card__value">1000 г</dd>
+                  <dt class="product-card__option">Вкус</dt>
+                  <dd class="product-card__value">Рыба</dd>
+                  <dt class="product-card__option">Цена</dt>
+                  <dd class="product-card__value">1000 Р.</dd>
+                </dl>
               </div>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
           <li class="catalog__products-list-item">
             <div class="product-card">
-              <a class="product-card__product-link" href="#"><img class="product-card__image" src="https://via.placeholder.com/150x150" alt="Банка 100% натурального корма со вкусом гречки весом 0.5кг." width="140" height="144"></a>
+              <a class="product-card__product-link" href="#"><img class="product-card__image" src="img/buckwheat-small-mobile@1x.jpg" alt="Банка 100% натурального корма со вкусом гречки весом 0.5кг." width="140" height="144"></a>
               <div class="product-card__txt-content">
                 <h3 class="product-card__header">cat energy slim 500 г</h3>
-                <table class="product-card__characteristics">
-                  <tr class="product-card__characteristics-item">
-                    <td>Объем</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Вкус</td>
-                    <td>Гречка</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Цена</td>
-                    <td>400 Р.</td>
-                  </tr>
-                </table>
+                <dl class="product-card__options-item">
+                  <dt class="product-card__option">Объем</dt>
+                  <dd class="product-card__value">500 г</dd>
+                  <dt class="product-card__option">Вкус</dt>
+                  <dd class="product-card__value">Гречка</dd>
+                  <dt class="product-card__option">Цена</dt>
+                  <dd class="product-card__value">400 Р.</dd>
+                </dl>
               </div>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
           <li class="catalog__products-list-item">
             <div class="product-card">
-              <a class="product-card__product-link" href="#"><img class="product-card__image" src="https://via.placeholder.com/150x150" alt="Банка 100% натурального корма со вкусом гречки весом 1кг." width="140" height="144"></a>
+              <a class="product-card__product-link" href="#"><img class="product-card__image" src="img/buckwheat-big-mobile@1x.jpg" alt="Банка 100% натурального корма со вкусом гречки весом 1кг." width="140" height="144"></a>
               <div class="product-card__txt-content">
                 <h3 class="product-card__header">cat energy slim 1000 г</h3>
-                <table class="product-card__characteristics">
-                  <tr class="product-card__characteristics-item">
-                    <td>Объем</td>
-                    <td>1000 г</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Вкус</td>
-                    <td>Гречка</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Цена</td>
-                    <td>700 Р.</td>
-                  </tr>
-                </table>
+                <dl class="product-card__options-item">
+                  <dt class="product-card__option">Объем</dt>
+                  <dd class="product-card__value">1000 г</dd>
+                  <dt class="product-card__option">Вкус</dt>
+                  <dd class="product-card__value">Гречка</dd>
+                  <dt class="product-card__option">Цена</dt>
+                  <dd class="product-card__value">700 Р.</dd>
+                </dl>
               </div>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
           <li class="catalog__products-list-item">
             <div class="product-card">
-              <a class="product-card__product-link" href="#"><img class="product-card__image" src="https://via.placeholder.com/150x150" alt="Банка 100% натурального корма со вкусом риса весом 0.5кг." width="140" height="144"></a>
+              <a class="product-card__product-link" href="#"><img class="product-card__image" src="img/rice-small-mobile@1x.jpg" alt="Банка 100% натурального корма со вкусом риса весом 0.5кг." width="140" height="144"></a>
               <div class="product-card__txt-content">
                 <h3 class="product-card__header">cat energy slim 500 г</h3>
-                <table class="product-card__characteristics">
-                  <tr class="product-card__characteristics-item">
-                    <td>Объем</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Вкус</td>
-                    <td>Рис</td>
-                  </tr>
-                  <tr class="product-card__characteristics-item">
-                    <td>Цена</td>
-                    <td>500 Р.</td>
-                  </tr>
-                </table>
+                <dl class="product-card__options-item">
+                  <dt class="product-card__option">Объем</dt>
+                  <dd class="product-card__value">500 г</dd>
+                  <dt class="product-card__option">Вкус</dt>
+                  <dd class="product-card__value">Рис</dd>
+                  <dt class="product-card__option">Цена</dt>
+                  <dd class="product-card__value">500 Р.</dd>
+                </dl>
               </div>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
@@ -202,62 +159,54 @@
           <a class="more-card__link button button--gray" href="#">показать все</a>
         </div>
       </section>
-      <section class="add-on-products">
-        <h2 class="add-on-products__header">Дополнительные товары</h2>
-        <ul class="add-on-products__list">
-          <li class="add-on-products__list-item">
+      <section class="catalog__extra">
+        <h2 class="catalog__block block-header">Дополнительные товары</h2>
+        <ul class="catalog__extra-list">
+          <li class="catalog__extra-item">
             <div class="product-card">
               <h3 class="product-card__header">сахарозаменитель</h3>
-              <table class="product-card__characteristics">
-                <tr class="product-card__characteristics-item">
-                  <td>1 упаковка (100 г)</td>
-                  <td>200 Р.</td>
-                </tr>
-              </table>
+              <dl class="product-card__options-item">
+                <dt class="product-card__option">1 упаковка (100 г)</dt>
+                <dd class="product-card__value">200 Р.</dd>
+              </dl>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
-          <li class="add-on-products__list-item">
+          <li class="catalog__extra-item">
             <div class="product-card">
               <h3 class="product-card__header">питьевая вода</h3>
-              <table class="product-card__characteristics">
-                <tr class="product-card__characteristics-item">
-                  <td>5 литров</td>
-                  <td>50 Р.</td>
-                </tr>
-              </table>
+              <dl class="product-card__options-item">
+                <dt class="product-card__option">5 литров</dt>
+                <dd class="product-card__value">50 Р.</dd>
+              </dl>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
-          <li class="add-on-products__list-item">
+          <li class="catalog__extra-item">
             <div class="product-card">
               <h3 class="product-card__header">молоко</h3>
-              <table class="product-card__characteristics">
-                <tr class="product-card__characteristics-item">
-                  <td>1 литр</td>
-                  <td>100 Р.</td>
-                </tr>
-              </table>
+              <dl class="product-card__options-item">
+                <dt class="product-card__option">1 литр</dt>
+                <dd class="product-card__value">100 Р.</dd>
+              </dl>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
-          <li class="add-on-products__list-item">
+          <li class="catalog__extra-item">
             <div class="product-card">
               <h3 class="product-card__header">витамины</h3>
-              <table class="product-card__characteristics">
-                <tr class="product-card__characteristics-item">
-                  <td>1 упаковка (30 г)</td>
-                  <td>300 Р.</td>
-                </tr>
-              </table>
+              <dl class="product-card__options-item">
+                <dt class="product-card__option">1 упаковка (30 г)</dt>
+                <dd class="product-card__value">300 Р.</dd>
+              </dl>
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
         </ul>
       </section>
-      <section class="banner-present">
-        <h2 class="visuall-hidden">Подарок</h2>
-        <img class="banner-present__image" src="https://via.placeholder.com/150x150" width="56" height="61" alt="коробочка с подарком">
+      <section class="catalog__banner banner-present">
+        <h2 class="visually-hidden">Подарок</h2>
+        <img class="banner-present__image" src="img/icon-gift.svg" width="56" height="61" alt="коробочка с подарком">
         <p class="banner-present__appeal">Закажите все и получите чехол для кота в подарок!</p>
       </section>
     </section>

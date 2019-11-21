@@ -9,7 +9,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   box-sizing: content-box;
-  background-color: $main-bg-color;
+  background-color: $blocks-bg-color;
+
+  &--main {
+    background-color: $main-bg-color;
+  }
 }
 
 .contacts__description {
@@ -25,8 +29,6 @@
 
 .contacts__address {
   width: 53%;
-  margin: 0;
-  padding: 0;
 
   @include font-content(14px, 20px);
   font-style: normal;

@@ -26,18 +26,14 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-//
-// body {
-//   margin: 0;
-//   min-width: 320px;
-//   font-family: Arial, sans-serif;
-//   font-weight: 400;
-//   font-style: normal;
-//   font-size: 15px;
-//   line-height: 2;
-//   color: black;
-// }
 
 body {
   @include container-mobile();
+  font-family: "Arial", "Verdana", sans-serif;//Так сделано специально, мало ли где ошибка, чтобы шрифт более менее смотрелся
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: black;
+  background-color: $main-bg-color;
 }

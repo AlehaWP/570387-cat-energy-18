@@ -1,10 +1,28 @@
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald"),
+    url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald Medium"),
+    url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+}
+
 @import "normalize.scss";
 @import "variable.scss";
+@import "mixins.scss";
 @import "overall.scss";
 @import "button.scss";
 @import "header/page-header.scss";
 @import "header/page-list.scss";
 @import "main/page_main.scss";
+@import "main/block-header.scss";
 @import "main/banner-promotion.scss";
 @import "main/our-programs.scss";
 @import "main/item-card.scss";
@@ -13,6 +31,8 @@
 @import "main/catalog.scss";
 @import "main/product-card.scss";
 @import "main/more-card.scss";
+@import "main/banner-present.scss";
+@import "main/form.scss";
 @import "footer/page-footer.scss";
 @import "footer/contacts.scss";
 @import "footer/social.scss";

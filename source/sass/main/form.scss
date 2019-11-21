@@ -1,0 +1,154 @@
+.form {
+  @include font-header(16px, 18px);
+  color: $txt-form-color;
+  background-color: $main-bg-color;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+}
+
+.form__legend {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 31px;
+}
+
+.form__description {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
+
+  @include font-header(14px, 18px);
+  text-transform: uppercase;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 10px;
+  width: 100%;
+  border: none;
+
+  &--border {
+    padding-top: 24px;
+    border-top: 1px solid $border-block-color;
+    border-bottom: 1px solid $border-block-color;
+    margin-bottom: 28px;
+  }
+
+  &--check {
+    padding-top: 15px;
+  }
+}
+
+.form__lb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--check {
+    margin-bottom: 27px;
+  }
+
+  &--check:active {
+    opacity: 0.3;
+  }
+}
+
+.form__text {
+  flex-grow: 1;
+  padding: 12px 16px;
+  margin-left: 15px;
+  border: 1px solid rgba($border-input-color, 0.5);
+
+  &:hover,
+  &:focus {
+    border-color: $border-input-color;
+  }
+
+  &:invalid {
+    border-color: $border-error-color;
+  }
+
+  &--email,
+  &--tel {
+    padding-right: 35px;
+  }
+}
+
+.form__check {
+  position: relative;
+  z-index: 0;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  margin-right: 20px;
+  cursor: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15px, -15px);
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-input-color;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    border-color: $border-hover-color;
+  }
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 17px;
+    transform: translate(-11px, -8px);
+    background-color: transparent;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  &--radio:checked::after {
+    transform: translate(-6px, -6px);
+    width: 12px;
+    height: 12px;
+    background-color: $button-bg-color;
+    border-radius: 50%;
+  }
+}
+
+.form__textarea {
+  margin-bottom: 20px;
+}
+
+.form__submit {
+  margin-bottom: 23px;
+}
+
+.form__dictionary {
+  margin: 0;
+  text-align: center;
+
+  @include font-content(14px, 16px);
+  color: $txt-main-color;
+  background-color: transparent;
+}

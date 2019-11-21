@@ -107,7 +107,7 @@
 
   &:hover::before,
   &:focus::before,
-  &:active::before{
+  &:active::before {
     border-color: $border-hover-color;
   }
 

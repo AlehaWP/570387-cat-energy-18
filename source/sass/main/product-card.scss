@@ -23,11 +23,8 @@
 }
 
 .product-card__txt-content {
-  margin: 0;
   padding: 0;
   margin: 10px 0 10px 0;
-//  display: flex;
-//  flex-flow: column;
   width: 140px;
 }
 
@@ -47,7 +44,6 @@
 .product-card__options-item {
   width: 100%;
   list-style: none;
-  margin: 0;
   margin: 14px 0;
   padding: 0;
   display: flex;

@@ -7,7 +7,7 @@
 
   @include font-header(24px, 24px);
 
-  &::after{
+  &::after {
     content: "";
     margin-top: 12px;
     height: 3px;

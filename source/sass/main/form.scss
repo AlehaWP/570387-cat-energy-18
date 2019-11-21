@@ -51,7 +51,7 @@
   margin-bottom: 14px;
   text-transform: uppercase;
 
-  &--check{
+  &--check {
     margin-bottom: 27px;
   }
 }
@@ -85,7 +85,7 @@
   }
 
   &:checked::after {
-    content:"";
+    content: "";
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -122,6 +122,7 @@
 .form__dictionary {
   margin: 0;
   text-align: center;
+
   @include font-content(14px, 16px);
   color: $txt-main-color;
   background-color: transparent;

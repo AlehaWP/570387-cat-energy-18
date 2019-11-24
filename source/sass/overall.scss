@@ -37,3 +37,9 @@ body {
   color: black;
   background-color: $main-bg-color;
 }
+
+@media (min-width: $tablet-width) {
+  body {
+    @include container-tablet();
+  }
+}

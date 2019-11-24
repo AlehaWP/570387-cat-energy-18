@@ -1,8 +1,7 @@
 $button-color: #222222;
 
 .page-header {
-  display: flex;
-  flex-wrap: wrap;
+  padding-top: 11px;
 
   @include font-menu(20px, 22px);
   color: $txt-header-color;
@@ -10,11 +9,12 @@ $button-color: #222222;
 }
 
 .page-header__top {
-  padding: 11px 23px 15px 20px;
-  flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 0 20px;
+  margin-bottom: 15px;
 }
 
 .page-header__logo {
@@ -69,8 +69,36 @@ $button-color: #222222;
   &--close::before {
     transform: translateY(-1px) rotate(-45deg);
   }
+
+  &.no-js {
+    display: none;
+  }
 }
 
-.page-header__menu-toggle.no-js {
-  display: none;
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: flex;
+    padding: 24px 30px;
+  }
+
+  .page-header__top {
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .page-header__logo {
+    width: 174px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header__menu-toggle {
+    display: none;
+  }
+
+  .page-header__nav {
+    padding-top: 10px;
+  }
 }

@@ -15,7 +15,7 @@
 
   @include font-menu(20px, 20px);
   color: $txt-header-color;
-  background-color: $main-bg-color;
+  background-color: transparent;
 
   &--active {
     border-bottom: 1px solid $button-bg-color;
@@ -54,5 +54,34 @@
       border-bottom: 2px solid $button-bg-color;
       cursor: default;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .page-list__item-link {
+    width: auto;
+    padding: 10px 0;
+    margin: 0 0 0 36px;
+
+    @include font-header(20px, 25px);
+
+    &:not(&--active) {
+      border-bottom: none;
+    }
+
+    &--fat{
+      color: $txt-contr-color;
+    }
+
+    // &--fat.page-list__item-link--active {
+    //   border-bottom: 2px solid $txt-contr-color;
+    //   cursor: default;
+    // }
   }
 }

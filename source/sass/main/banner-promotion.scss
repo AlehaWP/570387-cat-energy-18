@@ -26,7 +26,17 @@
 }
 
 .banner-promotion__image {
-  width: 280;
-  height: 280;
-  background-color: transparent;
+  width: 280px;
+  height: 280px;
+}
+
+@media (min-width: $desktop-width) {
+  .banner-promotion {
+    margin-top: -100px;
+  //  margin-left: 500px;
+  }
+
+  .banner-promotion__image {
+    background-color: green;
+  }
 }

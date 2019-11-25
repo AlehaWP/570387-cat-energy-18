@@ -43,3 +43,9 @@ body {
     @include container-tablet();
   }
 }
+
+@media (min-width: $desktop-width) {
+  body {
+    @include container-desktop();
+  }
+}

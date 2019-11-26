@@ -30,13 +30,65 @@
   height: 280px;
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .banner-promotion {
-    margin-top: -100px;
-  //  margin-left: 500px;
+    position: relative;
+    padding: 40px 230px 530px 120px;
+    color: $txt-header-color;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .banner-promotion__header {
+    padding: 0;
+    margin-bottom: 33px;
+
+    @include font-header(60px, 60px);
+  }
+
+  .banner-promotion__appeal {
+    padding: 0;
+    margin-bottom: 45px;
+
+    @include font-header(20px, 20px);
   }
 
   .banner-promotion__image {
-    background-color: green;
+    position: absolute;
+    z-index: -1;
+    top: 230px;
+    left: 100px;
+    width: 709px;
+    height: 609px;
+  }
+
+  .banner-promotion__show-programs {
+    display: inline-block;
+    width: auto;
+    padding: 15px 26px;
+    @include font-header(20px, 20px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner-promotion {
+    margin-top: -165px;
+    padding: 226px 835px 188px 191px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 50% auto;
+  }
+
+  .banner-promotion__appeal {
+    margin-bottom: 53px;
+  }
+
+  .banner-promotion__image {
+    z-index: 1;
+    top: 140px;
+    left: 590px;
+    width: 552px;
+    height: 499px;
   }
 }

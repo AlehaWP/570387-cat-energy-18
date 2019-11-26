@@ -22,3 +22,15 @@
 .page-main__form {
   padding: 0 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .page-main__banner {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__banner {
+    margin-bottom: 80px;
+  }
+}

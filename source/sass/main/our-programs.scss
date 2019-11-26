@@ -7,3 +7,28 @@
   padding: 0;
   list-style: none;
 }
+
+@media (min-width: $tablet-width) {
+  .our-programs {
+    padding: 0 30px;
+  }
+
+  .our-programs__list-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .our-programs {
+    padding: 0 110px;
+  }
+
+  .our-programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .our-programs__list-item {
+    width: 46.72%;
+  }
+}

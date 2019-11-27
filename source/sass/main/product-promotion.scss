@@ -8,6 +8,7 @@
 
 .product-promotion__text-content {
   padding: 0 19px;
+  background-color: inherit;
 }
 
 .product-promotion__header {
@@ -27,16 +28,23 @@
 }
 
 .product-promotion__progress {
-  border-collapse: separate;
-  table-layout: fixed;
   width: 100%;
-  border-spacing: 32px 0;
-  margin: 0 0 20px -32px;
+  margin-bottom: 20px;
+  background-color: inherit;
+}
+
+.product-promotion__progress tbody{
+  background-color: inherit;
+}
+
+.product-promotion__progress-value {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .product-promotion__progress-value td {
-  margin-right: 32px;
-  width: 124px;
+  width: 44.28%;
   padding: 17px 0;
   text-align: center;
   border: 1px solid gray;
@@ -44,25 +52,25 @@
 
   @include font-header(24px, 24px);
   color: $txt-header-color;
+  background-color: transparent;
+}
+
+.product-promotion__progress-header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: -7px;
   background-color: inherit;
 }
 
-.product-promotion__progress-header {
-  display: flex;
-  width: 280px;
-  justify-content: space-between;
-  margin-top: -7px;
-}
-
 .product-promotion__progress-header th {
-  padding: 0 16px;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 89px;
+  padding: 0 5.71%;
+  margin: 0 5.71%;
+  width: 31.78%;
 
   @include font-content(12px, 12px);
   color: $txt-main-color;
-  background-color: $blocks-bg-color;
+  background-color: inherit;
   font-style: normal;
   font-weight: normal;
 }
@@ -80,7 +88,7 @@
 
 .product-promotion__img {
   display: none;
-  background-color: inherit;
+  background-color: transparent;
   width: 311px;
   height: 232px;
 }
@@ -111,7 +119,7 @@
   background-color: $main-bg-color;
   cursor: pointer;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     width: 35px;
@@ -124,7 +132,114 @@
 }
 
 .product-promotion__img-toggle.before {
-  &::after {
+  &::before {
     left: 4px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-promotion {
+    @include font-content(16px, 24px);
+    background-color: inherit;
+  }
+
+  .product-promotion__text-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    margin-bottom: 221px;
+    background-color: inherit;
+  }
+
+  .product-promotion__header {
+    margin-bottom: 60px;
+
+    @include font-header(60px, 60px);
+  }
+
+  .product-promotion__description {
+    padding-right: 20px;
+    margin-bottom: 56px;
+  }
+
+  .product-promotion__progress {
+    width: 53%;
+    margin-right: auto;
+  }
+
+  .product-promotion__progress-header th {
+    padding: 0 2%;
+    margin: 0 2%;
+    width: 40%;
+
+    @include font-content(14px, 14px);
+  }
+
+  .product-promotion__expense {
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+    text-align: right;
+
+    @include font-header(20px, 20px);
+  }
+
+  .product-promotion__example-images {
+    padding: 369px 100px 68px 100px;
+    position: relative;
+    background-color: $blocks-bg-color;
+  }
+
+  .product-promotion__img {
+    position: absolute;
+    top: 0;
+    transform: translate(-80px, -200px);
+    width: 596px;
+    height: 517px;
+  }
+
+  .product-promotion__img-toggle-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-promotion__img-toggle-caption {
+    padding: 0;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted $border-hover-color;
+  }
+
+  .product-promotion__img-toggle {
+    margin: 7px 21px;
+    flex-grow: 1;
+    height: 6px;
+    background-color: $toogle-color;
+
+    &::before {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: $main-bg-color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $button-bg-color;
+    }
+  }
+
+  .product-promotion__img-toggle.before {
+    &::after,
+    &::before{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }

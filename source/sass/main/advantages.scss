@@ -1,5 +1,6 @@
 .advantages {
   padding: 0 19px;
+  border-bottom: 1px solid $border-block-color;
 
   @include font-content(14px, 18px);
   color: $txt-main-color;
@@ -23,16 +24,17 @@
 }
 
 .advantages__list-item {
-  position: relative;
-  padding: 6px 1px 6px 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 20px;
 
   &::before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 3px;
-    width: 60px;
+    position: relative;
+    flex-grow: 0;
+    margin-right: 20px;
+    min-width: 60px;
     height: 60px;
     background-color: $button-bg-color;
     background-image: url("../img/advantage-leaf@1x.png");
@@ -56,5 +58,79 @@
 .advantages__list-item--clock {
   &::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    padding: 0 30px;
+
+    @include font-content(16px, 24px);
+  }
+
+  .advantages__header {
+    margin-bottom: 30px;
+
+    @include font-header(60px, 60px);
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__list-item {
+    position: relative;
+    width: 245px;
+    margin: 32px auto 105px 0px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &::before {
+      content: "";
+      flex-grow: 0;
+      margin-bottom: 37px;
+      min-width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: "1";
+      position: absolute;
+      right: 0px;
+      top: -40px;
+      z-index: -1;
+      @include font-header(281px, 281px);
+      color: $blocks-bg-color;
+      background-color: transparent;
+    }
+
+    &--powder {
+      &::after {
+        content: "2";
+      }
+    }
+
+    &--dining {
+      &::after {
+        content: "3";
+      }
+    }
+
+    &--clock {
+      &::after {
+        content: "4";
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding: 0 110px;
+
+    @include font-content(16px, 24px);
   }
 }

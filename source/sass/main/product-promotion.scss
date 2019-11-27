@@ -47,7 +47,7 @@
   width: 44.28%;
   padding: 17px 0;
   text-align: center;
-  border: 1px solid gray;
+  border: 1px solid $border-input-color;
   border-radius: 3px;
 
   @include font-header(24px, 24px);
@@ -84,6 +84,11 @@
   @include font-header(14px, 20px);
   color: $txt-header-color;
   background-color: inherit;
+}
+
+.product-promotion__expense br,
+.product-promotion__expense span{
+  display: none;
 }
 
 .product-promotion__img {
@@ -184,6 +189,10 @@
     @include font-header(20px, 20px);
   }
 
+  .product-promotion__expense br{
+    display: block;
+  }
+
   .product-promotion__example-images {
     padding: 369px 100px 68px 100px;
     position: relative;
@@ -241,5 +250,63 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-promotion {
+    position: relative;
+    display: flex;
+    padding: 0 110px;
+    background-color: $blocks-bg-color;
+  }
+
+  .product-promotion__expense br {
+    //display: none;
+  }
+
+  .product-promotion__text-content {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-right: 12%;
+    padding-top: 70px;
+    width: 36%;
+  }
+
+  .product-promotion__header {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -135px;
+  }
+
+  .product-promotion__description {
+    margin-bottom: 61px;
+  }
+
+  .product-promotion__progress {
+    width: 82%;
+  }
+
+  .product-promotion__expense br {
+    display: none;
+  }
+
+  .product-promotion__expense span{
+    display: block;
+  }
+
+  .product-promotion__expense {
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-promotion__example-images {
+    width: 52%;
+    padding: 369px 0 68px 45px;
+    position: relative;
+    background-color: $blocks-bg-color;
   }
 }

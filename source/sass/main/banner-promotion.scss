@@ -67,6 +67,7 @@
     display: inline-block;
     width: auto;
     padding: 15px 26px;
+
     @include font-header(20px, 20px);
   }
 }

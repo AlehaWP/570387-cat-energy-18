@@ -33,7 +33,7 @@
   background-color: inherit;
 }
 
-.product-promotion__progress tbody{
+.product-promotion__progress tbody {
   background-color: inherit;
 }
 
@@ -55,7 +55,7 @@
   background-color: transparent;
 }
 
-.product-promotion__progress-header{
+.product-promotion__progress-header {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -87,7 +87,7 @@
 }
 
 .product-promotion__expense br,
-.product-promotion__expense span{
+.product-promotion__expense span {
   display: none;
 }
 
@@ -189,7 +189,7 @@
     @include font-header(20px, 20px);
   }
 
-  .product-promotion__expense br{
+  .product-promotion__expense br {
     display: block;
   }
 
@@ -245,7 +245,7 @@
 
   .product-promotion__img-toggle.before {
     &::after,
-    &::before{
+    &::before {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -262,7 +262,7 @@
   }
 
   .product-promotion__expense br {
-    //display: none;
+    display: none;
   }
 
   .product-promotion__text-content {
@@ -289,11 +289,8 @@
     width: 82%;
   }
 
-  .product-promotion__expense br {
-    display: none;
-  }
 
-  .product-promotion__expense span{
+  .product-promotion__expense span {
     display: block;
   }
 

@@ -128,7 +128,7 @@
       content: "";
       position: absolute;
       left: 430px;
-      top: 0px;
+      top: 0;
       width: 141px;
       height: 194px;
     }
@@ -159,6 +159,7 @@
     width: 100%;
     margin: 0;
     padding: 53px 53px 60px 53px;
+
     @include font-content(16px, 24px);
   }
 
@@ -171,7 +172,7 @@
     &::before {
       content: "";
       position: absolute;
-      left: 0px;
+      left: 0;
       top: -30px;
       width: 100px;
       height: 100px;

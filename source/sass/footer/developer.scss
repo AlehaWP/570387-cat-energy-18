@@ -8,6 +8,7 @@
 
 .developer__link {
   text-decoration: none;
+
   @include font-content(16px, 16px);
   color: $txt-main-color;
   background-color: transparent;

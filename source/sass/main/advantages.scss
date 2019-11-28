@@ -85,7 +85,7 @@
     position: relative;
     z-index: 0;
     width: 245px;
-    margin: 32px auto 105px 0px;
+    margin: 32px auto 105px 0;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -102,8 +102,9 @@
       content: "1";
       position: absolute;
       z-index: -1;
-      right: 0px;
+      right: 0;
       top: -40px;
+
       @include font-header(281px, 281px);
       color: $blocks-bg-color;
       background-color: transparent;

@@ -28,6 +28,12 @@
 }
 
 @media (min-width: $tablet-width) {
+  .page-main__header {
+    padding: 35px 30px;
+
+    @include font-header(60px, 60px);
+  }
+
   .page-main__banner {
     margin-bottom: 0;
   }

@@ -33,6 +33,7 @@
 @media (min-width: $tablet-width) {
   .banner-promotion {
     position: relative;
+    z-index: 0;
     padding: 40px 230px 530px 120px;
     color: $txt-header-color;
     background-color: transparent;

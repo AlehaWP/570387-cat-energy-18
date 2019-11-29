@@ -1,4 +1,6 @@
 .more-card {
+  width: 100%;
+
   @include font-content(12px, 16px);
   color: $txt-main-color;
   background-color: inherit;
@@ -19,7 +21,7 @@
     position: absolute;
     top: 27px;
     left: 50%;
-    transform: translateX(-15px);
+    transform: translateX(-50%);
     width: 31px;
     height: 31px;
     background-color: inherit;
@@ -32,4 +34,34 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .more-card{
+    padding: 0 38px 40px 38px;
+    border: 1px solid $border-input-color;
+  }
+
+  .more-card__header {
+    padding: 166px 22% 0 22%;
+    margin-bottom: 28px;
+
+    @include font-header(20px, 20px);
+    color: $txt-header-color;
+    text-align: center;
+
+    &::before {
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 61px;
+      height: 61px;
+    }
+  }
+
+  .more-card__intrigue {
+    margin: 0;
+    margin-bottom: 85px;
+    text-align: center;
+  }
 }

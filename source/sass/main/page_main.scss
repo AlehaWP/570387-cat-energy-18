@@ -3,9 +3,6 @@
 }
 
 .page-main__header {
-  margin: 0;
-  padding: 12px 22px 25px 22px;
-
   @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: inherit;
@@ -29,8 +26,6 @@
 
 @media (min-width: $tablet-width) {
   .page-main__header {
-    padding: 35px 30px;
-
     @include font-header(60px, 60px);
   }
 

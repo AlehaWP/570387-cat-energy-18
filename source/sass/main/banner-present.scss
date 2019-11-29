@@ -3,7 +3,7 @@
   flex-flow: column;
   align-items: center;
   width: 280px;
-  padding: 65px 60px 40px 60px;
+  padding: 65px 60px 43px 60px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -12,11 +12,38 @@
 .banner-present__image {
   width: 56px;
   height: 61px;
-  margin-bottom: 64px;
+  margin-bottom: 45px;
 }
 
 .banner-present__appeal {
   text-align: center;
   color: $txt-contr-color;
   background-color: transparent;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .banner-present {
+    flex-flow: row;
+    justify-content: space-between;
+    width: 708px;
+    padding: 65px 125px 60px 91px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .banner-present__image {
+    margin-bottom: 0px;
+  }
+
+  .banner-present__appeal {
+    width: 160px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner-present {
+    width: 245px;
+    padding: 65px 43px 43px;
+    //background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
 }

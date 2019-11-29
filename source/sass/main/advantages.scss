@@ -76,6 +76,7 @@
   }
 
   .advantages__list {
+    counter-reset: advantages-items;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -99,7 +100,8 @@
     }
 
     &::after {
-      content: "1";
+      counter-increment: advantages-items;
+      content: counter(advantages-items);
       position: absolute;
       z-index: -1;
       right: 0;
@@ -110,23 +112,23 @@
       background-color: transparent;
     }
 
-    &--powder {
-      &::after {
-        content: "2";
-      }
-    }
-
-    &--dining {
-      &::after {
-        content: "3";
-      }
-    }
-
-    &--clock {
-      &::after {
-        content: "4";
-      }
-    }
+    // &--powder {
+    //   &::after {
+    //     content: "2";
+    //   }
+    // }
+    //
+    // &--dining {
+    //   &::after {
+    //     content: "3";
+    //   }
+    // }
+    //
+    // &--clock {
+    //   &::after {
+    //     content: "4";
+    //   }
+    // }
   }
 }
 

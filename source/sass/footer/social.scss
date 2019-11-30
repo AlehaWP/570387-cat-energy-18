@@ -62,3 +62,10 @@
     background-image: url("../img/icon-fb.svg");
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    padding: 0;
+    border: none;
+  }
+}

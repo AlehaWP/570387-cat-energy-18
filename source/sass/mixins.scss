@@ -22,3 +22,13 @@
   width: 320px;
   margin: 0 auto;
 }
+
+@mixin container-tablet {
+  width: $tablet-width;
+  margin: 0 auto;
+}
+
+@mixin container-desktop {
+  width: $desktop-width;
+  margin: 0 auto;
+}

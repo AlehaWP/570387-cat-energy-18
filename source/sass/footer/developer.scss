@@ -26,3 +26,14 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .developer {
+    padding: 0;
+    border: none;
+  }
+
+  .developer__name {
+    margin-right: 23px;
+  }
+}

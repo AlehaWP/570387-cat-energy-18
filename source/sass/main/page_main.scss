@@ -1,7 +1,8 @@
-.page-main__header {
-  margin: 0;
-  padding: 12px 22px 25px 22px;
+.page-main {
+  background-color: inherit;
+}
 
+.page-main__header {
   @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: inherit;
@@ -21,4 +22,32 @@
 
 .page-main__form {
   padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__header {
+    @include font-header(60px, 60px);
+  }
+
+  .page-main__banner {
+    margin-bottom: 0;
+  }
+
+  .page-main__programs {
+    margin-bottom: 45px;
+  }
+
+  .page-main__advantages {
+    margin-bottom: 27px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__banner {
+    margin-bottom: 80px;
+  }
+
+  .page-main__advantages {
+    margin-bottom: 147px;
+  }
 }

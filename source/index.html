@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__top">
+      <div class="page-header__top page-header__top--index">
         <a class="page-header__logo">
           <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
         </a>
@@ -15,16 +16,16 @@
           <span class="visually-hidden">Меню</span>
         </button>
       </div>
-      <nav class="page-header__nav">
+      <nav class="page-header__nav page-header__nav--index">
         <ul class="page-header__page-list page-list">
           <li class="page-list__item">
-            <a class="page-list__item-link page-list__item-link--active">главная</a>
+            <a class="page-list__item-link page-list__item-link--active page-list__item-link--index">главная</a>
           </li>
           <li class="page-list__item">
-            <a class="page-list__item-link" href="catalog.html">каталог продукции</a>
+            <a class="page-list__item-link page-list__item-link--index" href="catalog.html">каталог продукции</a>
           </li>
           <li class="page-list__item">
-            <a class="page-list__item-link" href="form.html">подбор программы</a>
+            <a class="page-list__item-link page-list__item-link--index" href="form.html">подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -59,16 +60,16 @@
         <h2 class="advantages__header">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__list-item advantages__list-item--leaf">
-            <span class="advantages__text">Функциональное питание содержит только полезные питательные вещества.</span>
+            Функциональное питание содержит только полезные питательные вещества.
           </li>
           <li class="advantages__list-item advantages__list-item--powder">
-            <span class="advantages__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
+            Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
           </li>
           <li class="advantages__list-item advantages__list-item--dining">
-            <span class="advantages__text">Замените один-два приема обычной еды на наше функциональное питание.</span>
+            Замените один-два приема обычной еды на наше функциональное питание.
           </li>
           <li class="advantages__list-item advantages__list-item--clock">
-            <span class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</span>
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </li>
         </ul>
       </section>
@@ -86,7 +87,7 @@
               <th>затрачено времени</th>
             </tr>
           </table>
-          <p class="product-promotion__expense">затраты на питание: 15 000 руб.</p>
+          <p class="product-promotion__expense">затраты на питание:<span></span>15 000 руб.</p>
         </div>
         <div class="product-promotion__example-images">
           <img class="product-promotion__img product-promotion__img--before active" src="/img/before-mobile@1x.png" width="311" height="232" alt="Толстый кот">
@@ -100,46 +101,48 @@
       </article>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__for-partners contacts">
-        <div class="contacts__text-content contacts__text-content--main">
+      <section class="page-footer__contacts contacts">
+        <div class="contacts__text-content contacts__text-content--index">
           <h2 class="visually-hidden">Контактная информация</h2>
           <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></address>
         </div>
         <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="363" alt="Карта">
       </section>
-      <a class="page-footer__logo">
-        <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
-      </a>
-      <section class="page-footer__social social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social__list">
-          <li class="social__list-item">
-            <a class="social__list-vk" href="https://vk.ru">
-              <span class="visually-hidden">ВКонтакте</span>
-            </a>
-          </li>
-          <li class="social__list-item">
-            <a class="social__list-insta" href="https://www.instagram.com/">
-              <span class="visually-hidden">Инстаграмм</span>
-            </a>
-          </li>
-          <li class="social__list-item">
-            <a class="social__list-fb" href="https://fb.com">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="page-footer__developer developer">
-        <h2 class="visually-hidden">Разработчик</h2>
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="developer__name">HTML Academy</span>
+      <div class="page-footer__bottom">
+        <a class="page-footer__logo">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </a>
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="developer__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML академия">
-        </a>
-      </section>
+        <section class="page-footer__social social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social__list">
+            <li class="social__list-item">
+              <a class="social__list-vk" href="https://vk.ru">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-insta" href="https://www.instagram.com/">
+                <span class="visually-hidden">Инстаграмм</span>
+              </a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-fb" href="https://fb.com">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="page-footer__developer developer">
+          <h2 class="visually-hidden">Разработчик</h2>
+          <a class="developer__link developer__name" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+          </a>
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="developer__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML академия">
+          </a>
+        </section>
+      </div>
     </footer>
   </body>
 </html>

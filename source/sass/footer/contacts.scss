@@ -1,6 +1,8 @@
 .contacts {
   display: flex;
   flex-flow: column;
+
+  @include font-content(14px, 20px);
 }
 
 .contacts__text-content {
@@ -11,7 +13,7 @@
   box-sizing: content-box;
   background-color: $blocks-bg-color;
 
-  &--main {
+  &--index {
     background-color: $main-bg-color;
   }
 }
@@ -29,12 +31,67 @@
 
 .contacts__address {
   width: 53%;
-
-  @include font-content(14px, 20px);
   font-style: normal;
 }
 
 .contacts__map {
   width: 320px;
   height: 363px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__text-content {
+    align-items: stretch;
+    padding: 62px 71px;
+
+    @include font-content(16px, 20px);
+  }
+
+  .contacts__description {
+    @include font-header(20px, 25px);
+    width: 25%;
+  }
+
+  .contacts__address {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    font-style: normal;
+  }
+
+  .contacts__map {
+    width: 767px;
+    height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__text-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 110px;
+    width: 570px;
+    background-color: $main-bg-color;
+  }
+
+  .contacts__description {
+    width: 30%;
+  }
+
+  .contacts__address {
+    width: 30%;
+    text-align: left;
+  }
+
+  .contacts__map {
+    width: 1440px;
+    height: 400px;
+  }
 }

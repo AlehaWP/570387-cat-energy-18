@@ -1,8 +1,9 @@
 .block-header {
+  width: 100%;
   margin: 0;
-  margin-left: 20px;
   padding: 0;
-  padding-bottom: 25px;
+  padding-left: 20px;
+  margin-bottom: 25px;
   display: flex;
 
   @include font-header(24px, 24px);
@@ -15,5 +16,36 @@
     flex-grow: 2;
     margin-left: 24px;
     background-color: $button-bg-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .block-header {
+    padding: 0;
+
+    @include font-header(36px, 36px);
+
+    &::after {
+      margin-left: 39px;
+    }
+
+    &::before {
+      content: "";
+      margin-top: 12px;
+      height: 3px;
+      width: 25px;
+      margin-right: 39px;
+      background-color: $button-bg-color;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .block-header {
+    padding: 0;
+
+    &::before {
+      width: 71px;
+    }
   }
 }

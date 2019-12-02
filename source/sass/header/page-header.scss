@@ -58,21 +58,35 @@ $button-color: #222222;
     background-color: $button-color;
   }
 
-  &--close {
+  &--opened {
     border: none;
   }
 
-  &--close::after {
+  &--opened::after {
     transform: translateY(-1px) rotate(45deg);
   }
 
-  &--close::before {
+  &--opened::before {
     transform: translateY(-1px) rotate(-45deg);
   }
 
   &.no-js {
     display: none;
   }
+}
+
+.page-header__nav {
+  &--mobile-closed {
+    display: none;
+  }
+
+  &.no-js {
+    display: block;
+  }
+}
+
+.page-header__nav--mobile-close {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -100,6 +114,7 @@ $button-color: #222222;
 
   .page-header__nav {
     padding-top: 10px;
+    display: block;
   }
 }
 

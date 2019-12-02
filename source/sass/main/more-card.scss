@@ -9,8 +9,8 @@
 .more-card__header {
   position: relative;
   margin: 0;
-  margin-bottom: 10px;
-  padding: 83px 35px 0 37px;
+  margin-bottom: 8px;
+  padding: 81px 35px 0 37px;
 
   @include font-header(16px, 20px);
   text-transform: uppercase;
@@ -33,7 +33,7 @@
 .more-card__intrigue {
   margin: 0;
   margin-bottom: 20px;
-  padding: 0 25px;
+  padding: 0 28px;
 }
 
 @media (min-width: $tablet-width) {

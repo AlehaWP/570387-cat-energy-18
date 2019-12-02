@@ -1,6 +1,6 @@
 .catalog__header {
   margin: 0;
-  padding: 12px 22px 25px 22px;
+  padding: 15px 19px 28px 22px;
   border-bottom: 1px solid #ededed;
 }
 
@@ -12,16 +12,17 @@
 }
 
 .catalog__products-list {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .catalog__products-list-item {
-  padding: 25px 20px;
+  padding: 0 20px;
+  padding-bottom: 24px;
   border-bottom: 1px solid $border-input-color;
 }
 
 .catalog__block-header {
-  margin-bottom: 25px;
+  margin-bottom: 33px;
 }
 
 .catalog__extra {

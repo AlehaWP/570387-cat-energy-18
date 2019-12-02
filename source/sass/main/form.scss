@@ -46,6 +46,7 @@
 
 .form__lb {
   display: flex;
+  width: 100%;
   align-items: center;
   margin-bottom: 14px;
   text-transform: uppercase;
@@ -138,6 +139,7 @@
 
 .form__textarea {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .form__submit {
@@ -151,4 +153,76 @@
   @include font-content(14px, 16px);
   color: $txt-main-color;
   background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    @include font-header(16px, 18px);
+  }
+
+  .form__block-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 71px;
+  }
+
+  .form__legend br {
+    display: none;
+  }
+
+  .form__fieldset--border {
+    padding-left: 28px;
+    padding-top: 30px;
+    border: 1px solid $border-input-color;
+  }
+
+  .form__lb--check {
+    width: 40%;
+  }
+
+  .form__submit {
+    width: 45%;
+  }
+
+  .form__dictionary {
+    width: 40%;
+    text-align: left;
+
+    @include font-content(16px, 16px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__block-wrapper {
+    margin: 0 110px;
+  }
+
+  .form__description {
+      width: 100%;
+
+      @include font-header(16px, 18px);
+  }
+
+  .form__lb--radio {
+    width: 100%;
+  }
+
+  .form__block-wrapper>fieldset {
+    width: 45%;
+  }
+
+  .form__block-wrapper > .form__lb {
+    width: 45%;
+  }
+
+  .form__lb--check:not(.form__lb--radio) {
+    width: 25%;
+  }
+
+  .form__dictionary {
+    width: 50%;
+    margin-top: 15px;
+    text-align: left;
+  }
 }

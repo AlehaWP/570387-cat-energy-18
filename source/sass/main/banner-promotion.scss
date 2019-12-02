@@ -1,33 +1,36 @@
 .banner-promotion {
-  padding: 29px 19px 0 19px;
+  padding: 28px 19px 0 19px;
   color: $txt-contr-color;
   background-color: $main-bg-color;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 100% 63.4%;
+  background-size: 100% 63.5%;
 }
 
 .banner-promotion__header {
   margin: 0;
   padding: 0 16px;
-  margin-bottom: 19px;
+  margin-bottom: 24px;
 
   @include font-header(36px, 36px);
+  text-align: center;
 }
 
 .banner-promotion__appeal {
   margin: 0;
   padding: 0 16px;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 
   @include font-header(14px, 14px);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .banner-promotion__image {
   width: 280px;
   height: 280px;
+  margin-bottom: -7px;
 }
 
 @media (min-width: $tablet-width) {

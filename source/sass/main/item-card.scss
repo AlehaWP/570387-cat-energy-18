@@ -1,7 +1,7 @@
 .item-card {
   width: 280px;
   min-height: 266px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding: 20px;
 
   @include font-content(14px, 18px);
@@ -11,7 +11,7 @@
 
 .item-card__header {
   position: relative;
-  margin: 18px 30px 15px 70px;
+  margin: 15px 30px 27px 72px;
 
   @include font-header(24px, 37px);
   color: $txt-header-color;
@@ -34,7 +34,7 @@
     content: "";
     position: absolute;
     left: -63px;
-    top: -7px;
+    top: -8px;
     width: 35px;
     height: 49px;
     background-color: transparent;
@@ -46,7 +46,7 @@
 
 .item-card__header--pro {
   &::after {
-    left: -83px;
+    left: -77px;
     top: 3px;
     width: 67px;
     height: 28px;
@@ -74,7 +74,7 @@
     content: "";
     transition: width 0.3s linear 0s;
     margin: auto 0 auto 12px;
-    width: 25px;
+    width: 20px;
     height: 2px;
     background-color: $txt-header-color;
   }

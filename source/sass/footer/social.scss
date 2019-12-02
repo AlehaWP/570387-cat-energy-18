@@ -1,5 +1,5 @@
 .social {
-  padding: 19px 0;
+  padding: 21px 0;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
 }
@@ -30,7 +30,7 @@
 .social__list-vk {
   width: 21px;
   height: 12px;
-  margin-right: 34px;
+  margin-right: 35px;
   background-image: url("../img/icon-vk.svg");
 
   &:hover,
@@ -40,9 +40,9 @@
 }
 
 .social__list-insta {
-  width: 23px;
-  height: 23px;
-  margin-right: 34px;
+  width: 17px;
+  height: 17px;
+  margin-right: 40px;
   background-image: url("../img/icon-insta.svg");
 
   &:hover,
@@ -54,7 +54,7 @@
 .social__list-fb {
   width: 10px;
   height: 19px;
-  margin-right: 0;
+  margin-right: 12px;
   background-image: url("../img/icon-fb.svg");
 
   &:hover,
@@ -67,5 +67,10 @@
   .social {
     padding: 0;
     border: none;
+  }
+
+  .social__list-insta {
+    width: 23px;
+    height: 23px;
   }
 }

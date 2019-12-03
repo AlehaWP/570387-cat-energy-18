@@ -5,13 +5,13 @@
   padding-left: 20px;
   margin-bottom: 35px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   @include font-header(24px, 24px);
 
   &::after {
     content: "";
-    margin-top: 5px;
+    margin-top: 15px;
     height: 3px;
     min-width: 10%;
     flex-grow: 2;

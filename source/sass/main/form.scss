@@ -4,19 +4,29 @@
   background-color: $main-bg-color;
   display: flex;
   flex-direction: column;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
+}
+
+.form__block-wrapper {
+  margin: 0 20px;
 }
 
 .form__legend {
   margin: 0;
   padding: 0;
+  padding-left: 20px;
   width: 100%;
-  margin-bottom: 31px;
+  margin-bottom: 34px;
+}
+
+.form__fieldset--check .form__legend{
+  margin-bottom: 40px;
 }
 
 .form__description {
   padding: 0;
   margin: 0;
+  padding-right: 50px;
   margin-bottom: 38px;
 
   @include font-header(14px, 18px);
@@ -28,7 +38,7 @@
   padding: 0;
   display: flex;
   flex-flow: column;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   width: 100%;
   border: none;
 
@@ -37,10 +47,6 @@
     border-top: 1px solid $border-block-color;
     border-bottom: 1px solid $border-block-color;
     margin-bottom: 28px;
-  }
-
-  &--check {
-    padding-top: 15px;
   }
 }
 
@@ -53,7 +59,7 @@
   cursor: pointer;
 
   &--check {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
   &--check:active {
@@ -66,6 +72,7 @@
   padding: 12px 16px;
   margin-left: 15px;
   border: 1px solid rgba($border-input-color, 0.5);
+  text-transform: uppercase;
 
   &:hover,
   &:focus {
@@ -87,7 +94,7 @@
   z-index: 0;
   width: 12px;
   height: 12px;
-  margin-left: 10px;
+  margin-left: 13px;
   margin-right: 20px;
   cursor: inherit;
 
@@ -138,8 +145,12 @@
 }
 
 .form__textarea {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 100%;
+  height: 150px;
+  padding: 15px 0 0 15px;
+  border: 1px solid $border-input-color;
+  text-transform: uppercase;
 }
 
 .form__submit {

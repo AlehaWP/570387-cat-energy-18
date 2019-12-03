@@ -3,10 +3,12 @@
   flex-flow: column;
   align-items: center;
   width: 280px;
-  padding: 65px 60px 43px 60px;
+  padding: 65px 60px 26px 60px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
+
+  @include font-content(16px, 20px);
 }
 
 .banner-present__image {

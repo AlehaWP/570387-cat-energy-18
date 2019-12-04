@@ -96,11 +96,11 @@
   background-color: transparent;
   width: 311px;
   height: 232px;
-}
-
-.product-promotion__img.active {
-  display: block;
   margin-bottom: 35px;
+
+  &.active {
+    display: block;
+  }
 }
 
 .product-promotion__img-toggle-block {
@@ -151,8 +151,8 @@
   .product-promotion__text-content {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 30px;
-    margin-bottom: 221px;
+    padding: 0 28px;
+    margin-bottom: 230px;
     background-color: inherit;
   }
 
@@ -164,12 +164,17 @@
 
   .product-promotion__description {
     padding-right: 20px;
-    margin-bottom: 56px;
+    margin-bottom: 49px;
   }
 
   .product-promotion__progress {
-    width: 53%;
+    width: 51.5%;
     margin-right: auto;
+  }
+
+  .product-promotion__progress-value td {
+    padding-bottom: 18px;
+    @include font-header(30px, 37px);
   }
 
   .product-promotion__progress-header th {
@@ -188,15 +193,16 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+    margin-right: 5px;
     padding: 0;
-    padding-top: 13px;
+    padding-top: 9px;
     text-align: right;
 
-    @include font-header(20px, 20px);
+    @include font-header(20px, 30px);
   }
 
   .product-promotion__example-images {
-    padding: 369px 100px 68px 100px;
+    padding: 364px 100px 68px 98px;
     position: relative;
     background-color: $blocks-bg-color;
   }
@@ -204,7 +210,7 @@
   .product-promotion__img {
     position: absolute;
     top: 0;
-    transform: translate(-80px, -200px);
+    transform: translate(-45px, -170px);
     width: 596px;
     height: 517px;
   }
@@ -212,18 +218,21 @@
   .product-promotion__img-toggle-block {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0;
     margin: 0;
   }
 
   .product-promotion__img-toggle-caption {
     padding: 0;
-    padding-bottom: 6px;
+    padding-bottom: 0;
     border-bottom: 1px dotted $border-hover-color;
+
+    @include font-header(20px, 30px);
   }
 
   .product-promotion__img-toggle {
-    margin: 7px 21px;
+    margin: 0 21px 0 21px;
     flex-grow: 1;
     height: 6px;
     background-color: $toogle-color;
@@ -284,11 +293,12 @@
   }
 
   .product-promotion__progress {
-    width: 82%;
+    width: 84%;
+    margin-bottom: 38px;
   }
 
   .product-promotion__expense {
-    width: 82%;
+    width: 75%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -296,8 +306,14 @@
 
   .product-promotion__example-images {
     width: 52%;
-    padding: 369px 0 68px 45px;
+    padding: 363px 0 68px 66px;
     position: relative;
     background-color: $blocks-bg-color;
+  }
+
+  .product-promotion__img {
+    position: absolute;
+    top: 0;
+    transform: translate(-73px, -190px);
   }
 }

@@ -37,7 +37,7 @@
   .banner-promotion {
     position: relative;
     z-index: 0;
-    padding: 40px 230px 530px 120px;
+    padding: 35px 230px 530px 115px;
     color: $txt-header-color;
     background-color: transparent;
     background-image: none;
@@ -45,23 +45,25 @@
 
   .banner-promotion__header {
     padding: 0;
-    margin-bottom: 33px;
+    margin-bottom: 40px;
 
     @include font-header(60px, 60px);
+    text-align: left;
   }
 
   .banner-promotion__appeal {
     padding: 0;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
 
     @include font-header(20px, 20px);
+    text-align: left;
   }
 
   .banner-promotion__image {
     position: absolute;
     z-index: -1;
-    top: 230px;
-    left: 100px;
+    top: 235px;
+    left: 70px;
     width: 709px;
     height: 609px;
   }
@@ -78,10 +80,10 @@
 @media (min-width: $desktop-width) {
   .banner-promotion {
     margin-top: -165px;
-    padding: 226px 835px 188px 191px;
+    padding: 225px 835px 188px 190px;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-position: 100%;
     background-size: 50% auto;
   }
 

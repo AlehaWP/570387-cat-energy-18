@@ -42,7 +42,7 @@
 @media (min-width: $tablet-width) {
   .contacts__text-content {
     align-items: stretch;
-    padding: 62px 71px;
+    padding: 50px 71px 60px 71px;
 
     @include font-content(16px, 20px);
   }
@@ -76,8 +76,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding: 60px 78px;
     left: 110px;
-    width: 570px;
+    width: 430px;
     background-color: $main-bg-color;
   }
 
@@ -86,7 +87,7 @@
   }
 
   .contacts__address {
-    width: 30%;
+    width: 42%;
     text-align: left;
   }
 

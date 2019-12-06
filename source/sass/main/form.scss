@@ -168,6 +168,7 @@
 @media (min-width: $tablet-width) {
   .form {
     padding-top: 25px;
+    margin-bottom: 18px;
 
     @include font-header(20px, 20px);
   }
@@ -183,8 +184,13 @@
     margin-bottom: 21px;
 
     &--check {
+      width: 46%;
+      margin-bottom: 30px;
+    }
+
+    &--radio {
       margin-bottom: 14px;
-      width: 50%;
+      width: 100%;
     }
   }
 
@@ -193,12 +199,14 @@
   }
 
   .form__fieldset {
-    //margin-bottom: 50px;
-
     &--border {
       margin: 40px 0;
       padding: 25px 0 10px 28px;
       border: 1px solid $border-input-color;
+    }
+
+    &--check {
+      margin-bottom: 0;
     }
   }
 
@@ -240,10 +248,19 @@
 
   .form__textarea {
     height: 175px;
+    margin-bottom: 25px;
+  }
+
+  .form__fieldset--check .form__legend {
+    margin-bottom: 55px;
   }
 
   .form__submit {
     width: 45%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @include font-header(20px, 20px);
   }
 
   .form__dictionary {

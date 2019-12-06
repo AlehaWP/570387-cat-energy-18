@@ -28,6 +28,10 @@
     padding: 0 30px;
 
     @include font-header(60px, 60px);
+
+    &--form {
+      margin: 32px 0;
+    }
   }
 
   .page-main__banner {
@@ -50,6 +54,10 @@
 @media (min-width: $desktop-width) {
   .page-main__header {
     padding: 0 110px;
+
+    &--form {
+
+    }
   }
 
   .page-main__banner {

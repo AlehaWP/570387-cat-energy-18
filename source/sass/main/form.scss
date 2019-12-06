@@ -105,7 +105,7 @@
     background-color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-15px, -15px);
+    transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
     border: 1px solid $border-input-color;
@@ -125,7 +125,7 @@
     left: 50%;
     width: 22px;
     height: 17px;
-    transform: translate(-11px, -8px);
+    transform: translate(-50%, -50%);
     background-color: transparent;
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
@@ -136,7 +136,6 @@
   }
 
   &--radio:checked::after {
-    transform: translate(-6px, -6px);
     width: 12px;
     height: 12px;
     background-color: $button-bg-color;
@@ -168,28 +167,79 @@
 
 @media (min-width: $tablet-width) {
   .form {
-    @include font-header(16px, 18px);
+    padding-top: 25px;
+
+    @include font-header(20px, 20px);
+  }
+
+  .form__description {
+    width: 60%;
+    margin-bottom: 65px;
+
+    @include font-header(20px, 30px);
+  }
+
+  .form__lb{
+    margin-bottom: 21px;
+
+    &--check {
+      margin-bottom: 14px;
+      width: 50%;
+    }
+  }
+
+  .form__text {
+    padding: 13px 16px;
+  }
+
+  .form__fieldset {
+    //margin-bottom: 50px;
+
+    &--border {
+      margin: 40px 0;
+      padding: 25px 0 10px 28px;
+      border: 1px solid $border-input-color;
+    }
+  }
+
+  .form__check {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    margin-right: 20px;
+    cursor: inherit;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--radio:checked::after {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   .form__block-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 71px;
+    margin: 0 70px 30px 65px;
+  }
+
+  .form__legend {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 75px;
   }
 
   .form__legend br {
     display: none;
   }
 
-  .form__fieldset--border {
-    padding-left: 28px;
-    padding-top: 30px;
-    border: 1px solid $border-input-color;
-  }
-
-  .form__lb--check {
-    width: 40%;
+  .form__textarea {
+    height: 175px;
   }
 
   .form__submit {

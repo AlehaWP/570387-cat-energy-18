@@ -42,7 +42,7 @@
 @media (min-width: $tablet-width) {
   .contacts__text-content {
     align-items: stretch;
-    padding: 50px 71px 60px 71px;
+    padding: 65px 71px 60px 71px;
 
     @include font-content(16px, 20px);
   }

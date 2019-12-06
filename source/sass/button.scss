@@ -36,3 +36,11 @@
     background-color: #ebebeb;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 10px;
+
+    @include font-header(16px, 20px);
+  }
+}

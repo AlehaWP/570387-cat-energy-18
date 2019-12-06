@@ -27,15 +27,16 @@
     @include font-header(36px, 36px);
 
     &::after {
-      margin-left: 39px;
+      margin-left: 37px;
+      margin-top: 21px;
     }
 
     &::before {
       content: "";
-      margin-top: 12px;
+      margin-top: 21px;
       height: 3px;
-      width: 30px;
-      margin-right: 39px;
+      width: 27px;
+      margin-right: 38px;
       background-color: $button-bg-color;
     }
   }

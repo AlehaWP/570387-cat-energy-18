@@ -1,5 +1,6 @@
 .product-promotion {
-  padding: 16px 0;
+  padding: 0;
+  padding-top: 16px;
 
   @include font-content(14px, 18px);
   color: $txt-main-color;
@@ -104,7 +105,9 @@
 }
 
 .product-promotion__img-toggle-block {
-  margin: 0 0 20px 47px;
+  margin: 0;
+  margin-left: 47px;
+  padding-bottom: 36px;
 }
 
 .product-promotion__img-toggle-caption {

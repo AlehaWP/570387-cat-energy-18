@@ -2,6 +2,7 @@ $button-color: #222222;
 
 .page-header {
   padding-top: 11px;
+  border-bottom: 1px solid $border-block-color;
 
   @include font-menu(20px, 22px);
   color: $txt-header-color;
@@ -93,6 +94,7 @@ $button-color: #222222;
   .page-header {
     display: flex;
     padding: 24px 30px;
+    border: none;
   }
 
   .page-header__top {

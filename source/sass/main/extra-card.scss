@@ -1,6 +1,7 @@
 .extra-card {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 0 17px;
 
   @include font-content(12px, 16px);
   color: $txt-main-color;
@@ -45,56 +46,69 @@
 @media (min-width: $tablet-width) {
   .extra-card {
     justify-content: space-between;
-    padding: 0;
+    padding: 26px 38px 28px;
     background-color: transparent;
 
     @include font-content(16px, 16px);
   }
 
-  .extra-card__txt-content {
-    width: 100%;
-  }
-
   .extra-card__header {
     margin: 0;
-    margin-bottom: 23px;
-    padding: 0 10px;
+    margin-bottom: 24px;
+    padding: 0;
     width: auto;
-    text-align: center;
 
     @include font-header(20px, 20px);
   }
 
   .extra-card__options-item {
-    width: 220px;
+    width: 228px;
     margin: 0;
+    margin-top: 5px;
   }
 
   .extra-card__option,
   .extra-card__value {
     padding: 0;
-    flex-grow: 1;
     border: none;
+    text-align: right;
+  }
+
+  .extra-card__option {
+    padding-right: 4px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .extra-card {
-    padding: 0;
-    justify-content: space-between;
+    padding: 17px 0 14px;
+    justify-content: flex-start;
     align-items: center;
   }
 
   .extra-card__header {
-    width: 295px;
+    margin: 0;
+    width: 270px;
     text-align: left;
   }
 
   .extra-card__options-item {
-    width: 295px;
+    min-width: 287px;
+    margin-left: auto;
+  }
+
+  .extra-card__option {
+    text-align: left;
+    margin-right: auto;
+  }
+
+  .extra-card__value {
+    width: 45px;
+    text-align: left;
   }
 
   .extra-card__buy {
     width: 245px;
+    margin-left: 36px;
   }
 }

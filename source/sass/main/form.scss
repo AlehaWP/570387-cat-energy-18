@@ -145,20 +145,6 @@
     @include font-header(20px, 30px);
   }
 
-  .form__label {
-    margin-bottom: 21px;
-
-    &--select {
-      width: 46%;
-      margin-bottom: 30px;
-    }
-
-    &--radiobutton {
-      margin-bottom: 14px;
-      width: 100%;
-    }
-  }
-
   .form__text-in {
     padding: 13px 16px;
   }
@@ -172,24 +158,6 @@
 
     &--extra-goods {
       margin-bottom: 0;
-    }
-  }
-
-  .form__check-in {
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    margin-right: 20px;
-    cursor: inherit;
-
-    &::before {
-      width: 40px;
-      height: 40px;
-    }
-
-    &--radiobutton:checked::after {
-      width: 18px;
-      height: 18px;
     }
   }
 
@@ -214,10 +182,6 @@
   .form__textaria {
     height: 175px;
     margin-bottom: 25px;
-  }
-
-  .form__fieldset--extra-goods .form__legend {
-    margin-bottom: 55px;
   }
 
   .form__submit {
@@ -245,22 +209,6 @@
     width: 100%;
 
     @include font-header(16px, 18px);
-  }
-
-  .form__label--radiobutton {
-    width: 100%;
-  }
-
-  .form__block-wrapper > fieldset {
-    width: 45%;
-  }
-
-  .form__block-wrapper > .form__label {
-    width: 45%;
-  }
-
-  .form__label--select:not(.form__label--radiobutton) {
-    width: 25%;
   }
 
   .form__dictionary {

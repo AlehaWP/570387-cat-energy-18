@@ -79,7 +79,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .select__label {
+    padding: 60px;
 
+    @include font-header(20px, 20px);
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+
+    &::after {
+      left: 20px;
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {

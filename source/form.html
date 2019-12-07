@@ -30,68 +30,77 @@
         </ul>
       </nav>
     </header>
-    <section class="page-main">
+    <main class="page-main">
       <h1 class="page-main__header page-main__header--form">Подбор программы</h1>
       <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form__block-wrapper">
-          <p class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
-          <fieldset class="form__fieldset form__fieldset--border-bottom">
-            <legend class="visually-hidden">Данные кота</legend>
-            <label class="form__lb">имя:*
-              <input class="form__text" type="text" name="cat-name" placeholder="БАРСИК" required>
-            </label>
-            <label class="form__lb">вес (кг):*
-              <input class="form__text" type="number" name="cat-weight" placeholder="7" required>
-            </label>
-            <label class="form__lb">возраст (лет):
-              <input class="form__text" type="number" name="cat-age" placeholder="7">
-            </label>
-          </fieldset>
-          <fieldset class="form__fieldset form__fieldset--border">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <label class="form__lb form__lb--check form__lb--radio">
-              <input class="form__check form__check--radio" type="radio" name="program" value="loss-weight" checked>похудение
-            </label>
-            <label class="form__lb form__lb--check form__lb--radio">
-              <input class="form__check form__check--radio" type="radio" name="program" value="up-weight">набор массы
-            </label>
-            <label class="form__lb form__lb--check form__lb--radio">
-              <input class="form__check form__check--radio" type="radio" name="program" value="no-idea">не знаю (нужен ваш совет)
-            </label>
-          </fieldset>
-        </div>
-        <fieldset class="form__fieldset">
-          <legend class="form__legend block-header">Контактные данные </br>(владельца кота)</legend>
+        <p class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <fieldset class="form__fieldset form__fieldset--cat">
+          <legend class="visually-hidden">Данные кота</legend>
+          <label class="form__label">имя:*
+            <input class="form__text-in" type="text" name="cat-name" placeholder="БАРСИК" required>
+          </label>
+          <label class="form__label">вес (кг):*
+            <input class="form__text-in" type="number" name="cat-weight" placeholder="7" required>
+          </label>
+          <label class="form__label">возраст (лет):
+            <input class="form__text-in" type="number" name="cat-age" placeholder="7">
+          </label>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--programm">
+          <legend class="visually-hidden">Выбор программы</legend>
+          <ul class="form__list-radio select">
+            <li class="select__item select__item--radio">
+              <input class="select__check-in" type="radio" name="program" value="loss-weight" id="radio-1" checked>
+              <label class="select__label select__label--radio" for="radio-1">похудение</label>
+            </li class="select__item select__item--radio">
+            <li class="select__item">
+              <input class="select__check-in" type="radio" name="program" value="up-weight" id="radio-2">
+              <label class="select__label select__label--radio" for="radio-2">набор массы</label>
+            </li>
+            <li class="select__item select__item--radio">
+              <input class="select__check-in" type="radio" name="program" value="no-idea" id="radio-3">
+              <label class="select__label select__label--radio" for="radio-3">не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <legend class="form__legend form__legend--contacts block-header">Контактные данные </br>(владельца кота)</legend>
           <div class="form__block-wrapper">
-            <label class="form__lb" lang="en">e-mail:*
-              <input class="form__text form__text--email" type="email" name="sender-email" placeholder="kuklachev@gmail.com" required>
+            <label class="form__label" lang="en">e-mail:*
+              <input class="form__text-in form__text-in--email" type="email" name="sender-email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="form__lb">телефон:*
-              <input class="form__text form__text--tel" type="tel" name="sender-tel" placeholder="8 (960) 900-60-90" required>
+            <label class="form__label">телефон:*
+              <input class="form__text-in form__text-in--tel" type="tel" name="sender-tel" placeholder="8 (960) 900-60-90" required>
             </label>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <legend class="form__legend block-header">Комментарий</legend>
+        <fieldset class="form__fieldset form__fieldset--comment">
+          <legend class="form__legend form__legend--comment block-header">Комментарий</legend>
           <div class="form__block-wrapper">
             <textarea class="form__textarea" name="name" rows="7" cols="40" placeholder="расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--check">
-          <legend class="form__legend block-header">Дополнительно</legend>
+        <fieldset class="form__fieldset form__fieldset--extra-goods">
+          <legend class="form__legend form__legend--extra-goods block-header">Дополнительно</legend>
           <div class="form__block-wrapper">
-            <label class="form__lb form__lb--check">
-              <input class="form__check" type="checkbox" name="add-on" value="no-shugar" checked>сахарозаменитель
-            </label>
-            <label class="form__lb form__lb--check">
-              <input class="form__check" type="checkbox" name="add-on" value="water">питьевая вода
-            </label>
-            <label class="form__lb form__lb--check">
-              <input class="form__check" type="checkbox" name="add-on" value="water">молоко
-            </label>
-            <label class="form__lb form__lb--check">
-              <input class="form__check" type="checkbox" name="add-on" value="vitamins">витамины
-            </label>
+            <ul class="form__list-checkbox select">
+              <li class="select__item select__item--checkbox">
+                <input class="select__check-in" type="checkbox" name="add-on" value="no-shugar" id="check-1" checked>
+                <label class="select__label select__label--checkbox" for="check-1">сахарозаменитель</label>
+              </li>
+              <li class="select__item select__item--checkbox">
+                <input class="select__check-in" type="checkbox" name="add-on" value="water" id="check-2">
+                <label class="select__label select__label--checkbox" for="check-2">питьевая вода</label>
+              </li>
+              <li class="select__item select__item--checkbox">
+                <input class="select__check-in" type="checkbox" name="add-on" value="water" id="check-3">
+                <label class="select__label select__label--checkbox" for="check-3">молоко</label>
+              </li>
+              <li class="select__item select__item--checkbox" class="select__item">
+                <input class="select__check-in" type="checkbox" name="add-on" value="vitamins" id="check-4">
+                <label class="select__label select__label--checkbox" for="check-4">витамины</label>
+              </li>
+            </ul>
           </div>
         </fieldset>
         <div class="form__block-wrapper">
@@ -99,7 +108,7 @@
           <p class="form__dictionary">* — Обязательные поля</p>
         </div>
       </form>
-    </section>
+    </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
         <div class="contacts__text-content">

@@ -127,5 +127,10 @@
 }
 
 @media (min-width: $desktop-width) {
-
+  .select {
+    padding: 33px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

@@ -53,10 +53,6 @@
   }
 }
 
-.form__list-radio {
-
-}
-
 .form__legend {
   margin: 0;
   padding: 0;
@@ -165,7 +161,6 @@
     width: auto;
 
     &--cat {
-      margin-bottom: 55px;
       margin: 0 71px 55px;
       padding: 0;
     }
@@ -193,6 +188,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
+
     &--contacts {
       margin-bottom: 75px;
     }

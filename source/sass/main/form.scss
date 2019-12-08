@@ -7,6 +7,10 @@
   margin-bottom: 30px;
 }
 
+.form__block-wrapper {
+  padding: 0 20px;
+}
+
 .form__description {
   margin: 0;
   margin-bottom: 38px;
@@ -72,11 +76,6 @@
   }
 }
 
-.form__block-wrapper {
-  padding: 0 20px;
-}
-
-
 .form__label {
   display: flex;
   width: 100%;
@@ -138,62 +137,98 @@
     @include font-header(20px, 20px);
   }
 
-  .form__description {
-    width: 60%;
-    margin-bottom: 65px;
-
-    @include font-header(20px, 30px);
-  }
-
-  .form__text-in {
-    padding: 13px 16px;
-  }
-
-  .form__fieldset {
-    &--programm {
-      margin: 40px 0;
-      padding: 25px 0 10px 28px;
-      border: 1px solid $border-input-color;
-    }
-
-    &--extra-goods {
-      margin-bottom: 0;
-    }
-  }
-
   .form__block-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 70px 30px 65px;
+    padding: 0 71px;
+  }
+
+  .form__description {
+    width: 60%;
+    margin-bottom: 65px;
+    padding: 0 50px 0 70px;
+
+    @include font-header(20px, 30px);
+  }
+
+  .form__label {
+    margin-bottom: 20px;
+  }
+
+  .form__text-in {
+    margin-left: 19px;
+    padding: 13px 16px;
+  }
+
+  .form__fieldset {
+    width: auto;
+
+    &--cat {
+      margin-bottom: 55px;
+      margin: 0 71px 55px;
+      padding: 0;
+    }
+
+    &--programm {
+      margin: 0 71px 78px;
+      padding: 0 25px;
+      border: 1px solid $border-block-color;
+    }
+
+    &--contacts {
+      margin-bottom: 47px;
+    }
+
+    &--comment {
+      margin-bottom: 40px;
+    }
+
+    &--extra-goods {
+      margin-bottom: 33px;
+    }
   }
 
   .form__legend {
     margin: 0;
     padding: 0;
     width: 100%;
-    margin-bottom: 75px;
+    &--contacts {
+      margin-bottom: 75px;
+    }
+
+    &--comment {
+      margin-bottom: 75px;
+    }
+
+    &--extra-goods {
+      margin-bottom: 33px;
+    }
   }
 
   .form__legend br {
     display: none;
   }
 
-  .form__textaria {
+  .form__textarea {
     height: 175px;
     margin-bottom: 25px;
   }
 
   .form__submit {
-    width: 45%;
+    width: 45.5%;
     padding-top: 14px;
     padding-bottom: 14px;
+    margin-bottom: 57px;
 
     @include font-header(20px, 20px);
   }
 
   .form__dictionary {
-    width: 40%;
+    width: 45%;
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
     text-align: left;
 
     @include font-content(16px, 16px);

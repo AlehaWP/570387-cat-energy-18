@@ -1,4 +1,5 @@
 .select {
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 25px 0;
@@ -79,8 +80,36 @@
 }
 
 @media (min-width: $tablet-width) {
+  .select {
+    padding: 33px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .select__item {
+    &--radio {
+      width: 100%;
+      margin-bottom: 33px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &--checkbox {
+      width: 45%;
+      margin-bottom: 0;
+
+      &:nth-child(2n):not(:last-child) {
+        margin-bottom: 52px;
+      }
+    }
+  }
+
+
   .select__label {
-    padding: 60px;
+    padding-left: 60px;
 
     @include font-header(20px, 20px);
 

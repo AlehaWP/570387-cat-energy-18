@@ -100,13 +100,14 @@
     &--checkbox {
       width: 45%;
       margin-bottom: 0;
-
-      &:nth-child(2n):not(:last-child) {
-        margin-bottom: 52px;
-      }
     }
   }
 
+  @media (max-width: $desktop-width) {
+    .select__item--checkbox :nth-child(2n):not(:last-child) {
+      margin-bottom: 52px;
+    }
+  }
 
   .select__label {
     padding-left: 60px;
@@ -127,10 +128,12 @@
 }
 
 @media (min-width: $desktop-width) {
-  .select {
-    padding: 33px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .select__item--checkbox {
+    width: 20.5%;
+    margin-bottom: 0;
+
+    &:nth-child(4n):not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 }

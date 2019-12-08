@@ -8,6 +8,7 @@
 }
 
 .form__block-wrapper {
+  width: 100%;
   padding: 0 20px;
 }
 
@@ -29,7 +30,7 @@
   border: none;
 
   &--cat {
-    margin-bottom: 14px;
+    margin-bottom: 28px;
     padding: 0 20px;
   }
 
@@ -41,7 +42,7 @@
   }
 
   &--contacts {
-    margin-bottom: 15px;
+    margin-bottom: 29px;
   }
 
   &--comment {
@@ -79,6 +80,10 @@
   margin-bottom: 14px;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__text-in {
@@ -150,6 +155,10 @@
 
   .form__label {
     margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .form__text-in {
@@ -158,10 +167,8 @@
   }
 
   .form__fieldset {
-    width: auto;
-
     &--cat {
-      margin: 0 71px 55px;
+      margin: 0 71px 75px;
       padding: 0;
     }
 
@@ -172,7 +179,7 @@
     }
 
     &--contacts {
-      margin-bottom: 47px;
+      margin-bottom: 67px;
     }
 
     &--comment {
@@ -232,19 +239,75 @@
 }
 
 @media (min-width: $desktop-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .form__block-wrapper {
-    margin: 0 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 110px;
   }
 
   .form__description {
     width: 100%;
+    padding: 0;
+    margin: 0 110px 65px;
+    padding-right: 60%;
+  }
 
-    @include font-header(16px, 18px);
+  .form__fieldset {
+    &--cat {
+      width: 39.7%;
+      margin: 0;
+      padding: 0;
+      margin-left: 110px;
+    }
+
+    &--programm {
+      width: 39.7%;
+      margin: 0;
+      margin-right: 110px;
+      margin-bottom: 72px;
+      padding: 0 25px;
+      border: 1px solid $border-block-color;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    &--comment {
+      margin-bottom: 42px;
+    }
+
+    &--extra-goods {
+      margin-bottom: 40px;
+    }
+  }
+
+  .form__label {
+    &--tel,
+    &--email {
+      width: 47%;
+      margin-bottom: 0;
+    }
+  }
+
+  .form__submit {
+    width: 46.5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 65px;
+
+    @include font-header(20px, 20px);
   }
 
   .form__dictionary {
-    width: 50%;
-    margin-top: 15px;
-    text-align: left;
+    width: 47%;
   }
 }

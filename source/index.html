@@ -10,7 +10,11 @@
     <header class="page-header">
       <div class="page-header__top page-header__top--index">
         <a class="page-header__logo">
-          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desctop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+          </picture>
         </a>
         <button type="button" class="page-header__menu-toggle page-header__menu-toggle--opened no-js">
           <span class="visually-hidden">Меню</span>
@@ -34,7 +38,11 @@
       <article class="page-main__banner banner-promotion">
         <h1 class="banner-promotion__header">Функциональное питание для котов</h1>
         <p class="banner-promotion__appeal">Занялся собой? Займись котом!</p>
-        <img class="banner-promotion__image" src="img\index-can-mobile@1x.png" width="280" height="270" alt="100% натуральный куринный корм">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img class="banner-promotion__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="100% натуральный куринный корм">
+        </picture>
         <a class="banner-promotion__show-programs button button--green" href="#">Подобрать программу</a>
       </article>
       <section class="page-main__programs our-programs">
@@ -90,8 +98,16 @@
           <p class="product-promotion__expense">затраты на питание:<span></span>15 000 руб.</p>
         </div>
         <div class="product-promotion__example-images">
-          <img class="product-promotion__img product-promotion__img--before active" src="/img/before-mobile@1x.png" width="311" height="232" alt="Толстый кот">
-          <img class="product-promotion__img product-promotion__img--after" src="/img/after-mobile@1x.png" width="311" height="232" alt="Худой кот">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+            <img class="product-promotion__img product-promotion__img--before active" src="img/before-mobile@1x.png" width="311" height="232" alt="Толстый кот">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+            <img class="product-promotion__img product-promotion__img--after" src="img/after-mobile@1x.png" width="311" height="232" alt="Худой кот">
+          </picture>
           <div class="product-promotion__img-toggle-block">
             <span class="product-promotion__img-toggle-caption">Было</span>
             <span class="product-promotion__img-toggle before"></span>
@@ -107,7 +123,11 @@
           <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></address>
         </div>
-        <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="363" alt="Карта">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+          <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="363" alt="Карта">
+        </picture>
       </section>
       <div class="page-footer__bottom">
         <a class="page-footer__logo">

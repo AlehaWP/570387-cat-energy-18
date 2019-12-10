@@ -105,12 +105,12 @@
 
 @media (min-width: $desktop-width) {
   .catalog__header {
-    padding: 23px 110px;
+    padding: 23px 40px;
   }
 
   .catalog__products-list {
     margin-bottom: 75px;
-    padding: 0 110px;
+    padding: 0 40px;
     justify-content: flex-start;
   }
 
@@ -131,10 +131,10 @@
   }
 
   .catalog__extra-list {
-    width: 1005px;
+    width: 935px;
     margin: 0;
     padding: 0;
-    padding-left: 110px;
+    padding-left: 40px;
   }
 
   .catalog__extra-item {
@@ -147,6 +147,6 @@
   }
 
   .catalog__banner {
-    margin-right: 110px;
+    margin-right: 40px;
   }
 }

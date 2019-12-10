@@ -272,7 +272,7 @@
   .product-promotion {
     position: relative;
     display: flex;
-    padding: 0 110px;
+    padding: 0 40px;
     background-color: $blocks-bg-color;
   }
 
@@ -318,6 +318,6 @@
   .product-promotion__img {
     position: absolute;
     top: 0;
-    transform: translate(-73px, -190px);
+    transform: translate(-60px, -185px) rotate(3deg);
   }
 }

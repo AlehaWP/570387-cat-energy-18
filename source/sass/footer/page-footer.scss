@@ -5,12 +5,12 @@
 }
 
 .page-footer__contacts {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .page-footer__logo {
   display: block;
-  margin: 0 96px 31px 96px;
+  margin: 0 96px 25px 96px;
   padding: 0;
 }
 
@@ -43,7 +43,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 58px 30px;
+    padding: 54px 30px;
   }
 
   .page-footer__logo {
@@ -51,7 +51,6 @@
     padding: 0;
   }
 
-  .page-footer__social,
   .page-footer__developer {
     margin: 0;
   }
@@ -59,6 +58,6 @@
 
 @media (min-width: $desktop-width) {
   .page-footer__bottom {
-    padding: 58px 110px;
+    padding: 50px 40px;
   }
 }

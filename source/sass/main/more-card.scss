@@ -1,5 +1,7 @@
 .more-card {
   width: 100%;
+  padding: 0 19px;
+  padding-bottom: 22px;
 
   @include font-content(12px, 16px);
   color: $txt-main-color;
@@ -9,8 +11,8 @@
 .more-card__header {
   position: relative;
   margin: 0;
-  margin-bottom: 10px;
-  padding: 83px 35px 0 37px;
+  margin-bottom: 8px;
+  padding: 80px 35px 0 40px;
 
   @include font-header(16px, 20px);
   text-transform: uppercase;
@@ -33,18 +35,20 @@
 .more-card__intrigue {
   margin: 0;
   margin-bottom: 20px;
-  padding: 0 25px;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .more-card {
     padding: 0 38px 40px 38px;
     border: 1px solid $border-input-color;
+
+    @include font-content(16px, 16px);
   }
 
   .more-card__header {
-    padding: 166px 21px 0 10px;
-    margin-bottom: 28px;
+    padding: 165px 45px 0;
+    margin-bottom: 29px;
 
     @include font-header(20px, 20px);
     color: $txt-header-color;
@@ -52,8 +56,6 @@
 
     &::before {
       top: 55px;
-      left: 50%;
-      transform: translateX(-50%);
       width: 61px;
       height: 61px;
     }
@@ -61,7 +63,18 @@
 
   .more-card__intrigue {
     margin: 0;
+    padding: 0 35px;
     margin-bottom: 85px;
     text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-card__header {
+    padding: 165px 0 0;
+  }
+
+  .more-card__intrigue {
+    padding: 0;
   }
 }

@@ -3,30 +3,35 @@
 }
 
 .page-main__header {
+  margin: 0;
+  padding: 15px 19px 28px 22px;
+
   @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: inherit;
 }
 
 .page-main__banner {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .page-main__programs {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .page-main__advantages {
   margin-bottom: 42px;
 }
 
-.page-main__form {
-  padding: 0 20px;
-}
-
 @media (min-width: $tablet-width) {
   .page-main__header {
+    padding: 0 30px;
+
     @include font-header(60px, 60px);
+
+    &--form {
+      margin: 32px 0;
+    }
   }
 
   .page-main__banner {
@@ -34,20 +39,36 @@
   }
 
   .page-main__programs {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
 
   .page-main__advantages {
     margin-bottom: 27px;
   }
+
+  .page-main__form {
+    padding: 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .page-main__header {
+    padding: 0 40px;
+
+    &--form {
+      margin: 25px 0 30px;
+    }
+  }
+
   .page-main__banner {
     margin-bottom: 80px;
   }
 
+  .page-main__programs {
+    margin-bottom: 74px;
+  }
+
   .page-main__advantages {
-    margin-bottom: 147px;
+    margin-bottom: 160px;
   }
 }

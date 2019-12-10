@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 12px;
+  padding: 11px;
   border: none;
 
   @include font-header(14px, 18px);
@@ -34,5 +34,13 @@
   &--gray:active {
     color: rgba(#444444, 0.3);
     background-color: #ebebeb;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 10px;
+
+    @include font-header(16px, 20px);
   }
 }

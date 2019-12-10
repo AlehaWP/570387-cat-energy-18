@@ -3,14 +3,15 @@
   margin: 0;
   padding: 0;
   padding-left: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   display: flex;
+  align-items: flex-start;
 
   @include font-header(24px, 24px);
 
   &::after {
     content: "";
-    margin-top: 12px;
+    margin-top: 15px;
     height: 3px;
     min-width: 10%;
     flex-grow: 2;
@@ -26,15 +27,16 @@
     @include font-header(36px, 36px);
 
     &::after {
-      margin-left: 39px;
+      margin-left: 37px;
+      margin-top: 21px;
     }
 
     &::before {
       content: "";
-      margin-top: 12px;
+      margin-top: 21px;
       height: 3px;
-      width: 25px;
-      margin-right: 39px;
+      width: 27px;
+      margin-right: 38px;
       background-color: $button-bg-color;
     }
   }
@@ -45,7 +47,7 @@
     padding: 0;
 
     &::before {
-      width: 71px;
+      width: 1px;
     }
   }
 }

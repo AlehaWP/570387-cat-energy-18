@@ -98,13 +98,13 @@
     }
 
     &--checkbox {
-      width: 45%;
       margin-bottom: 0;
+      width: 45%;
     }
   }
 
   @media (max-width: $desktop-width) {
-    .select__item--checkbox :nth-child(2n):not(:last-child) {
+    .select__item--checkbox:nth-child(2n):not(:last-child) {
       margin-bottom: 52px;
     }
   }

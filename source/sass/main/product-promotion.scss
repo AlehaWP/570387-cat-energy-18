@@ -149,6 +149,7 @@
   .product-promotion {
     display: flex;
     flex-direction: column;
+
     @include font-content(16px, 24px);
     background-color: inherit;
   }

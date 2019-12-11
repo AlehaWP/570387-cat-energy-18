@@ -147,6 +147,8 @@
 
 @media (min-width: $tablet-width) {
   .product-promotion {
+    display: flex;
+    flex-direction: column;
     @include font-content(16px, 24px);
     background-color: inherit;
   }
@@ -271,7 +273,7 @@
 @media (min-width: $desktop-width) {
   .product-promotion {
     position: relative;
-    display: flex;
+    flex-direction: row;
     padding: 0 40px;
     background-color: $blocks-bg-color;
   }

@@ -214,11 +214,18 @@
     background-color: $blocks-bg-color;
   }
 
-  .product-promotion__img {
+  .product-promotion__images-block {
     position: absolute;
+
+
     top: 0;
     transform: translate(-45px, -170px);
-    width: 596px;
+    width: 636px;
+    height: 517px;
+  }
+
+  .product-promotion__img {
+    width: 700px;
     height: 517px;
   }
 
@@ -318,7 +325,7 @@
     background-color: $blocks-bg-color;
   }
 
-  .product-promotion__img {
+  .product-promotion__images-block {
     position: absolute;
     top: 0;
     transform: translate(-60px, -185px) rotate(3deg);

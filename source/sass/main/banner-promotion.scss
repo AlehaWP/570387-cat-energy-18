@@ -6,6 +6,10 @@
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 63.5%;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .banner-promotion__header {
@@ -85,6 +89,10 @@
     background-repeat: no-repeat;
     background-position: 111.7%;
     background-size: auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .banner-promotion__appeal {

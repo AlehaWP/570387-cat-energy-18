@@ -85,6 +85,8 @@
   }
 
   .catalog__extra-list {
+    display: flex;
+    flex-direction: column;
     padding: 0 30px;
     margin-bottom: 69px;
   }

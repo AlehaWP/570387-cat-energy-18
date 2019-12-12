@@ -29,29 +29,22 @@
     border-radius: 50%;
     background-color: $button-bg-color;
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: -63px;
-    top: -8px;
-    width: 35px;
-    height: 49px;
-    background-color: transparent;
-    background-image: url("../img/icon-cat-slim.svg");
-    background-repeat: no-repeat;
-  }
+.program-card__header-icon {
+  position: absolute;
+  left: -63px;
+  top: -8px;
+  width: 35px;
+  height: 49px;
 }
 
 
-.program-card__header--pro {
-  &::after {
-    left: -77px;
-    top: 3px;
-    width: 67px;
-    height: 28px;
-    background-image: url("../img/icon-cat-pro.svg");
-  }
+.program-card__header-icon--pro {
+  left: -77px;
+  top: 3px;
+  width: 67px;
+  height: 28px;
 }
 
 .program-card__description {

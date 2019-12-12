@@ -12,6 +12,7 @@
     "gulp-postcss": "8.0.x",
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
+    "gulp-svg-sprites": "^4.1.2",
     "node-sass": "^4.13.0",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
@@ -21,7 +22,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp css",
-    "start": "gulp start"
+    "start": "gulp start",
+    "svg": "gulp svg"
   },
   "browserslist": [
     "last 2 versions",

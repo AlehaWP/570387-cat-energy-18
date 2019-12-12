@@ -81,6 +81,11 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  &--email,
+  &--tel {
+    position: relative;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -92,20 +97,40 @@
   margin-left: 15px;
   border: 1px solid rgba($border-input-color, 0.5);
   text-transform: uppercase;
-
-  &:hover,
-  &:focus {
-    border-color: $border-input-color;
-  }
+  outline: transparent;
 
   &:invalid {
     border-color: $border-error-color;
+  }
+
+  &:hover {
+    border-color: $border-input-color;
+  }
+
+  &:focus {
+    border-color: $txt-main-color;
+    box-shadow: 0 0 0 1px $txt-main-color;
   }
 
   &--email,
   &--tel {
     padding-right: 35px;
   }
+}
+
+.form__text-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.form__text-in:invalid + .form__text-icon {
+  fill: $border-error-color;
+}
+
+.form__text-in:focus + .form__text-icon {
+  fill: $icon-active-color;
 }
 
 .form__textarea {

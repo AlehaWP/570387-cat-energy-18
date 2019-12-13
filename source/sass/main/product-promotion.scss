@@ -211,22 +211,25 @@
   .product-promotion__example-images {
     padding: 364px 100px 68px 98px;
     position: relative;
-    background-color: $blocks-bg-color;
-  }
-
-  .product-promotion__images-block {
-    position: absolute;
-
-
-    top: 0;
-    transform: translate(-45px, -170px);
-    width: 636px;
-    height: 517px;
+    background-image: linear-gradient(to right, $blocks-bg-color 0% 50%, $blocks-bg-color-add 50% 100%);
   }
 
   .product-promotion__img {
-    width: 700px;
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translate(-40px, -170px);
+    width: 636px;
     height: 517px;
+
+    &--before {
+      clip: rect(0, 325px, 517px, 0);
+    }
+
+    &--after {
+      transform: translate(-25px, -170px);
+      clip: rect(0, 636px, 517px, 310px);
+    }
   }
 
   .product-promotion__img-toggle-block {
@@ -282,7 +285,8 @@
   .product-promotion {
     position: relative;
     flex-direction: row;
-    padding: 0 40px;
+    padding: 0;
+    padding-left: 40px;
     background-color: $blocks-bg-color;
   }
 
@@ -320,14 +324,22 @@
 
   .product-promotion__example-images {
     width: 52%;
-    padding: 363px 0 68px 66px;
+    padding: 363px 40px 68px 46px;
     position: relative;
     background-color: $blocks-bg-color;
   }
 
-  .product-promotion__images-block {
-    position: absolute;
+  .product-promotion__img {
     top: 0;
-    transform: translate(-60px, -185px) rotate(3deg);
+    transform: translate(-60px, -195px);
+
+    &--before {
+      clip: rect(0, 340px, 517px, 0);
+    }
+
+    &--after {
+      transform: translate(-50px, -195px);
+      clip: rect(0, 636px, 517px, 330px);
+    }
   }
 }

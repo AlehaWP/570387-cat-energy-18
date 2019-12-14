@@ -7,7 +7,9 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var svgSprite = require("gulp-svg-sprites");
+var svgSprite = require("gulp-svg-sprites"),
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace');
 var webp = require('gulp-webp');
 
 gulp.task("css", function () {
@@ -48,6 +50,16 @@ gulp.task('webp', () =>
 
 gulp.task('svg', function () {
   return gulp.src('source/img/*.svg')
+  .pipe(cheerio({
+    run: function ($) {
+      $('fill').remove();
+      $('stroke').remove();
+      $('style').remove();
+      $('class').remove();
+    },
+    parserOptions: { xmlMode: false }
+  }))
+  .pipe(replace('&gt;', '>'))
   .pipe(svgSprite({
     mode: "symbols",
     preview: true,

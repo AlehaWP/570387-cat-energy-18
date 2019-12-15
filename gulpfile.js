@@ -116,7 +116,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/img/*.svg", gulp.series("svg", "refresh"));
+  gulp.watch("source/*.html").on("change", gulp.series("html", "refresh"));
 });
 
 gulp.task("build", gulp.series("clean","copy","css","webp","images","svg","html"));

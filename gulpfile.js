@@ -73,6 +73,7 @@ gulp.task("svg", function () {
     }
   }
   ))
+  .pipe(replace("\t", "  "))
   .pipe(gulp.dest("source/img/"));
 });
 

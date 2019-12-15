@@ -13,12 +13,14 @@
   }
 
   @include font-content(16px, 20px);
+  color: $txt-contr-color;
 }
 
 .banner-present__image {
   width: 56px;
   height: 61px;
   margin-bottom: 45px;
+  fill: currentColor;
 }
 
 .banner-present__appeal {

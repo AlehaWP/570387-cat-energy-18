@@ -7,6 +7,7 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var svgSprite = require("gulp-svg-sprites");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -35,3 +36,15 @@ gulp.task("server", function () {
 });
 
 gulp.task("start", gulp.series("css", "server"));
+
+gulp.task('svg', function () {
+  return gulp.src('source/img/*.svg')
+  .pipe(svgSprite({
+    mode: "symbols",
+    preview: true,
+    selector: "%f",
+    svgPath: "%f"
+  }
+  ))
+  .pipe(gulp.dest("source/img"));
+});

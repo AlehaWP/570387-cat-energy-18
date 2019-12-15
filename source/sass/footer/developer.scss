@@ -1,17 +1,23 @@
 .developer {
   padding: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .developer__link {
   text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
   @include font-content(16px, 16px);
-  color: $txt-main-color;
+  color: $icon-color;
   background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $icon-active-color;
+  }
 
   &:active {
     opacity: 0.3;
@@ -19,21 +25,16 @@
 }
 
 .developer__logo {
-  width: 27px;
-  height: 34px;
-
-  &:active {
-    opacity: 0.3;
-  }
+  width: 37px;
+  height: 44px;
+  margin-left: 18px;
+  margin-right: -5px;
+  fill: currentColor;
 }
 
 @media (min-width: $tablet-width) {
   .developer {
     padding: 0;
     border: none;
-  }
-
-  .developer__name {
-    margin-right: 23px;
   }
 }

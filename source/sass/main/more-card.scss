@@ -1,4 +1,5 @@
 .more-card {
+  position: relative;
   width: 100%;
   padding: 0 19px;
   padding-bottom: 22px;
@@ -8,8 +9,17 @@
   background-color: inherit;
 }
 
+.more-card__plus {
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 31px;
+  height: 31px;
+  fill: currentColor;
+}
+
 .more-card__header {
-  position: relative;
   margin: 0;
   margin-bottom: 8px;
   padding: 80px 35px 0 40px;
@@ -17,19 +27,6 @@
   @include font-header(16px, 20px);
   text-transform: uppercase;
   background-color: inherit;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 27px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 31px;
-    height: 31px;
-    background-color: inherit;
-    background-image: url("../img/icon-plus.svg");
-    background-repeat: no-repeat;
-  }
 }
 
 .more-card__intrigue {
@@ -46,6 +43,12 @@
     @include font-content(16px, 16px);
   }
 
+  .more-card__plus {
+    top: 55px;
+    width: 61px;
+    height: 61px;
+  }
+
   .more-card__header {
     padding: 165px 45px 0;
     margin-bottom: 29px;
@@ -53,12 +56,6 @@
     @include font-header(20px, 20px);
     color: $txt-header-color;
     text-align: center;
-
-    &::before {
-      top: 55px;
-      width: 61px;
-      height: 61px;
-    }
   }
 
   .more-card__intrigue {

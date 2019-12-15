@@ -13,6 +13,7 @@ var svgSprite = require("gulp-svg-sprites"),
 var webp = require("gulp-webp");
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -53,7 +54,7 @@ gulp.task("webp", () =>
 );
 
 gulp.task("svg", function () {
-  return gulp.src("source/img/*.svg")
+  return gulp.src(["source/img/*.svg","!source/img/sprite.svg"])
   .pipe(cheerio({
     run: function ($) {
       $("fill").remove();
@@ -75,6 +76,16 @@ gulp.task("svg", function () {
   ))
   .pipe(replace("\t", "  "))
   .pipe(gulp.dest("source/img/"));
+});
+
+gulp.task("images", function(){
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest("build/img"))
 });
 
 gulp.task("start", gulp.series("css", "webp", "svg", "server"));

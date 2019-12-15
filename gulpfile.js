@@ -7,9 +7,9 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var svgSprite = require("gulp-svg-sprites"),
-    cheerio = require("gulp-cheerio"),
-    replace = require("gulp-replace");
+var svgsprite = require("gulp-svg-sprites");
+var cheerio = require("gulp-cheerio");
+var replace = require("gulp-replace");
 var webp = require("gulp-webp");
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
@@ -44,18 +44,16 @@ gulp.task("webp", () =>
 );
 
 gulp.task("svg", function () {
-  return gulp.src(["source/img/*.svg","!source/img/sprite.svg"])
+  return gulp.src("source/img/*.svg")
   .pipe(cheerio({
     run: function ($) {
       $("fill").remove();
       $("stroke").remove();
-      $("style").remove();
-      $("class").remove();
     },
     parserOptions: { xmlMode: false }
   }))
   .pipe(replace("&gt;", ">"))
-  .pipe(svgSprite({
+  .pipe(svgsprite({
     mode: "symbols",
     preview: true,
     selector: "%f",
@@ -117,8 +115,11 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/*.svg", gulp.series("svg", "refresh"));
+  gulp.watch("source/img/**/*.{jpg,png}", gulp.series("optimizeimg", "refresh"));
   gulp.watch("source/*.html").on("change", gulp.series("html", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean","copy","css","webp","images","svg","html"));
+gulp.task("buildcontent", gulp.series(gulp.parallel("copy", "css", "svg"), "html"));
+gulp.task("optimizeimg", gulp.parallel("images", "webp"));
+gulp.task("build", gulp.series("clean", gulp.parallel("buildcontent", "optimizeimg")));
 gulp.task("start", gulp.series("build", "server"));

@@ -11,6 +11,4 @@ npm-debug.*
 build/
 source/css/*.css
 source/css/*.map
-source/img/webp/
-source/img/sprite.svg
 Thumbs.db

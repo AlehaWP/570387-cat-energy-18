@@ -29,6 +29,6 @@
 }
 
 @mixin container-desktop {
-  width: $desktop-width;
+  width: $desktop-width-container;
   margin: 0 auto;
 }

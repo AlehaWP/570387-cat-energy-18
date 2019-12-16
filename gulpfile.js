@@ -135,7 +135,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/*.svg", gulp.series("svg", "refresh"));
   //del comment when not work-pc//gulp.watch("source/img/**/*.{jpg,png}", gulp.series("optimizeimg", "refresh"));
-  gulp.watch("source/*.html").on("change", gulp.series("html", "refresh"));
+  gulp.watch("source/*.html").on("change", gulp.series("html", "minifyhtml", "refresh"));
 });
 
 gulp.task("buildcontent", gulp.series(gulp.parallel("copy", "css", "svg", "uglify"), "html", "minifyhtml"));

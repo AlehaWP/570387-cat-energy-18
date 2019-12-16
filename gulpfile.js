@@ -50,7 +50,8 @@ gulp.task("svg", function () {
   .pipe(cheerio({
     run: function ($) {
       $("fill").remove();
-      $("stroke").remove();
+      $("class").remove();
+      $("style").remove();
     },
     parserOptions: { xmlMode: false }
   }))
@@ -110,6 +111,7 @@ gulp.task("copy", function () {
       "source/fonts/**/*.{woff,woff2}",
       "source/js/**",
       "source/*.ico"
+      ,"source/img/*"
     ], {
       base: "source"
     })
@@ -132,11 +134,13 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/*.svg", gulp.series("svg", "refresh"));
-  gulp.watch("source/img/**/*.{jpg,png}", gulp.series("optimizeimg", "refresh"));
+  //del comment when not work-pc//gulp.watch("source/img/**/*.{jpg,png}", gulp.series("optimizeimg", "refresh"));
   gulp.watch("source/*.html").on("change", gulp.series("html", "refresh"));
 });
 
 gulp.task("buildcontent", gulp.series(gulp.parallel("copy", "css", "svg", "uglify"), "html", "minifyhtml"));
-gulp.task("optimizeimg", gulp.parallel("images", "webp"));
-gulp.task("build", gulp.series("clean", gulp.parallel("buildcontent", "optimizeimg")));
+//del comment when not work-pc//gulp.task("optimizeimg", gulp.parallel("images", "webp"));
+//del comment when not work-pc//gulp.task("build", gulp.series("clean", gulp.parallel("buildcontent", "optimizeimg")));
+//del comment when not work-pc//gulp.task("build", gulp.series("clean", gulp.series("buildcontent")));
+gulp.task("build", gulp.series("buildcontent"));//del row when not work-pc
 gulp.task("start", gulp.series("build", "server"));

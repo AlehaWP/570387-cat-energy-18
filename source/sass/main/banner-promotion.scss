@@ -85,12 +85,23 @@
   .banner-promotion {
     margin-top: -165px;
     padding: 225px 700px 191px 120px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 111.7%;
-    background-size: auto;
 
-    @media (min-resolution: $retina-dppx) {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-color: $image-bg-color;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    .banner-promotion:after {
       background-image: url("../img/index-background-desktop@2x.jpg");
     }
   }

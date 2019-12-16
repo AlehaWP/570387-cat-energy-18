@@ -14,9 +14,13 @@
 }
 
 .select__check-in {
+  position: absolute;
   width: 0;
   height: 0;
   margin-right: -3px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .select__label {

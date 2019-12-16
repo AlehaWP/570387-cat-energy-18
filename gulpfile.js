@@ -49,11 +49,14 @@ gulp.task("svg", function () {
   return gulp.src("source/img/*.svg")
   .pipe(cheerio({
     run: function ($) {
-      $("fill").remove();
-      $("class").remove();
-      $("style").remove();
+      $("[class]").removeAttr("class");
+      $("[fill]").removeAttr("fill");
+      //$("style").remove();
     },
-    parserOptions: { xmlMode: false }
+    parserOptions: {
+      decodeEntities: false,
+      xmlMode: false
+    }
   }))
   .pipe(replace("&gt;", ">"))
   .pipe(svgsprite({

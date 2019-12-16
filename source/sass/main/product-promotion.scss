@@ -29,52 +29,42 @@
 }
 
 .product-promotion__progress {
+  background-color: inherit;
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 17px;
-  background-color: inherit;
-}
-
-.product-promotion__progress tbody {
-  background-color: inherit;
 }
 
 .product-promotion__progress-value {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.product-promotion__progress-value td {
-  width: 44.28%;
-  padding: 13px 0;
-  text-align: center;
+  width: 44%;
+  padding: 14px 0;
+  order: 0;
   border: 1px solid $border-input-color;
   border-radius: 3px;
 
   @include font-header(24px, 24px);
   text-transform: uppercase;
+  text-align: center;
   color: $txt-header-color;
   background-color: transparent;
 }
 
 .product-promotion__progress-header {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: -7px;
-  background-color: inherit;
-}
-
-.product-promotion__progress-header th {
   padding: 0 5.71%;
-  margin: 0 5.71%;
-  width: 31.78%;
+  margin: -7px 5.71% 0;
+  width: 34%;
+  z-index: 1;
+  order: 1;
+  background-color: inherit;
 
   @include font-content(12px, 12px);
   color: $txt-main-color;
   background-color: inherit;
-  font-style: normal;
-  font-weight: normal;
+  text-align: center;
 }
 
 .product-promotion__expense {
@@ -178,15 +168,15 @@
     margin-right: auto;
   }
 
-  .product-promotion__progress-value td {
+  .product-promotion__progress-value {
     padding-bottom: 18px;
 
     @include font-header(30px, 37px);
   }
 
-  .product-promotion__progress-header th {
+  .product-promotion__progress-header {
     padding: 0 2%;
-    margin: 0 2%;
+    margin: -5px 2% 0;
     width: 40%;
 
     @include font-content(14px, 14px);
@@ -311,8 +301,8 @@
   }
 
   .product-promotion__progress {
-    width: 84%;
-    margin-bottom: 38px;
+    width: 81%;
+    margin-bottom: 40px;
   }
 
   .product-promotion__expense {

@@ -1,5 +1,6 @@
 .advantages {
-  padding: 0 19px;
+  @include container-mobile;
+  padding: 0;
 
   @include font-content(14px, 18px);
   color: $txt-main-color;
@@ -79,7 +80,8 @@
 
 @media (min-width: $tablet-width) {
   .advantages {
-    padding: 0 28px;
+    @include container-tablet;
+    padding: 0;
     border-bottom: 1px solid $border-block-color;
 
     @include font-content(16px, 24px);
@@ -101,8 +103,8 @@
   .advantages__list-item {
     position: relative;
     z-index: 0;
-    width: 245px;
-    margin: 32px 83px 100px 0;
+    width: 35%;
+    margin: 32px 79px 100px 0;
     flex-wrap: wrap;
 
     &::before {
@@ -132,13 +134,19 @@
 
 @media (min-width: $desktop-width) {
   .advantages {
-    padding: 0 40px;
+    @include container-desktop;
+    padding: 0;
     border-bottom: none;
 
     @include font-content(16px, 24px);
   }
 
   .advantages__list-item {
-    margin-right: 0;
+    width: 20%;
+    margin-right: 81px;
+
+    &:last-child {
+      margin-right: auto;
+    }
   }
 }

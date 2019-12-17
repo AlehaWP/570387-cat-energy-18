@@ -1,4 +1,6 @@
 .product-promotion {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   padding-top: 16px;
 
@@ -8,7 +10,8 @@
 }
 
 .product-promotion__text-content {
-  padding: 0 19px;
+  @include container-mobile;
+  padding: 0;
   background-color: inherit;
 }
 
@@ -76,10 +79,16 @@
   @include font-header(14px, 20px);
   color: $txt-header-color;
   background-color: inherit;
+  text-align: center;
 }
 
 .product-promotion__expense span {
   display: none;
+}
+
+.product-promotion__example-images {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-promotion__img {

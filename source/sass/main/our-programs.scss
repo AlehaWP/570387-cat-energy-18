@@ -15,6 +15,11 @@
     padding: 0;
   }
 
+  .our-programs__list {
+    display: flex;
+    flex-direction: column;
+  }
+
   .our-programs__list-item {
     width: 100%;
   }
@@ -27,11 +32,15 @@
   }
 
   .our-programs__list {
-    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: stretch;
   }
 
   .our-programs__list-item {
+    display: flex;
+    margin-bottom: 24px;
     width: 46.72%;
   }
 }

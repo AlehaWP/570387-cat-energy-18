@@ -85,7 +85,6 @@
 
 @media (min-width: $desktop-width) {
   .banner-promotion {
-    margin-top: -173px;
     padding: 225px 700px 191px 120px;
 
     &:after {
@@ -121,7 +120,7 @@
   .banner-promotion__image {
     z-index: 1;
     top: 145px;
-    left: 490px;
+    right: -210px;
     width: 552px;
     height: 499px;
   }

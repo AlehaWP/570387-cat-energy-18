@@ -36,6 +36,7 @@
 @media (min-width: $tablet-width) {
   .page-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     border: none;
@@ -60,10 +61,6 @@
 }
 
 @media (min-width: $desktop-width) {
-
-  .page-list {
-  }
-
   .page-list__item-link {
     //Сделано потому что сдвигаем нижний блок, чтобы было над ним видно.
     position: relative;

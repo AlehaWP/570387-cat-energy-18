@@ -208,30 +208,52 @@
   }
 
   .product-promotion__example-images {
-    padding: 364px 100px 68px 98px;
     position: relative;
-    background-image: linear-gradient(to right, $blocks-bg-color 0% 50%, $blocks-bg-color-add 50% 100%);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    //padding: 364px 100px 68px 98px;
+    padding: 0;
+    //background-image: linear-gradient(to right, $blocks-bg-color 0% 50%, $blocks-bg-color-add 50% 100%);
+  }
+
+  .product-promotion__image_block {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 700px;
+    padding-bottom: 68px;
+    background-image: linear-gradient(to bottom, $main-bg-color 27%, $blocks-bg-color 27%);
+    overflow: hidden;
+
+    &--after {
+      justify-content: flex-start;
+      background-image: linear-gradient(to bottom, $main-bg-color 27%, $blocks-bg-color-add 27%);
+    }
   }
 
   .product-promotion__img {
     display: block;
-    position: absolute;
-    top: 0;
-    transform: translate(-40px, -170px);
-    width: 636px;
+    flex-shrink: 0;
+    min-width: 636px;
     height: 517px;
 
     &--before {
-      clip: rect(0, 325px, 517px, 0);
+      transform: translate(50%);
     }
 
     &--after {
-      transform: translate(-25px, -170px);
-      clip: rect(0, 636px, 517px, 310px);
+      transform: translate(-50%);
     }
   }
 
   .product-promotion__img-toggle-block {
+    position: absolute;
+    bottom: 68px;
+
+    @include container-tablet;
     display: flex;
     justify-content: space-between;
     align-items: center;

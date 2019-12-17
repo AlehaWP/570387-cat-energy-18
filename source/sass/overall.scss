@@ -28,7 +28,7 @@ img {
 }
 
 body {
-  @include container-mobile();
+  min-width: 320px;
   font-family: "Arial", "Verdana", sans-serif;//Так сделано специально, мало ли где ошибка, чтобы шрифт более менее смотрелся
   font-weight: 400;
   font-style: normal;
@@ -36,16 +36,4 @@ body {
   line-height: 15px;
   color: black;
   background-color: $main-bg-color;
-}
-
-@media (min-width: $tablet-width) {
-  body {
-    @include container-tablet();
-  }
-}
-
-@media (min-width: $desktop-width) {
-  body {
-    @include container-desktop();
-  }
 }

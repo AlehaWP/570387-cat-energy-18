@@ -14,8 +14,9 @@ $button-color: #222222;
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 20px;
+  @include container-mobile;
   margin-bottom: 13px;
+  padding: 0;
 }
 
 .page-header__logo {
@@ -93,7 +94,9 @@ $button-color: #222222;
 @media (min-width: $tablet-width) {
   .page-header {
     display: flex;
-    padding: 24px 30px;
+
+    @include container-tablet;
+    padding: 24px 0;
     border: none;
   }
 
@@ -101,6 +104,7 @@ $button-color: #222222;
     padding: 0;
     margin: 0;
     margin-right: auto;
+    width: auto;
   }
 
   .page-header__logo {
@@ -123,7 +127,9 @@ $button-color: #222222;
 @media (min-width: $desktop-width) {
   .page-header {
     display: flex;
-    padding: 49px 40px;
+
+    @include container-desktop;
+    padding: 55px 0;
   }
 
   .page-header__top {

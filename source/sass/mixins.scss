@@ -19,16 +19,23 @@
 }
 
 @mixin container-mobile {
-  width: $mobile-width;
-  margin: 0 auto;
+  width: $mobile-content-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin mobile-padding($p-top: 0, $p-bottom: 0) {
+  padding: $p-top 6.25vw $p-bottom;
 }
 
 @mixin container-tablet {
-  width: $tablet-width;
-  margin: 0 auto;
+  width: $tablet-content-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @mixin container-desktop {
-  width: $desktop-width-container;
-  margin: 0 auto;
+  width: $desktop-content-width;
+  margin-left: auto;
+  margin-right: auto;
 }

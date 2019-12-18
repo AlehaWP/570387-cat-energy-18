@@ -123,9 +123,11 @@ $button-color: #222222;
 @media (min-width: $desktop-width) {
   .page-header {
     display: flex;
-    margin-bottom: -173px;
-    padding: 55px $desktop-padding;
-    background-image: linear-gradient(to right, $main-bg-color 50%, $image-bg-color 50%);
+    &--index{
+      margin-bottom: -173px;
+      padding: 55px $desktop-padding;
+      background-image: linear-gradient(to right, $main-bg-color 50%, $image-bg-color 50%);
+    }
   }
 
   .page-header__top {

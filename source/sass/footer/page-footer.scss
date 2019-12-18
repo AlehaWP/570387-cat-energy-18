@@ -60,7 +60,8 @@
   .page-footer__logo {
     margin: 0;
     padding: 0;
-    width: auto;
+    justify-content: flex-start;
+    width: 40%;
   }
 
   .page-footer__developer {

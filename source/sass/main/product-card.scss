@@ -42,7 +42,7 @@
 }
 
 .product-card__options-item {
-  width: 90%;
+  width: 100%;
   list-style: none;
   margin: 14px 0;
   padding: 0;
@@ -115,6 +115,10 @@
     padding: 7px 0;
     flex-grow: 1;
     border-bottom: 1px solid $border-input-color;
+  }
+
+  .product-card__options-item {
+    width: 100%;
   }
 }
 

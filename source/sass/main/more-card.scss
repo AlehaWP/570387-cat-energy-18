@@ -22,7 +22,7 @@
 .more-card__header {
   margin: 0;
   margin-bottom: 8px;
-  padding: 80px 35px 0 40px;
+  padding: 80px 20px 0 20px;
 
   @include font-header(16px, 20px);
   text-transform: uppercase;
@@ -67,6 +67,13 @@
 }
 
 @media (min-width: $desktop-width) {
+  .more-card {
+    padding: 0 34px 40px;
+    border: 1px solid $border-input-color;
+
+    @include font-content(16px, 16px);
+  }
+
   .more-card__header {
     padding: 165px 0 0;
   }

@@ -9,6 +9,10 @@
   @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: inherit;
+
+  &--form {
+    padding-bottom: 12px;
+  }
 }
 
 .page-main__banner {

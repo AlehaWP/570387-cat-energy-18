@@ -123,6 +123,8 @@ $button-color: #222222;
 @media (min-width: $desktop-width) {
   .page-header {
     display: flex;
+    padding: 55px $desktop-padding 50px;
+
     &--index{
       margin-bottom: -173px;
       padding: 55px $desktop-padding;

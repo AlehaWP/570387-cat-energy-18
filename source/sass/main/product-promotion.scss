@@ -35,6 +35,7 @@
   background-color: inherit;
   list-style: none;
   margin: 0;
+  margin-bottom: 15px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -63,7 +64,7 @@
   left: 50%;
   transform: translate(-50%, 60%);
   padding: 0 5.71%;
-  width: 90%;
+  width: 70%;
   background-color: inherit;
 
   @include font-content(12px, 12px);
@@ -180,6 +181,7 @@
 
   .product-promotion__progress {
     width: 51.5%;
+    margin: 0;
     margin-right: auto;
   }
 
@@ -191,6 +193,7 @@
 
   .product-promotion__progress-description {
     padding: 0 2%;
+    width: 90%;
 
     @include font-content(14px, 14px);
   }

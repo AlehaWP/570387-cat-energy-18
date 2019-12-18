@@ -109,7 +109,7 @@
   }
 
   .catalog__products-list-item {
-    width: 22%;
+    width: 20.1%;
     max-width: 270px;
     margin-top: 142px;
   }
@@ -135,9 +135,5 @@
     &:first-child {
       border-top: 1px solid $border-input-color;
     }
-  }
-
-  .catalog__banner {
-    margin-right: $desktop-padding;
   }
 }

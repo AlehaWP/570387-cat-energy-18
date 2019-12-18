@@ -2,12 +2,14 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 280px;
+
+  @include container-mobile;
   padding: 65px 60px 26px 60px;
   background-color: $image-bg-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -34,7 +36,8 @@
   .banner-present {
     flex-flow: row;
     justify-content: space-between;
-    width: 708px;
+
+    @include container-tablet;
     padding: 48px 125px 53px 91px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 

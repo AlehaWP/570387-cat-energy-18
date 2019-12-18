@@ -312,13 +312,14 @@
   .product-promotion {
     position: relative;
     flex-direction: row;
+    justify-content: space-between;
     padding: 0;
-    padding-left: 40px;
+    padding-left: $desktop-padding;
     background-color: $blocks-bg-color;
   }
 
   .product-promotion__text-content {
-    display: block;
+    align-self: flex-start;
     padding: 0;
     margin: 0;
     margin-right: 12%;
@@ -339,34 +340,49 @@
 
   .product-promotion__progress {
     width: 81%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .product-promotion__expense {
-    width: 75%;
+    width: 72%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .product-promotion__example-images {
-    width: 52%;
-    padding: 363px 40px 68px 46px;
-    position: relative;
-    background-color: $blocks-bg-color;
+    width: 650px;
+    padding: 0;
+    margin: 0;
   }
 
-  .product-promotion__img {
-    top: 0;
-    transform: translate(-60px, -195px);
+  .product-promotion__image_block {
+    margin: 0;
+    margin-top: -190px;
+    padding-bottom: 127px;
+    background-color: transparent;
 
     &--before {
-      clip: rect(0, 340px, 517px, 0);
+      background-image: none;
     }
 
     &--after {
-      transform: translate(-50px, -195px);
-      clip: rect(0, 636px, 517px, 330px);
+      background-image: linear-gradient(to bottom, transparent 29%, $blocks-bg-color-add 29%);
     }
+  }
+
+  .product-promotion__img {
+    &--before {
+      transform: translate(45%);
+    }
+
+    &--after {
+      transform: translate(-52.5%);
+    }
+  }
+
+  .product-promotion__img-toggle-block {
+    padding: 0 15px;
+    transform: translate(-50%);
   }
 }

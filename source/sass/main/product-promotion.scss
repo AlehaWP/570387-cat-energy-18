@@ -33,8 +33,8 @@
 
 .product-promotion__progress {
   background-color: inherit;
+  list-style: none;
   margin: 0;
-  margin-bottom: 19px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -43,9 +43,10 @@
 }
 
 .product-promotion__progress-value {
+  position: relative;
   width: 44%;
+  margin-bottom: 19px;
   padding: 14px 0;
-  order: 0;
   border: 1px solid $border-input-color;
   border-radius: 3px;
 
@@ -53,20 +54,22 @@
   text-transform: uppercase;
   text-align: center;
   color: $txt-header-color;
-  background-color: transparent;
+  background-color: inherit;
 }
 
-.product-promotion__progress-header {
+.product-promotion__progress-description {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 60%);
   padding: 0 5.71%;
-  margin: -7px 5.71% 0;
-  width: 34%;
-  z-index: 1;
-  order: 1;
+  width: 90%;
   background-color: inherit;
 
   @include font-content(12px, 12px);
   color: $txt-main-color;
   background-color: inherit;
+  text-transform: lowercase;
   text-align: center;
 }
 
@@ -87,20 +90,21 @@
 }
 
 .product-promotion__example-images {
-  margin-left: auto;
-  margin-right: auto;
+  align-self: center;
+}
+
+.product-promotion__image_block {
+  background-color: transparent;
+  margin-bottom: 35px;
+
+  &--after {
+    display: none;
+  }
 }
 
 .product-promotion__img {
-  display: none;
-  background-color: transparent;
   width: 311px;
   height: 232px;
-  margin-bottom: 35px;
-
-  &.active {
-    display: block;
-  }
 }
 
 .product-promotion__img-toggle-block {
@@ -157,7 +161,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 28px;
-    margin-bottom: 230px;
+    margin-bottom: 45px;
     background-color: inherit;
   }
 
@@ -183,10 +187,8 @@
     @include font-header(30px, 37px);
   }
 
-  .product-promotion__progress-header {
+  .product-promotion__progress-description {
     padding: 0 2%;
-    margin: -5px 2% 0;
-    width: 40%;
 
     @include font-content(14px, 14px);
   }
@@ -221,22 +223,23 @@
 
   .product-promotion__image_block {
     display: flex;
-    justify-content: flex-end;
+    //Сделано так, из-за странной работы justify-content в ie11
+    flex-direction: column;
+    align-items: flex-end;
     width: 50%;
-    height: 700px;
-    padding-bottom: 68px;
+    padding-bottom: 80px;
     background-image: linear-gradient(to bottom, $main-bg-color 27%, $blocks-bg-color 27%);
     overflow: hidden;
 
     &--after {
-      justify-content: flex-start;
+      align-items: flex-start;
       background-image: linear-gradient(to bottom, $main-bg-color 27%, $blocks-bg-color-add 27%);
     }
   }
 
   .product-promotion__img {
-    display: block;
     flex-shrink: 0;
+    width: 636px;
     min-width: 636px;
     height: 517px;
 
@@ -245,13 +248,16 @@
     }
 
     &--after {
+      left: 0;
       transform: translate(-50%);
     }
   }
 
   .product-promotion__img-toggle-block {
     position: absolute;
+    left: 50%;
     bottom: 68px;
+    transform: translate(-50%);
 
     @include container-tablet;
     display: flex;

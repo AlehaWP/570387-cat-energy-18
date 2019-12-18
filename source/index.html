@@ -90,23 +90,27 @@
         <div class="product-promotion__text-content">
           <h2 class="product-promotion__header">Живой пример</h2>
           <p class="product-promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="product-promotion__progress">
-            <dd class="product-promotion__progress-header">снижение веса</dd>
-            <dt class="product-promotion__progress-value">5 кг</dt>
-            <dd class="product-promotion__progress-header">затрачено времени</dd>
-            <dt class="product-promotion__progress-value">60 дней</dt>
-          </dl>
+          <ul class="product-promotion__progress">
+            <li class="product-promotion__progress-value">
+              5 кг
+              <span class="product-promotion__progress-description">снижение веса</span>
+            </li>
+            <li class="product-promotion__progress-value">
+              60 дней
+              <span class="product-promotion__progress-description">затрачено времени</span>
+            </li>
+          </ul>
           <p class="product-promotion__expense">затраты на питание:<span></span>15 000 руб.</p>
         </div>
         <div class="product-promotion__example-images">
-          <div class="product-promotion__image_block">
+          <div class="product-promotion__image_block product-promotion__image_block--before active">
             <picture>
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="product-promotion__img product-promotion__img--before active" src="img/before-mobile@1x.png"  srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
+                <img class="product-promotion__img product-promotion__img--before" src="img/before-mobile@1x.png"  srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
             </picture>
           </div>
           <div class="product-promotion__image_block product-promotion__image_block--after">

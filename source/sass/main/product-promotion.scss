@@ -274,8 +274,18 @@
     padding: 0;
     padding-bottom: 0;
     border-bottom: 1px dotted $border-hover-color;
+    cursor: pointer;
 
     @include font-header(20px, 30px);
+
+    &:hover,
+    &:focus {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 
   .product-promotion__img-toggle {
@@ -289,6 +299,8 @@
       height: 34px;
       border-radius: 50%;
       background-color: $main-bg-color;
+      border: 1px solid $border-input-color;
+      box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
     }
 
     &::after {
@@ -298,6 +310,16 @@
       height: 8px;
       border-radius: 50%;
       background-color: $button-bg-color;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active::before {
+      box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: solid 2px #68b738;
     }
   }
 

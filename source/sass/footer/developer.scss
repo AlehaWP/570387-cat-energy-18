@@ -13,10 +13,10 @@
   color: $icon-color;
   background-color: transparent;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $icon-active-color;
+  &:hover .developer__logo,
+  &:focus .developer__logo,
+  &:active .developer__logo {
+     fill: $icon-active-color;
   }
 
   &:active {

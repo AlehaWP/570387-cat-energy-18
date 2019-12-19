@@ -1,4 +1,6 @@
 .product-promotion {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   padding-top: 16px;
 
@@ -8,7 +10,8 @@
 }
 
 .product-promotion__text-content {
-  padding: 0 19px;
+  @include container-mobile;
+  padding: 0;
   background-color: inherit;
 }
 
@@ -29,52 +32,45 @@
 }
 
 .product-promotion__progress {
+  background-color: inherit;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 17px;
-  background-color: inherit;
-}
-
-.product-promotion__progress tbody {
-  background-color: inherit;
 }
 
 .product-promotion__progress-value {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.product-promotion__progress-value td {
-  width: 44.28%;
-  padding: 13px 0;
-  text-align: center;
+  position: relative;
+  width: 44%;
+  margin-bottom: 19px;
+  padding: 14px 0;
   border: 1px solid $border-input-color;
   border-radius: 3px;
 
   @include font-header(24px, 24px);
   text-transform: uppercase;
+  text-align: center;
   color: $txt-header-color;
-  background-color: transparent;
-}
-
-.product-promotion__progress-header {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: -7px;
   background-color: inherit;
 }
 
-.product-promotion__progress-header th {
+.product-promotion__progress-description {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 60%);
   padding: 0 5.71%;
-  margin: 0 5.71%;
-  width: 31.78%;
+  width: 70%;
 
   @include font-content(12px, 12px);
   color: $txt-main-color;
   background-color: inherit;
-  font-style: normal;
-  font-weight: normal;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 .product-promotion__expense {
@@ -86,22 +82,29 @@
   @include font-header(14px, 20px);
   color: $txt-header-color;
   background-color: inherit;
+  text-align: center;
 }
 
 .product-promotion__expense span {
   display: none;
 }
 
-.product-promotion__img {
-  display: none;
+.product-promotion__example-images {
+  align-self: center;
+}
+
+.product-promotion__image_block {
   background-color: transparent;
-  width: 311px;
-  height: 232px;
   margin-bottom: 35px;
 
-  &.active {
-    display: block;
+  &--after {
+    display: none;
   }
+}
+
+.product-promotion__img {
+  width: 311px;
+  height: 232px;
 }
 
 .product-promotion__img-toggle-block {
@@ -155,10 +158,12 @@
   }
 
   .product-promotion__text-content {
+    align-self: flex-start;
+
+    @include container-tablet;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 28px;
-    margin-bottom: 230px;
+    margin-bottom: 72px;
     background-color: inherit;
   }
 
@@ -170,24 +175,24 @@
 
   .product-promotion__description {
     padding-right: 20px;
-    margin-bottom: 49px;
+    margin-bottom: 51px;
   }
 
   .product-promotion__progress {
     width: 51.5%;
+    margin: 0;
     margin-right: auto;
   }
 
-  .product-promotion__progress-value td {
+  .product-promotion__progress-value {
     padding-bottom: 18px;
 
     @include font-header(30px, 37px);
   }
 
-  .product-promotion__progress-header th {
+  .product-promotion__progress-description {
     padding: 0 2%;
-    margin: 0 2%;
-    width: 40%;
+    width: 90%;
 
     @include font-content(14px, 14px);
   }
@@ -209,34 +214,58 @@
   }
 
   .product-promotion__example-images {
-    padding: 364px 100px 68px 98px;
     position: relative;
-    background-image: linear-gradient(to right, $blocks-bg-color 0% 50%, $blocks-bg-color-add 50% 100%);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .product-promotion__image_block {
+    display: flex;
+    //Сделано так, из-за странной работы justify-content в ie11
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+    margin-bottom: 0;
+    padding-bottom: 105px;
+    background-image: linear-gradient(to bottom, $main-bg-color 26.5%, $blocks-bg-color 26.5%);
+    overflow: hidden;
+
+    &--after {
+      align-items: flex-start;
+      background-image: linear-gradient(to bottom, $main-bg-color 26.5%, $blocks-bg-color-add 26.5%);
+    }
   }
 
   .product-promotion__img {
-    display: block;
-    position: absolute;
-    top: 0;
-    transform: translate(-40px, -170px);
+    flex-shrink: 0;
     width: 636px;
+    min-width: 636px;
     height: 517px;
 
     &--before {
-      clip: rect(0, 325px, 517px, 0);
+      transform: translate(50%);
     }
 
     &--after {
-      transform: translate(-25px, -170px);
-      clip: rect(0, 636px, 517px, 310px);
+      left: 0;
+      transform: translate(-50%);
     }
   }
 
   .product-promotion__img-toggle-block {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translate(-50%);
+
+    @include container-tablet;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 70px;
     margin: 0;
   }
 
@@ -244,8 +273,18 @@
     padding: 0;
     padding-bottom: 0;
     border-bottom: 1px dotted $border-hover-color;
+    cursor: pointer;
 
     @include font-header(20px, 30px);
+
+    &:hover,
+    &:focus {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 
   .product-promotion__img-toggle {
@@ -259,6 +298,8 @@
       height: 34px;
       border-radius: 50%;
       background-color: $main-bg-color;
+      border: 1px solid $border-input-color;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     }
 
     &::after {
@@ -268,6 +309,16 @@
       height: 8px;
       border-radius: 50%;
       background-color: $button-bg-color;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active::before {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: solid 2px #68b738;
     }
   }
 
@@ -285,13 +336,14 @@
   .product-promotion {
     position: relative;
     flex-direction: row;
+    justify-content: space-between;
     padding: 0;
-    padding-left: 40px;
+    padding-left: $desktop-padding;
     background-color: $blocks-bg-color;
   }
 
   .product-promotion__text-content {
-    display: block;
+    align-self: flex-start;
     padding: 0;
     margin: 0;
     margin-right: 12%;
@@ -307,39 +359,55 @@
   }
 
   .product-promotion__description {
-    margin-bottom: 61px;
+    margin-bottom: 67px;
   }
 
   .product-promotion__progress {
-    width: 84%;
-    margin-bottom: 38px;
+    width: 81%;
+    margin-bottom: 30px;
   }
 
   .product-promotion__expense {
-    width: 75%;
+    width: 72%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .product-promotion__example-images {
-    width: 52%;
-    padding: 363px 40px 68px 46px;
-    position: relative;
-    background-color: $blocks-bg-color;
+    width: 650px;
+    padding: 0;
+    margin: 0;
   }
 
-  .product-promotion__img {
-    top: 0;
-    transform: translate(-60px, -195px);
+  .product-promotion__image_block {
+    margin: 0;
+    margin-top: -190px;
+    padding-bottom: 127px;
+    background-color: transparent;
 
     &--before {
-      clip: rect(0, 340px, 517px, 0);
+      background-image: none;
     }
 
     &--after {
-      transform: translate(-50px, -195px);
-      clip: rect(0, 636px, 517px, 330px);
+      background-image: linear-gradient(to bottom, transparent 29%, $blocks-bg-color-add 29%);
     }
+  }
+
+  .product-promotion__img {
+    &--before {
+      transform: translate(45%);
+    }
+
+    &--after {
+      transform: translate(-52.5%);
+    }
+  }
+
+  .product-promotion__img-toggle-block {
+    bottom: 68px;
+    padding: 0 15px;
+    transform: translate(-50%);
   }
 }

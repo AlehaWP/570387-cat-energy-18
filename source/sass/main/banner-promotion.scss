@@ -1,5 +1,5 @@
 .banner-promotion {
-  padding: 28px 19px 0 19px;
+  padding: 27px $mobile-padding 0;
   color: $txt-contr-color;
   background-color: $main-bg-color;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -7,24 +7,25 @@
   background-repeat: no-repeat;
   background-size: 100% 63.5%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
   }
 }
 
 .banner-promotion__header {
-  margin: 0;
-  padding: 0 16px;
-  margin-bottom: 24px;
+  width: 100%;
+  margin: 0 auto 27px;
 
   @include font-header(36px, 36px);
   text-align: center;
 }
 
 .banner-promotion__appeal {
-  margin: 0;
-  padding: 0 16px;
-  margin-bottom: 27px;
+  margin: 0 auto 27px;
 
   @include font-header(14px, 14px);
   text-transform: uppercase;
@@ -34,14 +35,15 @@
 .banner-promotion__image {
   width: 280px;
   height: 280px;
-  margin-bottom: -7px;
+  margin: 0 auto -7px;
 }
 
 @media (min-width: $tablet-width) {
   .banner-promotion {
     position: relative;
+    align-items: flex-start;
     z-index: 0;
-    padding: 35px 230px 530px 115px;
+    padding: 35px 100px 530px 115px;
     color: $txt-header-color;
     background-color: transparent;
     background-image: none;
@@ -49,7 +51,7 @@
 
   .banner-promotion__header {
     padding: 0;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
 
     @include font-header(60px, 60px);
     text-align: left;
@@ -57,7 +59,7 @@
 
   .banner-promotion__appeal {
     padding: 0;
-    margin-bottom: 48px;
+    margin: 0 0 48px;
 
     @include font-header(20px, 20px);
     text-align: left;
@@ -67,7 +69,7 @@
     position: absolute;
     z-index: -1;
     top: 235px;
-    left: 70px;
+    left: 25px;
     width: 709px;
     height: 609px;
   }
@@ -83,16 +85,32 @@
 
 @media (min-width: $desktop-width) {
   .banner-promotion {
-    margin-top: -165px;
-    padding: 225px 700px 191px 120px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 111.7%;
-    background-size: auto;
+    padding: 225px 55% 191px 120px;
 
-    @media (min-resolution: $retina-dppx) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-color: $image-bg-color;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: auto;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    .banner-promotion::after {
       background-image: url("../img/index-background-desktop@2x.jpg");
     }
+  }
+
+  .banner-promotion__header {
+    padding: 0;
+    margin: 0 0 42px;
   }
 
   .banner-promotion__appeal {
@@ -102,7 +120,7 @@
   .banner-promotion__image {
     z-index: 1;
     top: 145px;
-    left: 490px;
+    right: -210px;
     width: 552px;
     height: 499px;
   }

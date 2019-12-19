@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 22px 18px;
+  padding: 22px $mobile-padding;
   border-bottom: 1px solid $border-block-color;
   text-decoration: none;
   text-transform: uppercase;
@@ -36,6 +36,7 @@
 @media (min-width: $tablet-width) {
   .page-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     border: none;
@@ -64,6 +65,9 @@
     //Сделано потому что сдвигаем нижний блок, чтобы было над ним видно.
     position: relative;
     z-index: 1;
+
+    margin-right: 0;
+    margin-left: 33px;
 
     @include font-header(20px, 25px);
 

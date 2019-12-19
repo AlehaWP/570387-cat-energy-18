@@ -2,7 +2,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-left: 20px;
+  padding-left: $mobile-padding;
   margin-bottom: 35px;
   display: flex;
   align-items: flex-start;
@@ -35,7 +35,7 @@
       content: "";
       margin-top: 21px;
       height: 3px;
-      width: 27px;
+      width: $tablet-padding;
       margin-right: 38px;
       background-color: $button-bg-color;
     }
@@ -47,7 +47,7 @@
     padding: 0;
 
     &::before {
-      width: 1px;
+      width: 0.3%;
     }
   }
 }

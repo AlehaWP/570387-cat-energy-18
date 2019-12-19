@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <div class="page-header__top page-header__top--index">
         <a class="page-header__logo">
           <picture>
@@ -56,7 +58,7 @@
               <svg class="program-card__header-icon" width="35" height="49"><use xlink:href="img/sprite.svg#icon-cat-slim"></use></svg>
               <h3 class="program-card__header">похудение</h3>
               <p class="program-card__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="program-card__more-details" href="catalog.html">каталог slim</a>
+              <a class="program-card__more-details" href="catalog.html#catalog__slim">каталог slim</a>
             </section>
           </li>
           <li class="our-programs__list-item">
@@ -64,7 +66,7 @@
               <svg class="program-card__header-icon program-card__header-icon--pro" width="67" height="28"><use xlink:href="img/sprite.svg#icon-cat-pro"></use></svg>
               <h3 class="program-card__header program-card__header--pro">набор массы</h3>
               <p class="program-card__description program-card__description--pro">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="program-card__more-details" href="catalog.html">каталог pro</a>
+              <a class="program-card__more-details" href="catalog.html#catalog__pro">каталог pro</a>
             </section>
           </li>
         </ul>
@@ -90,35 +92,39 @@
         <div class="product-promotion__text-content">
           <h2 class="product-promotion__header">Живой пример</h2>
           <p class="product-promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <table class="product-promotion__progress">
-            <tr class="product-promotion__progress-value">
-              <td>5 кг</td>
-              <td>60 дней</td>
-            </tr>
-            <tr class="product-promotion__progress-header">
-              <th>снижение веса</th>
-              <th>затрачено времени</th>
-            </tr>
-          </table>
+          <ul class="product-promotion__progress">
+            <li class="product-promotion__progress-value">
+              5 кг
+              <span class="product-promotion__progress-description">снижение веса</span>
+            </li>
+            <li class="product-promotion__progress-value">
+              60 дней
+              <span class="product-promotion__progress-description">затрачено времени</span>
+            </li>
+          </ul>
           <p class="product-promotion__expense">затраты на питание:<span></span>15 000 руб.</p>
         </div>
         <div class="product-promotion__example-images">
-          <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="product-promotion__img product-promotion__img--before active" src="img/before-mobile@1x.png"  srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
-          </picture>
-          <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/webp/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img class="product-promotion__img product-promotion__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png" width="311" height="232" alt="Худой кот">
-          </picture>
+          <div class="product-promotion__image_block product-promotion__image_block--before active">
+            <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="product-promotion__img product-promotion__img--before" src="img/before-mobile@1x.png"  srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
+            </picture>
+          </div>
+          <div class="product-promotion__image_block product-promotion__image_block--after">
+            <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="product-promotion__img product-promotion__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png" width="311" height="232" alt="Худой кот">
+            </picture>
+          </div>
           <div class="product-promotion__img-toggle-block">
             <span class="product-promotion__img-toggle-caption">Было</span>
             <span class="product-promotion__img-toggle before"></span>
@@ -128,20 +134,13 @@
       </article>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__contacts contacts">
+      <section class="page-footer__contacts contacts contacts--index">
+        <h2 class="visually-hidden">Контактная информация</h2>
         <div class="contacts__text-content contacts__text-content--index">
-          <h2 class="visually-hidden">Контактная информация</h2>
           <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></address>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="363" alt="Карта">
-        </picture>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7efb42ed7331205e4fab45bb8e6c1f8c798186c42d9283f4ccb7c04d8fc14d5e&amp;source=constructor" width="320" height="368"></iframe>
       </section>
       <div class="page-footer__bottom">
         <a class="page-footer__logo">
@@ -179,7 +178,8 @@
         </section>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/svgxuse.js" defer></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/svgxuse.min.js" defer></script>
+    <script src="js/picturefill.min.js" defer></script>
   </body>
 </html>

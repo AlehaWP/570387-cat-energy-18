@@ -4,11 +4,15 @@
 
 .page-main__header {
   margin: 0;
-  padding: 15px 19px 28px 22px;
+  padding: 15px 18px 28px $mobile-padding;
 
   @include font-header(36px, 60px);
   color: $txt-header-color;
   background-color: inherit;
+
+  &--form {
+    padding-bottom: 12px;
+  }
 }
 
 .page-main__banner {
@@ -25,12 +29,14 @@
 
 @media (min-width: $tablet-width) {
   .page-main__header {
-    padding: 0 30px;
+    padding: 0;
 
+    @include container-tablet;
     @include font-header(60px, 60px);
 
     &--form {
-      margin: 32px 0;
+      margin-top: 32px;
+      margin-bottom: 32px;
     }
   }
 
@@ -39,11 +45,11 @@
   }
 
   .page-main__programs {
-    margin-bottom: 46px;
+    margin-bottom: 16px;
   }
 
   .page-main__advantages {
-    margin-bottom: 27px;
+    margin-bottom: 31px;
   }
 
   .page-main__form {
@@ -53,10 +59,13 @@
 
 @media (min-width: $desktop-width) {
   .page-main__header {
-    padding: 0 40px;
+    padding: 0;
+
+    @include container-desktop;
 
     &--form {
-      margin: 25px 0 30px;
+      margin-top: 25px;
+      margin-bottom: 30px;
     }
   }
 
@@ -65,10 +74,10 @@
   }
 
   .page-main__programs {
-    margin-bottom: 74px;
+    margin-bottom: 49px;
   }
 
   .page-main__advantages {
-    margin-bottom: 160px;
+    margin-bottom: 161px;
   }
 }

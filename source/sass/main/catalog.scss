@@ -1,6 +1,6 @@
 .catalog__header {
   margin: 0;
-  padding: 15px 19px 28px 22px;
+  padding: 15px $mobile-padding 28px 22px;
 }
 
 .catalog__products-list,
@@ -43,17 +43,13 @@
   margin-bottom: 39px;
 }
 
-.catalog__banner {
-  margin: 0 20px;
-}
-
 .product-card__buy {
   align-self: flex-end;
 }
 
 @media (min-width: $tablet-width) {
   .catalog__header {
-    padding: 35px 30px 22px;
+    padding: 35px $tablet-padding 22px;
     margin-bottom: 2px;
     border: none;
   }
@@ -65,13 +61,13 @@
     align-items: stretch;
     align-content: stretch;
     margin-bottom: 68px;
-    padding: 0 30px;
+    padding: 0 $tablet-padding;
   }
 
   .catalog__products-list-item {
     display: flex;
     width: 324px;
-    margin-top: 139px;
+    margin-top: 140px;
     padding: 0;
     border: none;
   }
@@ -87,7 +83,7 @@
   .catalog__extra-list {
     display: flex;
     flex-direction: column;
-    padding: 0 30px;
+    padding: 0 $tablet-padding;
     margin-bottom: 69px;
   }
 
@@ -99,44 +95,37 @@
       border-top: none;
     }
   }
-
-  .catalog__banner {
-    margin: 0 30px;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .catalog__header {
-    padding: 23px 40px;
+    padding: 23px $desktop-padding;
   }
 
   .catalog__products-list {
     margin-bottom: 75px;
-    padding: 0 40px;
-    justify-content: flex-start;
+    padding: 0 $desktop-padding;
+    justify-content: space-between;
   }
 
   .catalog__products-list-item {
-    width: 245px;
+    width: 20.1%;
+    max-width: 270px;
     margin-top: 142px;
-
-    &:not(:nth-child(4n)) {
-      margin-right: 80px;
-    }
   }
 
   .catalog__extra {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 70px;
+    margin-bottom: 87px;
   }
 
   .catalog__extra-list {
     width: 935px;
     margin: 0;
     padding: 0;
-    padding-left: 40px;
+    padding-left: $desktop-padding;
   }
 
   .catalog__extra-item {
@@ -146,9 +135,5 @@
     &:first-child {
       border-top: 1px solid $border-input-color;
     }
-  }
-
-  .catalog__banner {
-    margin-right: 40px;
   }
 }

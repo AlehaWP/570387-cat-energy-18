@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -68,7 +70,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--contacts">
-          <legend class="form__legend form__legend--contacts block-header">Контактные данные (владельца кота)</legend>
+          <h2 class="form__legend form__legend--contacts block-header">Контактные данные (владельца кота)</h2>
           <div class="form__block-wrapper">
             <label class="form__label form__label--email" lang="en">e-mail:*
               <input class="form__text-in form__text-in--email" type="email" name="sender-email" placeholder="kuklachev@gmail.com" required>
@@ -81,13 +83,13 @@
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--comment">
-          <legend class="form__legend form__legend--comment block-header">Комментарий</legend>
+          <h2 class="form__legend form__legend--comment block-header">Комментарий</h2>
           <div class="form__block-wrapper">
             <textarea class="form__textarea" name="name" rows="7" cols="40" placeholder="расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--extra-goods">
-          <legend class="form__legend form__legend--extra-goods block-header">Дополнительно</legend>
+          <h2 class="form__legend form__legend--extra-goods block-header">Дополнительно</h2>
           <div class="form__block-wrapper">
             <ul class="form__list-checkbox select">
               <li class="select__item select__item--checkbox">
@@ -117,19 +119,12 @@
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
         <div class="contacts__text-content contacts__text-content--index">
-          <h2 class="visually-hidden">Контактная информация</h2>
           <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></address>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="363" alt="Карта">
-        </picture>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7efb42ed7331205e4fab45bb8e6c1f8c798186c42d9283f4ccb7c04d8fc14d5e&amp;source=constructor" width="320" height="368"></iframe>
       </section>
       <div class="page-footer__bottom">
         <a class="page-footer__logo">
@@ -167,7 +162,8 @@
         </section>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/svgxuse.js" defer></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/svgxuse.min.js" defer></script>
+    <script src="js/picturefill.min.js" defer></script>
   </body>
 </html>

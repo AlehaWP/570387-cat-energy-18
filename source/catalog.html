@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -39,7 +41,7 @@
       <section class="catalog__products">
         <h2 class="visually-hidden">Основная продукция</h2>
         <ul class="catalog__products-list">
-          <li class="catalog__products-list-item">
+          <li class="catalog__products-list-item" id="catalog__pro">
             <div class="product-card">
               <a class="product-card__product-link" href="#">
                 <picture>
@@ -143,7 +145,7 @@
               <a class="product-card__buy button button--green" href="#">заказать</a>
             </div>
           </li>
-          <li class="catalog__products-list-item">
+          <li class="catalog__products-list-item" id="catalog__slim">
             <div class="product-card">
               <a class="product-card__product-link" href="#">
                 <picture>
@@ -276,7 +278,7 @@
           </li>
         </ul>
         <section class="catalog__banner banner-present">
-          <h2 class="visually-hidden">Подарок</h2>
+          <h2 class="banner-present__header visually-hidden">Подарок</h2>
           <svg class="banner-present__image" width="56" height="61"><use xlink:href="img/sprite.svg#icon-gift"></use></svg>
           <p class="banner-present__appeal">Закажите все и получите чехол для кота в подарок!</p>
         </section>
@@ -284,19 +286,12 @@
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
         <div class="contacts__text-content contacts__text-content--index">
-          <h2 class="visually-hidden">Контактная информация</h2>
           <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></address>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="363" alt="Карта">
-        </picture>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7efb42ed7331205e4fab45bb8e6c1f8c798186c42d9283f4ccb7c04d8fc14d5e&amp;source=constructor" width="320" height="368"></iframe>
       </section>
       <div class="page-footer__bottom">
         <a class="page-footer__logo">
@@ -334,7 +329,8 @@
         </section>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/svgxuse.js" defer></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/svgxuse.min.js" defer></script>
+    <script src="js/picturefill.min.js" defer></script>
   </body>
 </html>

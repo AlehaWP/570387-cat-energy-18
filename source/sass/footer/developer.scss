@@ -13,10 +13,10 @@
   color: $icon-color;
   background-color: transparent;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $icon-active-color;
+  &:hover .developer__logo,
+  &:focus .developer__logo,
+  &:active .developer__logo {
+    fill: $icon-active-color;
   }
 
   &:active {
@@ -36,5 +36,14 @@
   .developer {
     padding: 0;
     border: none;
+  }
+
+  .developer__link {
+    justify-content: flex-end;
+  }
+
+  .developer__logo {
+    margin-left: 15px;
+    margin-right: -5px;
   }
 }

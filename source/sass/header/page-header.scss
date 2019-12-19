@@ -13,9 +13,8 @@ $button-color: #222222;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 0 20px;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
+  padding: 0 $mobile-padding;
 }
 
 .page-header__logo {
@@ -93,7 +92,7 @@ $button-color: #222222;
 @media (min-width: $tablet-width) {
   .page-header {
     display: flex;
-    padding: 24px 30px;
+    padding: 24px $tablet-padding;
     border: none;
   }
 
@@ -101,6 +100,7 @@ $button-color: #222222;
     padding: 0;
     margin: 0;
     margin-right: auto;
+    width: auto;
   }
 
   .page-header__logo {
@@ -123,7 +123,13 @@ $button-color: #222222;
 @media (min-width: $desktop-width) {
   .page-header {
     display: flex;
-    padding: 49px 40px;
+    padding: 55px $desktop-padding 50px;
+
+    &--index {
+      margin-bottom: -173px;
+      padding: 55px $desktop-padding;
+      background-image: linear-gradient(to right, $main-bg-color 50%, $image-bg-color 50%);
+    }
   }
 
   .page-header__top {

@@ -1,5 +1,6 @@
 .our-programs {
-  padding: 0 19px;
+  @include container-mobile;
+  padding: 0;
 }
 
 .our-programs__list {
@@ -10,7 +11,13 @@
 
 @media (min-width: $tablet-width) {
   .our-programs {
-    padding: 0 30px;
+    @include container-tablet;
+    padding: 0;
+  }
+
+  .our-programs__list {
+    display: flex;
+    flex-direction: column;
   }
 
   .our-programs__list-item {
@@ -20,15 +27,20 @@
 
 @media (min-width: $desktop-width) {
   .our-programs {
-    padding: 0 40px;
+    @include container-desktop;
+    padding: 0;
   }
 
   .our-programs__list {
-    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: stretch;
   }
 
   .our-programs__list-item {
+    display: flex;
+    margin-bottom: 24px;
     width: 46.72%;
   }
 }

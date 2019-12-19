@@ -65,7 +65,6 @@
   transform: translate(-50%, 60%);
   padding: 0 5.71%;
   width: 70%;
-  background-color: inherit;
 
   @include font-content(12px, 12px);
   color: $txt-main-color;
@@ -300,7 +299,7 @@
       border-radius: 50%;
       background-color: $main-bg-color;
       border: 1px solid $border-input-color;
-      box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     }
 
     &::after {
@@ -314,11 +313,11 @@
 
     &:hover::before,
     &:focus::before {
-      box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
     &:active::before {
-      box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
       border: solid 2px #68b738;
     }
   }

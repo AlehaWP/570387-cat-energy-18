@@ -32,7 +32,6 @@
     padding: 0;
 
     @include container-tablet;
-
     @include font-header(60px, 60px);
 
     &--form {

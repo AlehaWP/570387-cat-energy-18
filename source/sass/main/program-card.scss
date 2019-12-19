@@ -2,7 +2,7 @@
   position: relative;
 
   min-height: 266px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   padding: 20px;
 
   @include font-content(14px, 18px);
@@ -96,7 +96,7 @@
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .program-card {
     min-width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     padding: 53px 285px 60px 51px;
 
     @include font-content(16px, 24px);
@@ -133,7 +133,7 @@
   }
 
   .program-card__description {
-    margin-bottom: 36px;
+    margin-bottom: 38px;
 
     &--pro {
       padding-right: 30px;
@@ -182,7 +182,7 @@
   }
 
   .program-card__header {
-    margin: 25px 25px 70px 0;
+    margin: 22px 25px 74px 0;
     padding-left: 160px;
 
     @include font-header(36px, 37px);

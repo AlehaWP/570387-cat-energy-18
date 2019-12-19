@@ -1,5 +1,5 @@
 .banner-promotion {
-  padding: 28px $mobile-padding 0;
+  padding: 27px $mobile-padding 0;
   color: $txt-contr-color;
   background-color: $main-bg-color;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -18,7 +18,7 @@
 
 .banner-promotion__header {
   width: 100%;
-  margin: 0 auto 24px;
+  margin: 0 auto 27px;
 
   @include font-header(36px, 36px);
   text-align: center;

@@ -43,7 +43,7 @@
   }
 
   &--contacts {
-    margin-bottom: 29px;
+    margin-bottom: 31px;
   }
 
   &--comment {
@@ -62,7 +62,7 @@
   width: 100%;
 
   &--contacts {
-    margin-bottom: 34px;
+    margin-bottom: 35px;
   }
 
   &--comment {
@@ -78,9 +78,10 @@
   display: flex;
   width: 100%;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   cursor: pointer;
+  white-space: nowrap;
 
   &--email,
   &--tel {
@@ -181,7 +182,8 @@
   }
 
   .form__label {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
+    white-space: normal;
 
     &:last-child {
       margin-bottom: 0;

@@ -60,7 +60,7 @@
 @media (min-width: $tablet-width) {
   .social {
     padding: 0;
-    padding-left: 35px;
+    padding-left: 20px;
     border: none;
   }
 
@@ -81,5 +81,11 @@
       width: 14px;
       height: 28px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    padding-left: 32px;
   }
 }

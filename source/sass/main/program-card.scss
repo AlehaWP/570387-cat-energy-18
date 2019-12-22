@@ -38,7 +38,7 @@
 }
 
 .program-card__header {
-  margin: 15px 30px 27px 72px;
+  margin: 12px 30px 27px 72px;
 
   @include font-header(24px, 37px);
   color: $txt-header-color;
@@ -97,7 +97,7 @@
   .program-card {
     min-width: 100%;
     margin-bottom: 30px;
-    padding: 53px 285px 60px 51px;
+    padding: 52px 285px 60px 51px;
 
     @include font-content(16px, 24px);
 
@@ -133,7 +133,7 @@
   }
 
   .program-card__description {
-    margin-bottom: 37px;
+    margin-bottom: 36px;
 
     &--pro {
       padding-right: 30px;
@@ -189,7 +189,7 @@
   }
 
   .program-card__description {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .program-card__more-details {

@@ -38,9 +38,9 @@ gulp.task("css", function () {
 gulp.task("webp", () =>
     gulp.src("source/img/*.{jpg,png}")
     .pipe(webp({
-        quality: 80,
+        quality: 90,
         preset: "photo",
-        method: 6
+        method: 4
     }))
     .pipe(gulp.dest("build/img/webp/"))
 );
@@ -142,5 +142,4 @@ gulp.task("server", function () {
 gulp.task("buildcontent", gulp.series(gulp.parallel("copy", "css", "svg", "uglify"), "html", "minifyhtml"));
 gulp.task("optimizeimg", gulp.parallel("images", "webp"));
 gulp.task("build", gulp.series("clean", gulp.parallel("buildcontent", "optimizeimg")));
-gulp.task("build", gulp.series("clean", gulp.series("buildcontent")));
 gulp.task("start", gulp.series("build", "server"));

@@ -1,24 +1,37 @@
 .banner-promotion {
+  position: relative;
   padding: 27px $mobile-padding 0;
   color: $txt-contr-color;
   background-color: $main-bg-color;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: 100% 63.5%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 63.5%;
+    z-index: 0;
+    background-color: $image-bg-color;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+  }
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-  }
 }
 
 .banner-promotion__header {
   width: 100%;
   margin: 0 auto 27px;
+  z-index: 1;
 
   @include font-header(36px, 36px);
   text-align: center;
@@ -26,6 +39,7 @@
 
 .banner-promotion__appeal {
   margin: 0 auto 27px;
+  z-index: 1;
 
   @include font-header(14px, 14px);
   text-transform: uppercase;
@@ -33,20 +47,29 @@
 }
 
 .banner-promotion__image {
+  position: relative;
   width: 280px;
   height: 280px;
   margin: 0 auto -7px;
+  z-index: 1;
+}
+
+.banner-promotion__show-programs {
+  z-index: 1;
 }
 
 @media (min-width: $tablet-width) {
   .banner-promotion {
     position: relative;
     align-items: flex-start;
-    z-index: 0;
     padding: 35px 100px 530px 115px;
     color: $txt-header-color;
     background-color: transparent;
     background-image: none;
+
+    &::before {
+      content: none;
+    }
   }
 
   .banner-promotion__header {
@@ -67,7 +90,7 @@
 
   .banner-promotion__image {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     top: 235px;
     left: 25px;
     width: 709px;
@@ -87,7 +110,7 @@
   .banner-promotion {
     padding: 225px 55% 191px 120px;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       top: 0;

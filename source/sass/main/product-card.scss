@@ -1,4 +1,5 @@
 .product-card {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 0 $mobile-padding 24px;
@@ -66,7 +67,7 @@
 @media (min-width: $tablet-width) {
   .product-card {
     position: relative;
-    padding: 165px 37px 40px;
+    padding: 163px 37px 40px;
     background-color: $blocks-bg-color;
 
     @include font-content(16px, 16px);

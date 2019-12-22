@@ -2,31 +2,27 @@
   width: 100%;
   list-style: none;
   margin: 0;
-  padding: 25px 0;
+  padding: 18px 0;
 }
 
 .select__item {
-  margin-bottom: 24px;
+  margin-bottom: 11px;
+
+  &--checkbox {
+    margin-bottom: 10px;
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.select__check-in {
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-right: -3px;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .select__label {
+  display: inline-block;
   position: relative;
-  padding-left: 45px;
+  padding: 7px 45px;
   cursor: pointer;
+  user-select: none;
 
   @include font-header(16px, 18px);
   text-transform: uppercase;
@@ -85,16 +81,20 @@
 
 @media (min-width: $tablet-width) {
   .select {
-    padding: 33px 0;
+    padding: 23px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
+  .select__label {
+    padding: 10px 45px;
+  }
+
   .select__item {
     &--radio {
       width: 100%;
-      margin-bottom: 33px;
+      margin-bottom: 13px;
 
       &:last-child {
         margin-bottom: 0;
@@ -109,7 +109,7 @@
 
   @media (max-width: $desktop-width) {
     .select__item--checkbox:nth-child(2n):not(:last-child) {
-      margin-bottom: 52px;
+      margin-bottom: 31px;
     }
   }
 

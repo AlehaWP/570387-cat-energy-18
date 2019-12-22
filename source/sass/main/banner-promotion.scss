@@ -11,6 +11,7 @@
     right: 0;
     width: 100%;
     height: 63.5%;
+    z-index: 0;
     background-color: $image-bg-color;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-position: center 0;
@@ -30,7 +31,7 @@
 .banner-promotion__header {
   width: 100%;
   margin: 0 auto 27px;
-  z-index: 0;
+  z-index: 1;
 
   @include font-header(36px, 36px);
   text-align: center;
@@ -38,7 +39,7 @@
 
 .banner-promotion__appeal {
   margin: 0 auto 27px;
-  z-index: 0;
+  z-index: 1;
 
   @include font-header(14px, 14px);
   text-transform: uppercase;
@@ -50,13 +51,17 @@
   width: 280px;
   height: 280px;
   margin: 0 auto -7px;
+  z-index: 1;
+}
+
+.banner-promotion__show-programs {
+  z-index: 1;
 }
 
 @media (min-width: $tablet-width) {
   .banner-promotion {
     position: relative;
     align-items: flex-start;
-    z-index: 0;
     padding: 35px 100px 530px 115px;
     color: $txt-header-color;
     background-color: transparent;
@@ -85,7 +90,7 @@
 
   .banner-promotion__image {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     top: 235px;
     left: 25px;
     width: 709px;
@@ -136,7 +141,7 @@
   }
 
   .banner-promotion__image {
-    z-index: 0;
+    z-index: 1;
     top: 145px;
     right: -210px;
     width: 552px;

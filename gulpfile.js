@@ -38,9 +38,9 @@ gulp.task("css", function () {
 gulp.task("webp", () =>
     gulp.src("source/img/*.{jpg,png}")
     .pipe(webp({
-        quality: 80,
+        quality: 90,
         preset: "photo",
-        method: 6
+        method: 4
     }))
     .pipe(gulp.dest("build/img/webp/"))
 );

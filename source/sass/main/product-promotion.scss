@@ -175,7 +175,7 @@
 
   .product-promotion__description {
     padding-right: 20px;
-    margin-bottom: 51px;
+    margin-bottom: 49px;
   }
 
   .product-promotion__progress {
@@ -207,7 +207,7 @@
     margin: 0;
     margin-right: 5px;
     padding: 0;
-    padding-top: 9px;
+    padding-top: 6px;
     text-align: right;
 
     @include font-header(20px, 30px);
@@ -229,7 +229,7 @@
     align-items: flex-end;
     width: 50%;
     margin-bottom: 0;
-    padding-bottom: 105px;
+    padding-bottom: 104px;
     background-image: linear-gradient(to bottom, $main-bg-color 26.5%, $blocks-bg-color 26.5%);
     overflow: hidden;
 

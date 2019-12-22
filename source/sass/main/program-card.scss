@@ -96,7 +96,7 @@
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .program-card {
     min-width: 100%;
-    margin-bottom: 31px;
+    margin-bottom: 30px;
     padding: 53px 285px 60px 51px;
 
     @include font-content(16px, 24px);
@@ -133,7 +133,7 @@
   }
 
   .program-card__description {
-    margin-bottom: 38px;
+    margin-bottom: 37px;
 
     &--pro {
       padding-right: 30px;

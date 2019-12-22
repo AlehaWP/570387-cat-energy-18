@@ -87,10 +87,6 @@
     justify-content: space-between;
   }
 
-  .select__label {
-    padding: 10px 45px;
-  }
-
   .select__item {
     &--radio {
       width: 100%;
@@ -114,6 +110,7 @@
   }
 
   .select__label {
+    padding: 10px 45px;
     padding-left: 60px;
 
     @include font-header(20px, 20px);

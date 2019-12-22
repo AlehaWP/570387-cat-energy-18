@@ -142,5 +142,4 @@ gulp.task("server", function () {
 gulp.task("buildcontent", gulp.series(gulp.parallel("copy", "css", "svg", "uglify"), "html", "minifyhtml"));
 gulp.task("optimizeimg", gulp.parallel("images", "webp"));
 gulp.task("build", gulp.series("clean", gulp.parallel("buildcontent", "optimizeimg")));
-gulp.task("build", gulp.series("clean", gulp.series("buildcontent")));
 gulp.task("start", gulp.series("build", "server"));

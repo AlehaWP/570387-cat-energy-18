@@ -33,7 +33,7 @@
   background-color: transparent;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and not (min-width: $desktop-width) {
   .banner-present {
     flex-flow: row;
     justify-content: space-between;

@@ -93,9 +93,9 @@
   align-self: center;
 }
 
-.product-promotion__image_block {
+.product-promotion__image-block {
   background-color: transparent;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 
   &--after {
     display: none;
@@ -109,20 +109,26 @@
 
 .product-promotion__img-toggle-block {
   margin: 0;
-  margin-left: 47px;
-  padding-bottom: 36px;
+  //margin-left: 47px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 33px;
 }
 
 .product-promotion__toggle {
-  padding: 0 15px;
+  display: block;
+  padding: 2px 16px;
   border: none;
 
   @include font-header(16px, 20px);
   text-transform: uppercase;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.product-promotion__img-toggle {
+.product-promotion__slider-bar {
   display: inline-block;
   position: relative;
   width: 84px;
@@ -131,22 +137,23 @@
   border-radius: 6px;
   background-color: $main-bg-color;
   cursor: pointer;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 35px;
-    height: 6px;
-    right: 4px;
-    top: 3px;
-    background-color: $banner-bg-color;
-    border-radius: 6px;
-  }
 }
 
-.product-promotion__img-toggle.before {
-  &::before {
-    left: 4px;
+.product-promotion__range-slider {
+  position: absolute;
+  width: 45%;
+  height: 6px;
+  right: 6px;
+  top: 3px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0;
+  color: transparent;
+  background-color: $banner-bg-color;
+  cursor: pointer;
+
+  &.before {
+    left: 6px;
   }
 }
 
@@ -224,7 +231,7 @@
     padding: 0;
   }
 
-  .product-promotion__image_block {
+  .product-promotion__image-block {
     display: flex;
     //Сделано так, из-за странной работы justify-content в ie11
     flex-direction: column;
@@ -288,7 +295,7 @@
     }
   }
 
-  .product-promotion__img-toggle {
+  .product-promotion__slider-bar {
     margin: 0 21px 0 21px;
     flex-grow: 1;
     height: 6px;
@@ -323,7 +330,7 @@
     }
   }
 
-  .product-promotion__img-toggle.before {
+  .product-promotion__slider-bar.before {
     &::after,
     &::before {
       top: 50%;
@@ -381,7 +388,7 @@
     margin: 0;
   }
 
-  .product-promotion__image_block {
+  .product-promotion__image-block {
     margin: 0;
     margin-top: -190px;
     padding-bottom: 127px;

@@ -113,11 +113,13 @@
   padding-bottom: 36px;
 }
 
-.product-promotion__img-toggle-caption {
+.product-promotion__toggle {
   padding: 0 15px;
+  border: none;
 
   @include font-header(16px, 20px);
   text-transform: uppercase;
+  background-color: transparent;
 }
 
 .product-promotion__img-toggle {
@@ -269,11 +271,10 @@
     margin: 0;
   }
 
-  .product-promotion__img-toggle-caption {
+  .product-promotion__toggle {
     padding: 0;
     padding-bottom: 0;
     border-bottom: 1px dotted $border-hover-color;
-    cursor: pointer;
 
     @include font-header(20px, 30px);
 

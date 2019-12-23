@@ -40,7 +40,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+  width: 99%;
 }
 
 .product-promotion__progress-value {
@@ -109,7 +109,6 @@
 
 .product-promotion__img-toggle-block {
   margin: 0;
-  //margin-left: 47px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -129,9 +128,8 @@
 }
 
 .product-promotion__slider-bar {
-  display: inline-block;
   position: relative;
-  width: 84px;
+  width: 27%;
   height: 14px;
   border: 1px solid #cdcdcd;
   border-radius: 6px;

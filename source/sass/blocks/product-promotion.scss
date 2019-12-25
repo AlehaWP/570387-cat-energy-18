@@ -61,8 +61,8 @@
 .product-promotion__progress-description {
   position: absolute;
   bottom: 0;
-  left: 48%;
-  transform: translate(-50%, 60%);
+  left: 0;
+  transform: translate(25%, 60%);
   padding: 0 5.71%;
   width: 70%;
 
@@ -200,6 +200,7 @@
   .product-promotion__progress-description {
     padding: 0 2%;
     width: 90%;
+    transform: translate(5%, 60%);
 
     @include font-content(14px, 14px);
   }

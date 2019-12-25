@@ -24,7 +24,7 @@
   .block-header {
     padding: 0;
 
-    @include font-header(36px, 36px);
+    @include set-font-size(36px, 36px);
 
     &::after {
       margin-left: 37px;

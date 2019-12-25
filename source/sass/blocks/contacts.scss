@@ -27,7 +27,6 @@
   @include font-header(16px, 20px);
   color: $txt-header-color;
   text-transform: uppercase;
-  background-color: transparent;
 }
 
 .contacts__address {
@@ -57,11 +56,11 @@
     align-items: stretch;
     padding: 65px 41px 60px;
 
-    @include font-content(16px, 20px);
+    @include set-font-size(16px, 20px);
   }
 
   .contacts__description {
-    @include font-header(20px, 25px);
+    @include set-font-size(20px, 25px);
     width: 25%;
   }
 

@@ -18,6 +18,11 @@
   font-weight: 400;
 }
 
+@mixin set-font-size($p-width: 14px, $p-line-height: 18px) {
+  font-size: $p-width;
+  line-height: $p-line-height;
+}
+
 @mixin container-mobile {
   width: $mobile-content-width;
   margin-left: auto;

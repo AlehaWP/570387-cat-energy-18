@@ -22,7 +22,6 @@
 
   @include font-header(36px, 60px);
   color: $txt-header-color;
-  background-color: transparent;
 }
 
 .product-promotion__description {
@@ -94,7 +93,6 @@
 }
 
 .product-promotion__image-block {
-  background-color: transparent;
   margin-bottom: 33px;
 
   &--after {
@@ -160,7 +158,7 @@
     display: flex;
     flex-direction: column;
 
-    @include font-content(16px, 24px);
+    @include set-font-size(16px, 24px);
     background-color: inherit;
   }
 
@@ -177,7 +175,7 @@
   .product-promotion__header {
     margin-bottom: 60px;
 
-    @include font-header(60px, 60px);
+    @include set-font-size(60px, 60px);
   }
 
   .product-promotion__description {
@@ -194,7 +192,7 @@
   .product-promotion__progress-value {
     padding-bottom: 18px;
 
-    @include font-header(30px, 37px);
+    @include set-font-size(30px, 37px);
   }
 
   .product-promotion__progress-description {
@@ -218,7 +216,7 @@
     padding-top: 6px;
     text-align: right;
 
-    @include font-header(20px, 30px);
+    @include set-font-size(20px, 30px);
   }
 
   .product-promotion__example-images {
@@ -281,7 +279,7 @@
     padding: 0;
     border-bottom: 1px dotted $border-hover-color;
 
-    @include font-header(20px, 30px);
+    @include set-font-size(20px, 30px);
 
     &:hover,
     &:focus {
@@ -393,7 +391,6 @@
     margin-top: -190px;
     justify-content: flex-end;
     padding-bottom: 127px;
-    background-color: transparent;
 
     &--before {
       background-image: none;

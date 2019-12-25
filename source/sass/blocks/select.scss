@@ -103,7 +103,7 @@
     }
   }
 
-  @media (max-width: $desktop-width) {
+  @media (max-width: $desktop-width - 1) {
     .select__item--checkbox:nth-child(2n):not(:last-child) {
       margin-bottom: 31px;
     }

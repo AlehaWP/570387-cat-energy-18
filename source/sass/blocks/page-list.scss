@@ -16,7 +16,6 @@
 
   @include font-menu(20px, 20px);
   color: $txt-header-color;
-  background-color: transparent;
 
   &--active {
     border-bottom: 1px solid $button-bg-color;
@@ -69,7 +68,7 @@
     margin-right: 0;
     margin-left: 33px;
 
-    @include font-header(20px, 25px);
+    @include set-font-size(20px, 25px);
 
     &--index {
       color: $txt-contr-color;

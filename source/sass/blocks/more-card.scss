@@ -41,7 +41,7 @@
     padding: 0 38px 40px 38px;
     border: 1px solid $border-input-color;
 
-    @include font-content(16px, 16px);
+    @include set-font-size(16px, 16px);
   }
 
   .more-card__plus {
@@ -54,7 +54,7 @@
     padding: 165px 45px 0;
     margin-bottom: 29px;
 
-    @include font-header(20px, 20px);
+    @include set-font-size(20px, 20px);
     color: $txt-header-color;
   }
 
@@ -70,8 +70,6 @@
   .more-card {
     padding: 0 34px 40px;
     border: 1px solid $border-input-color;
-
-    @include font-content(16px, 16px);
   }
 
   .more-card__header {

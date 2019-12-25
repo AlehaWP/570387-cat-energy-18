@@ -35,7 +35,6 @@
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
   .banner-present {
     flex-flow: row;
-    justify-content: space-between;
 
     @include container-tablet;
     padding: 48px 125px 53px 91px;
@@ -48,6 +47,7 @@
 
   .banner-present__image {
     margin-bottom: 0;
+    margin-right: auto;
   }
 
   .banner-present__appeal {

@@ -146,6 +146,7 @@
   height: 150px;
   padding: 15px 0 0 15px;
   border: 1px solid $border-input-color;
+  resize: vertical;
   text-transform: uppercase;
 }
 
@@ -159,7 +160,6 @@
 
   @include font-content(14px, 16px);
   color: $txt-main-color;
-  background-color: transparent;
 }
 
 @media (min-width: $tablet-width) {
@@ -167,7 +167,7 @@
     padding-top: 25px;
     margin-bottom: 18px;
 
-    @include font-header(20px, 20px);
+    @include set-font-size(20px, 20px);
   }
 
   .form__block-wrapper {
@@ -183,7 +183,7 @@
     margin-bottom: 65px;
     padding: 0 50px 0 70px;
 
-    @include font-header(20px, 30px);
+    @include set-font-size(20px, 30px);
   }
 
   .form__label {
@@ -260,7 +260,7 @@
     padding-bottom: 14px;
     margin-bottom: 57px;
 
-    @include font-header(20px, 20px);
+    @include set-font-size(20px, 20px);
   }
 
   .form__dictionary {
@@ -270,7 +270,7 @@
     padding: 0;
     text-align: left;
 
-    @include font-content(16px, 16px);
+    @include set-font-size(16px, 16px);
   }
 }
 
@@ -323,7 +323,7 @@
     }
 
     &--extra-goods {
-      margin-bottom: 6px;
+      margin-bottom: 37px;
     }
   }
 

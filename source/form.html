@@ -10,18 +10,16 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__top">
-        <a class="page-header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
-          </picture>
-        </a>
-        <button type="button" class="page-header__menu-toggle page-header__menu-toggle--opened no-js">
-          <span class="visually-hidden">Меню</span>
-        </button>
-      </div>
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+        </picture>
+      </a>
+      <button type="button" class="page-header__menu-toggle page-header__menu-toggle--opened no-js">
+        <span class="visually-hidden">Меню</span>
+      </button>
       <nav class="page-header__nav page-header__nav--mobile-closed no-js">
         <ul class="page-header__page-list page-list">
           <li class="page-list__item">
@@ -43,10 +41,10 @@
         <fieldset class="form__fieldset form__fieldset--cat">
           <legend class="visually-hidden">Данные кота</legend>
           <label class="form__label">имя:*
-            <input class="form__text-in" type="text" name="cat-name" placeholder="БАРСИК" required>
+            <input class="form__text-in input-required" type="text" name="cat-name" placeholder="БАРСИК" required>
           </label>
           <label class="form__label">вес (кг):*
-            <input class="form__text-in" type="number" name="cat-weight" placeholder="7" required>
+            <input class="form__text-in input-required" type="number" name="cat-weight" placeholder="7" required>
           </label>
           <label class="form__label">возраст (лет):
             <input class="form__text-in" type="number" name="cat-age" placeholder="7">
@@ -73,11 +71,11 @@
           <h2 class="form__legend form__legend--contacts block-header">Контактные данные (владельца кота)</h2>
           <div class="form__block-wrapper">
             <label class="form__label form__label--email" lang="en">e-mail:*
-              <input class="form__text-in form__text-in--email" type="email" name="sender-email" placeholder="kuklachev@gmail.com" required>
+              <input class="form__text-in form__text-in--email input-required" type="email" name="sender-email" placeholder="kuklachev@gmail.com" required>
               <svg class="form__text-icon" width="18" height="14"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
             </label>
             <label class="form__label form__label--tel">телефон:*
-              <input class="form__text-in form__text-in--tel" type="tel" name="sender-tel" placeholder="8 (960) 900-60-90" required>
+              <input class="form__text-in form__text-in--tel input-required" type="tel" name="sender-tel" placeholder="8 (960) 900-60-90" required>
               <svg class="form__text-icon" width="21" height="21"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
             </label>
           </div>
@@ -130,39 +128,34 @@
         <a class="page-footer__logo" href="index.html">
           <svg class="page-footer__logo-image" width="128" height="24"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
         </a>
-        <section class="page-footer__social social">
-          <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="social__list">
-            <li class="social__list-item">
-              <a class="social__link social__link--vk" href="https://vk.ru">
-                <svg class="social__icon" width="22" height="12"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
-                <span class="visually-hidden">ВКонтакте</span>
-              </a>
-            </li>
-            <li class="social__list-item">
-              <a class="social__link social__link--insta" href="https://fb.com">
-                <svg class="social__icon" width="17" height="17"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
-                <span class="visually-hidden">Фейсбук</span>
-              </a>
-            </li>
-            <li class="social__list-item">
-              <a class="social__link social__link--fb" href="https://fb.com">
-                <svg class="social__icon" width="10" height="19"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
-                <span class="visually-hidden">Фейсбук</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="page-footer__developer developer">
-          <h2 class="visually-hidden">Разработчик</h2>
-          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
-            <svg class="developer__logo" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
-          </a>
-        </section>
+        <ul class="page-footer__social social">
+          <li class="social__list-item">
+            <a class="social__link social__link--vk" href="https://vk.ru">
+              <svg class="social__icon" width="22" height="12"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social__list-item">
+            <a class="social__link social__link--insta" href="https://fb.com">
+              <svg class="social__icon" width="17" height="17"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__list-item">
+            <a class="social__link social__link--fb" href="https://fb.com">
+              <svg class="social__icon" width="10" height="19"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <svg class="developer__logo" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
+        </a>
       </div>
     </footer>
     <script src="js/menu.min.js"></script>
+    <script src="js/formreq.min.js"></script>
     <script src="js/svgxuse.min.js" defer></script>
     <script src="js/picturefill.min.js" defer></script>
   </body>

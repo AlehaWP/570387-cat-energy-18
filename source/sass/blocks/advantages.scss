@@ -4,7 +4,6 @@
 
   @include font-content(14px, 18px);
   color: $txt-main-color;
-  background-color: transparent;
 }
 
 .advantages__header {
@@ -14,7 +13,6 @@
 
   @include font-header(36px, 60px);
   color: $txt-header-color;
-  background-color: transparent;
 }
 
 .advantages__list {
@@ -28,7 +26,6 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
-  background-color: transparent;
 
   &::before {
     content: "";
@@ -86,13 +83,13 @@
     padding: 0;
     border-bottom: 1px solid $border-block-color;
 
-    @include font-content(16px, 24px);
+    @include set-font-size(16px, 24px);
   }
 
   .advantages__header {
     margin-bottom: 40px;
 
-    @include font-header(60px, 60px);
+    @include set-font-size(60px, 60px);
   }
 
   .advantages__list {
@@ -131,7 +128,6 @@
 
       @include font-header(281px, 281px);
       color: $blocks-bg-color;
-      background-color: transparent;
     }
   }
 }
@@ -142,7 +138,7 @@
     padding: 0;
     border-bottom: none;
 
-    @include font-content(16px, 24px);
+    @include set-font-size(16px, 24px);
   }
 
   .advantages__list-item {

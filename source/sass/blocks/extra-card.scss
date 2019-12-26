@@ -47,9 +47,8 @@
   .extra-card {
     justify-content: space-between;
     padding: 26px 38px 28px;
-    background-color: transparent;
 
-    @include font-content(16px, 16px);
+    @include set-font-size(16px, 16px);
   }
 
   .extra-card__header {
@@ -59,7 +58,7 @@
     padding: 0;
     width: auto;
 
-    @include font-header(20px, 20px);
+    @include set-font-size(20px, 20px);
   }
 
   .extra-card__options-item {

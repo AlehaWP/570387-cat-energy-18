@@ -32,7 +32,7 @@
     padding: 0;
 
     @include container-tablet;
-    @include font-header(60px, 60px);
+    @include set-font-size(60px, 60px);
 
     &--form {
       margin-top: 32px;

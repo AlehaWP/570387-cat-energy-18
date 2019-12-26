@@ -76,7 +76,7 @@
     padding: 0;
     margin: 0 0 40px;
 
-    @include font-header(60px, 60px);
+    @include set-font-size(60px, 60px);
     text-align: left;
   }
 
@@ -84,7 +84,7 @@
     padding: 0;
     margin: 0 0 48px;
 
-    @include font-header(20px, 20px);
+    @include set-font-size(20px, 20px);
     text-align: left;
   }
 
